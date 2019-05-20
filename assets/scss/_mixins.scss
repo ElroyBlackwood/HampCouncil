@@ -1,0 +1,138 @@
+//DISPLAY 
+@mixin flexbox() {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display:         flex;
+}
+
+@mixin flex-center{
+	align-items: center;
+	justify-content: center;
+}
+
+// TRANSFORMS
+@mixin transform($transforms) {
+	-webkit-transform: $transforms;
+	-moz-transform: $transforms;
+	-ms-transform: $transforms;
+	transform: $transforms;
+}
+
+// Rotate
+@mixin rotate ($deg) { 
+	@include transform(rotate(#{$deg}deg));
+}
+
+// Scale
+@mixin scale($scale) {
+	@include transform(scale($scale));
+}
+
+// Translate
+@mixin translate ($x, $y) {
+	@include transform(translate($x, $y));
+}
+
+// Translate
+@mixin translate3d ($x, $y, $z) {
+	@include transform(translate($x, $y, $z));
+}
+
+// Skew
+@mixin skew ($x, $y) {
+	@include transform(skew(#{$x}deg, #{$y}deg));
+}
+
+// Transform Origin
+@mixin transform-origin ($origin) {
+    	-webkit-transform-origin: $origin;
+    	-moz-transform-origin: $origin;
+	-ms-transform-origin: $origin;
+	transform-origin: $origin;
+}
+
+// IMAGES
+@mixin bg_img_contain(){
+	background-size: contain;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+}
+
+@mixin bg_img_cover(){
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	width: 100%;
+}
+
+@mixin background_opacity($op) {
+	content: " ";
+	z-index: 1;
+	display: block;
+	position: absolute;
+	height: 100%;
+	top: 0;
+	left: 0;
+	right: 0;
+	background: rgba(0, 0, 0, $op);
+}
+
+// Banner and slider
+// overlays
+
+@mixin overlay_center() {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	@include translate(-50%, -50%);
+}
+
+@mixin btn01() {
+	position: relative;
+	background-image: url("../images/bnt-bg.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #fff;
+	padding: 0.75vw 1.5vw;
+	border: 2px solid transparent;
+	transition: ease 0.5s all;
+	display: inline-block;
+	text-transform: uppercase;
+	font-family: $rubik;
+}
+
+@mixin btn01_mb() {
+	@include btn01();
+	padding: 2vw 4vw;
+}
+
+@mixin btn01_hover() {
+	border-color: #E52223;
+	color: #E52223;
+	background-image: none;
+}
+
+@mixin ease($attr, $sec) {
+	-webkit-transition: ease $sec $attr; /* Safari */
+	transition: ease $sec $attr;
+}
+
+@mixin easein($attr, $sec) {
+	-webkit-transition: ease-in $sec $attr; /* Safari */
+	transition: ease-in $sec $attr;
+}
+
+@mixin easeinout($attr, $sec) {
+	-webkit-transition: ease-in-out $sec $attr; /* Safari */
+	transition: ease-in-out $sec $attr;
+}
+
+@mixin hdwarexcel() {
+	-webkit-transform: translate3d(0, 0, 0);
+	-moz-transform: translate3d(0, 0, 0);
+	-ms-transform: translate3d(0, 0, 0);
+	-o-transform: translate3d(0, 0, 0);
+	transform: translate3d(0, 0, 0);
+}

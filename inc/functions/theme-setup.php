@@ -37,6 +37,7 @@
 	  register_nav_menus(
 	    array(
 	      'header-menu' => __( 'Header Menu' ),
+	      'top-bar' => __( 'Top Bar' ),
 	      'footer-menu-col1' => __( 'Footer Menu 1' ),
 	      'footer-menu-col2' => __( 'Footer Menu 2' ),
 	      'footer-menu-col3' => __( 'Footer Menu 3' ),

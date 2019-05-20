@@ -9,18 +9,6 @@
 	        'capability'    => 'edit_posts',
 	        'redirect'      => false
 	    ));
-	    
-	    acf_add_options_sub_page(array(
-	        'page_title'    => 'Testimonials',
-	        'menu_title'    => 'Testimonials',
-	        'parent_slug'   => $parent['menu_slug'],
-	    ));
-	    
-	    acf_add_options_sub_page(array(
-	        'page_title'    => 'Vehicle Info',
-	        'menu_title'    => 'Vehicle Info',
-	        'parent_slug'   => $parent['menu_slug'],
-	    ));
 
 	    // acf_add_options_sub_page(array(
 	    //     'page_title'    => 'Theme Footer Settings',
