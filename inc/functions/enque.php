@@ -8,6 +8,9 @@
         wp_register_style('lgo-styles', get_template_directory_uri() . '/assets/css/styles.min.css', array(), '1.0', 'all');
         wp_enqueue_style('lgo-styles'); 
 
+        wp_register_style('elroy-styles', get_template_directory_uri() . '/elroy-assets/styles.css', array(), '1.0', 'all');
+        wp_enqueue_style('elroy-styles'); 
+
         wp_register_style('lightbox-css', get_template_directory_uri() . '/assets/plugins/lightbox/css/lightbox.min.css', array(), '1.0', 'all');
         wp_enqueue_style('lightbox-css'); 
 
@@ -61,6 +64,9 @@
         
         wp_register_script('lgo-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), '1.0.0', true); // Custom scripts
         wp_enqueue_script('lgo-scripts');
+
+        wp_register_script('elroy-scripts', get_template_directory_uri() . '/elroy-assets/scripts.js', array('jquery'), '1.0.0', true); // Custom scripts
+        wp_enqueue_script('elroy-scripts');
 
         wp_enqueue_script( 'ajax-pagination',  get_stylesheet_directory_uri() . '/assets/plugins/ajax-pagination.js', array( 'jquery' ), '1.0', true );
 
