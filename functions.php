@@ -11,6 +11,10 @@
 
 	include_once(ABSPATH . 'wp-content/themes/HampCouncil/inc/functions/theme-setup.php');
 
+	include_once(ABSPATH . 'wp-content/themes/HampCouncil/inc/functions/lee-functions.php');
+
+	include_once(ABSPATH . 'wp-content/themes/HampCouncil/inc/functions/elroy-functions.php');
+
 	// Register custom navigation walker
 	require_once(get_template_directory() . '/wp-bootstrap-navwalker.php');
 	
@@ -27,12 +31,4 @@
 	    echo "<script type='text/javascript'>alert('$msg');</script>";
 	}
 
-	// generate header logo and menu
-	function lgo_header() { ?>
 
-<?php 
-	}
-
-	function outputBanner() {
-
-		}

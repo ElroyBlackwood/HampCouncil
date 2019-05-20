@@ -61,30 +61,5 @@
 		<!-- wrapper -->
 
 		<div class="site-wrap">
-
-			<?php lgo_header(); ?>
-
-			<?php if(is_front_page()) { ?>
-
-
-
-			<?php } else { ?>
-
-					<div class="breadcrumb-container">
-
-						<?php
-
-						if ( function_exists('yoast_breadcrumb') ) {
-
-						  yoast_breadcrumb( '<p id="breadcrumbs">','</p>' );
-
-						}
-
-						?>
-
-					</div>
-
-			<?php	} ?>
-
-			<?php outputBanner(); ?>
-
+			<?php outputHeader(); ?>
+		
