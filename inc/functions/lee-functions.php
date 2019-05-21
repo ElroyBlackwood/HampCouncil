@@ -47,9 +47,12 @@ function outputHeader() { ?>
 				$static_banner_image = get_field('static_banner_image');
 				$static_banner_overlay = get_field('static_banner_overlay');
 			?>
-			<div id="static-banner-image" style="background-image: url(<?php echo $static_banner_image['url']; ?>);">
+			<div id="static-banner-image" class="dimmed" style="background-image: url(<?php echo $static_banner_image['url']; ?>);">
 				<div id="static-banner-overlay">
 					<?php echo $static_banner_overlay; ?>
+				</div>
+				<div class="scroll-dwn">
+					<h5>Scroll Down</h5>
 				</div>
 			</div>
 		<?php } else { ?>
@@ -89,14 +92,14 @@ function outputHeader() { ?>
 				        $banner_overlay = get_sub_field('banner_overlay');
 				        
 				        if ($count_ban == 0) { ?>
-				        	<div class="carousel-item active" style="background-image: url(<?php echo $banner_img['url']; ?>);">
+				        	<div class="carousel-item active dimmed" style="background-image: url(<?php echo $banner_img['url']; ?>);">
 				        		<div class="slide-overlay">
 				        			<?php echo $banner_overlay; ?>
 				        		</div>
 				        	</div>
 				        <?php
 				        } else { ?>
-					        <div class="carousel-item" style="background-image: url(<?php echo $banner_img['url']; ?>);">
+					        <div class="carousel-item dimmed" style="background-image: url(<?php echo $banner_img['url']; ?>);">
 					        	<div class="slide-overlay">
 					        		<?php echo $banner_overlay; ?>
 					        	</div>
@@ -189,11 +192,6 @@ function outputWidgetBlock() { ?>
 			        <?php
 			    endwhile;
 			    ?>
-			    <script type="text/javascript">
-			    	jQuery('.widget').each(function() {
-			    		jQuery(this).
-			    	});
-			    </script>
 		    <?php
 			else :
 
