@@ -1,3 +1,104 @@
 /*Elroy styles*/
+.hmp_blue {color: rgba(113,217,254,1.00)}
+.hmp_blue_bg {background: rgba(113,217,254,1.00); color: rgba(255,254,254,1.00)}
+.hmp_orange {color: rgba(241,102,65,1.00)}
+.hmp_orange_bg {background: rgba(241,102,65,1.00); color: rgba(18,33,33,1.00)}
+
+.flex-container {
+  display: flex;
+  flex-wrap: nowrap;
+}
+
+
+/** OTHER **/
+.curve, .curve_btm {
+    height: 15px;
+    width: 100%;
+    border-top-left-radius: 50% 15px ;
+    border-top-right-radius: 50% 15px ;    
+    margin: 0 auto;
+    display: block;
+	/* box-shadow 
+ -webkit-box-shadow: rgba(0,0,0,0.8) 0px 0 10px;
+ -moz-box-shadow: rgba(0,0,0,0.8) 0 0 10px;
+ box-shadow: rgba(0,0,0,0.8) 0 0 10px;*/
+}
+
+.curve_btm {position:absolute; bottom: -25px}
+
+
+.main-footer {}
+  
+main-footer > .ul {list-style-type: none;}
+
+
+/*** FOOT SECTION 01 - NEWS START***/
+.news {min-height: 800px; background-image: cover}
+
+/*** FOOT SECTION 01 - NEWS END ***/
+
+/*** FOOT SECTION 02 - SITEMAP START***/
+.sitemap {color: #ffffff}
+.sitemap ul { padding-left: 0px;}
+.sitemap ul li {font-size: 0.875em}
+.sitemap ul li a {color: rgba(255,255,255,1.00)}
+.sitemap ul li a:hover {color: rgba(241,102,65,1.00)}
+
+/*** FOOT SECTION 02 - SITEMAP END ***/
+
+/*** FOOT SECTION 03 - SOCIAL START***/
+/*** Social Media icons ***/
+div.social ul {margin:0; padding:0; list-style:none}
+div.social ul li {display:inline-block; font-size:1.5rem; margin:0 0.2rem}
+div.social ul li a {color: rgba(18,33,33,1.00)}
+div.social ul li a span.hidden {display:none}
+div.social ul li a:hover {color: rgba(241,102,65,1.00)}
+
+/*** FOOT SECTION 03 - SOCIAL END ***/
+
+/*** FOOT SECTION 04 - LEGALS START***/
+.legals ul li {display:inline-block; font-size: 0.875em} 
+.legals ul li a {color: rgba(18,33,33,1.00)}
+.legals p {font-size: 0.875em}
+
+/*** FOOT SECTION 04 - LEGALS END ***/
+
+
+@import "compass/css3";
+
+.flex-container {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  
+  -webkit-flex-flow: row wrap;
+  justify-content: space-around;
+}
+
+.flex-item {
+  padding: 5px;
+  flex: 1;
+  margin-top: 10px;
+  text-align: center;
+}
+.flex-item ul { list-style: none}
+
+
+.flex-grid {
+  display: flex;
+}
+.col {
+  flex: 1;
+}
+
+
+
+
 
 /*end*/
