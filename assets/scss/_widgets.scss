@@ -50,6 +50,7 @@
 		width: 49%;
 		margin: 0 0 2%;
 		.wdg-container {
+			@include ease(all,0.2s);
 			@include bg_img_cover();
 			position: relative;
 			.color-overlay {
@@ -65,6 +66,7 @@
 				width: 70%;
 				text-align: center;
 				z-index: 10;
+				pointer-events:none;
 				h2 {
 					// @include ease(all, 0.25s);
 					position: relative;
@@ -114,3 +116,22 @@
 	}
 }
 // end
+
+// filter system
+#news-filter {
+	@include flexbox();
+	justify-content: center;
+	flex-wrap: wrap;
+	#post-filter {
+		width: 75vw;
+	}
+	#response {
+		width: 75vw;
+		padding: 0 0 15vh;
+		a {
+			.wdg-container.filtered {
+				opacity: 0;
+			}
+		}
+	}
+}

@@ -5,7 +5,7 @@
 <?php get_header(); ?>
 
 <?php outputWidgetBlock(); ?>
-<?php outputNewsWdgTwoWide(); ?>
+<?php outputWdgTwoWide(); ?>
 <?php outputNewsWdgWide(); ?>
 
 <?php get_footer(); ?>

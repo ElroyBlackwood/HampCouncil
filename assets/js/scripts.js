@@ -48,28 +48,30 @@
 // ==========================================
 	// hover functions for 2 wide widgets
 // ==========================================
-	$('.wdg-container').hover(function() {
-		
-		var wdgContainer = $(this);
-		var hidden = wdgContainer.find('p');
-		var content_height = hidden.height();
-		var change = content_height / 2;
+	$(function() {
+	      $(document).on('mouseover','.wdg-container', function() {
+	      	// console.log("new function");
+	      	var wdgContainer = $(this);
+	      	var hidden = wdgContainer.find('p');
+	      	var content_height = hidden.height();
+	      	var change = content_height / 2;
 
-		$(this).find('.color-overlay').animate({opacity: 0.6}, 250);
-		moveElmWdg(wdgContainer, content_height);
-		setTimeout(showElemWdg(hidden), 260);
+	      	$(this).find('.color-overlay').animate({opacity: 0.6}, 250);
+	      	moveElmWdg(wdgContainer, content_height);
+	      	setTimeout(showElemWdg(hidden), 260);
+	      });
+	      $(document).on('mouseout','.wdg-container', function() {
+	      	// console.log("new functionout");
+	      	var wdgContainer = $(this);
+	      	var hidden = wdgContainer.find('p');
+	      	var content_height = hidden.height();
+	      	var change = content_height / 2;
 
-	}, function() {
+	      	hideElemWdg(hidden);
 
-		var wdgContainer = $(this);
-		var hidden = wdgContainer.find('p');
-		var content_height = hidden.height();
-		var change = content_height / 2;
-
-		hideElemWdg(hidden);
-
-		setTimeout(resetElmWdg(wdgContainer), 260);
-		$(this).find('.color-overlay').animate({opacity: 0}, 250);
+	      	setTimeout(resetElmWdg(wdgContainer), 260);
+	      	$(this).find('.color-overlay').animate({opacity: 0}, 250);
+	      });
 	});
 
 	// fucntions for the wdg animations
@@ -98,43 +100,32 @@
 // ==========================================
 	// filter functions
 // ==========================================
-
-$('#filter').submit(function(){
-		var filter = $('#filter');
-		$.ajax({
-			url:filter.attr('action'),
-			data:filter.serialize(), // form data
-			type:filter.attr('method'), // POST
-			beforeSend:function(xhr){
-				filter.find('button').text('Processing...'); // changing the button label
-			},
-			success:function(data){
-				filter.find('button').text('Apply filter'); // changing the button label back
-				$('#response').html(data); // insert data
-
-			}
-		});
-		return false;
-	});
-
 $('.fitler_tag').click(function() {
 	var filter = $('#filter');
+	$('.active').each(function() {
+		$(this).removeClass('active');
+		console.log('removeClass');
+	});
+	$(this).addClass('active');
+	var label_id = $(this).attr('id');
+	$('.' + label_id).addClass('active');
 	$.ajax({
 		url:filter.attr('action'),
 		data:filter.serialize(), // form data
 		type:filter.attr('method'), // POST
 		beforeSend:function(xhr){
-			filter.find('button').text('Processing...'); // changing the button label
+			// filter.find('button').text('Processing...'); // changing the button label
 		},
 		success:function(data){
-			filter.find('button').text('Apply filter'); // changing the button label back
+			// filter.find('button').text('Apply filter'); // changing the button label back
+			// filter.find('label').addClass('active');
 			$('#response').html(data); // insert data
-			squareElement();
+			$('.filtered').ready(squareElement());
+			$('.filtered').animate({opacity: 1}, 250);
 		}
 	});
 	return false;
 })
-
 // ==========================================
 	// Fileter end
 // ==========================================
