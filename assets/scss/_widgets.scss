@@ -1,3 +1,4 @@
+// orange widgets under banner
 #wdgt_block {
 	position: relative;
 	padding: 7.5vh 0;
@@ -35,3 +36,69 @@
 		}
 	}
 }
+// orange wdg area end
+
+// 2 x 2 wdg block
+#news_wdg_two_wide {
+	@include flexbox();
+	@include ease(all, 0.25s);
+	flex-wrap: wrap;
+	justify-content: space-between;
+	padding: 15vh 0;
+	width: 75vw;
+	a {
+		width: 49%;
+		margin: 0 0 2%;
+		.wdg-container {
+			@include bg_img_cover();
+			position: relative;
+			.color-overlay {
+				@include overlay_cover();
+				background-color: #F26640;
+				opacity: 0;
+				z-index: 9;
+			}
+			.wdg-overlay {
+				@include overlay_center();
+				@include ease(all, 0.25s);
+				color: #fff;
+				width: 70%;
+				text-align: center;
+				z-index: 10;
+				h2 {
+					// @include ease(all, 0.25s);
+					position: relative;
+					top: 0;
+					color: #fff;
+				}
+				p {
+					@include overlay_center();
+					color: #fff;
+					width: 100%;
+					opacity: 0;
+				}
+				span {
+					// @include ease(all, 0.25s);
+					position: relative;
+					top: 0;
+					color: #fff;
+				}
+			}
+		}
+		.wdg-container:hover {
+			cursor: pointer;
+			.wdg-overlay {
+				h2 {
+					text-decoration: none;
+				}
+				p {
+					text-decoration: none;
+				}
+				a {
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}
+// end

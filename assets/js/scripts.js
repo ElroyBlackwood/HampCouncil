@@ -11,13 +11,13 @@
 	        if (windowsize > 255 && windowsize < 601) {
 
 	        } else if (windowsize > 600 && windowsize < 1201) {
-
+	        	squareElement();
 	        } else if (windowsize > 1200 && windowsize < 1601) {
-
+	        	squareElement();
 	        } else if (windowsize > 1600 && windowsize < 1921) {
-
+	        	squareElement();
 	        } else if (windowsize > 1920) {
-
+	        	squareElement();
 	        }
 	    }
 	    // Execute on load
@@ -27,6 +27,7 @@
 	    
 	});
 
+	// max width helper
 	function getMaxChildWidth(sel) {
 	    var max = 0;
 	    $(sel).children().each(function(){
@@ -37,6 +38,62 @@
 	    });
 	    return max;
 	}
+
+	// square divs
+	function squareElement() {
+		$('.square').each(function() {
+			$(this).height($(this).width());
+		});
+	}
+// ==========================================
+	// hover functions for 2 wide widgets
+// ==========================================
+	$('.wdg-container').hover(function() {
+		
+		var wdgContainer = $(this);
+		var hidden = wdgContainer.find('p');
+		var content_height = hidden.height();
+		var change = content_height / 2;
+
+		$(this).find('.color-overlay').animate({opacity: 0.5}, 250);
+		moveElmWdg(wdgContainer, content_height);
+		setTimeout(showElemWdg(hidden), 260);
+
+	}, function() {
+
+		var wdgContainer = $(this);
+		var hidden = wdgContainer.find('p');
+		var content_height = hidden.height();
+		var change = content_height / 2;
+
+		hideElemWdg(hidden);
+
+		setTimeout(resetElmWdg(wdgContainer), 260);
+		$(this).find('.color-overlay').animate({opacity: 0}, 250);
+	});
+
+	// fucntions for the wdg animations
+	function showElemWdg(elm) {
+		elm.animate({opacity: 1}, 250);
+	}
+
+	function hideElemWdg(elm) {
+		elm.animate({opacity: 0}, 250);
+	}
+
+	function moveElmWdg(elm, change) {
+		var half = change / 2;
+		elm.find('h2').animate({top: "-" + change}, 250);
+		elm.find('span').animate({top: half}, 250);
+	}
+
+	function resetElmWdg(elm) {
+		elm.find('h2').animate({top: "0"}, 250);
+		elm.find('span').animate({top: "0"}, 250);
+	}
+// ==========================================
+	// hover functions for 2 wide widgets end
+// ==========================================
 
 })( jQuery );
 
