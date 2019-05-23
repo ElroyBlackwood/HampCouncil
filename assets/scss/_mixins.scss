@@ -89,6 +89,14 @@
 	@include translate(-50%, -50%);
 }
 
+@mixin overlay_cover() {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+}
+
 @mixin btn01() {
 	position: relative;
 	background-image: url("../images/bnt-bg.png");
