@@ -55,7 +55,7 @@
 		var content_height = hidden.height();
 		var change = content_height / 2;
 
-		$(this).find('.color-overlay').animate({opacity: 0.5}, 250);
+		$(this).find('.color-overlay').animate({opacity: 0.6}, 250);
 		moveElmWdg(wdgContainer, content_height);
 		setTimeout(showElemWdg(hidden), 260);
 
@@ -84,15 +84,59 @@
 	function moveElmWdg(elm, change) {
 		var half = change / 2;
 		elm.find('h2').animate({top: "-" + change}, 250);
-		elm.find('span').animate({top: half}, 250);
+		elm.find('.read-more').animate({top: half}, 250);
 	}
 
 	function resetElmWdg(elm) {
 		elm.find('h2').animate({top: "0"}, 250);
-		elm.find('span').animate({top: "0"}, 250);
+		elm.find('.read-more').animate({top: "0"}, 250);
 	}
 // ==========================================
 	// hover functions for 2 wide widgets end
+// ==========================================
+
+// ==========================================
+	// filter functions
+// ==========================================
+
+$('#filter').submit(function(){
+		var filter = $('#filter');
+		$.ajax({
+			url:filter.attr('action'),
+			data:filter.serialize(), // form data
+			type:filter.attr('method'), // POST
+			beforeSend:function(xhr){
+				filter.find('button').text('Processing...'); // changing the button label
+			},
+			success:function(data){
+				filter.find('button').text('Apply filter'); // changing the button label back
+				$('#response').html(data); // insert data
+
+			}
+		});
+		return false;
+	});
+
+$('.fitler_tag').click(function() {
+	var filter = $('#filter');
+	$.ajax({
+		url:filter.attr('action'),
+		data:filter.serialize(), // form data
+		type:filter.attr('method'), // POST
+		beforeSend:function(xhr){
+			filter.find('button').text('Processing...'); // changing the button label
+		},
+		success:function(data){
+			filter.find('button').text('Apply filter'); // changing the button label back
+			$('#response').html(data); // insert data
+			squareElement();
+		}
+	});
+	return false;
+})
+
+// ==========================================
+	// Fileter end
 // ==========================================
 
 })( jQuery );

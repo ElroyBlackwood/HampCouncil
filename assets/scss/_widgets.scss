@@ -39,7 +39,7 @@
 // orange wdg area end
 
 // 2 x 2 wdg block
-#news_wdg_two_wide {
+#wdg_two_wide, #response {
 	@include flexbox();
 	@include ease(all, 0.25s);
 	flex-wrap: wrap;
@@ -77,11 +77,23 @@
 					width: 100%;
 					opacity: 0;
 				}
-				span {
-					// @include ease(all, 0.25s);
-					position: relative;
+				.read-more {
+					@include flexbox();
+					align-items: center;
+					justify-content: center;
 					top: 0;
-					color: #fff;
+					position: relative;
+					.blue-arrow {
+						@include bg_img_contain();
+						height: 1vw;
+						width: 2vw;
+					}
+					span {
+						// @include ease(all, 0.25s);
+						position: relative;
+						top: 0;
+						color: #fff;
+					}
 				}
 			}
 		}
