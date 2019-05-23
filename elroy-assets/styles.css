@@ -10,32 +10,46 @@
 }
 
 
+/***** WIDE STORY ********/
+#story_wdg_wide{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-transition:ease .25s all;transition:ease .25s all;flex-wrap:nowrap;padding: 0;}
+#story_wdg_wide a{width:100%;margin:0;}
+#story_wdg_wide a .wdg-container{background-size:cover;background-position:center;background-repeat:no-repeat;width:100%;position:relative; min-height:425px}
+#story_wdg_wide a .wdg-container .color-overlay{position:absolute;width:100%;height:100%;top:0;left:0;background-color:#F26640;opacity:0;z-index:9}
+#story_wdg_wide a .wdg-container .wdg-overlay{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%);-webkit-transition:ease .25s all;transition:ease .25s all;color:#fff;width:70%;text-align:center;z-index:10}
+#story_wdg_wide a .wdg-container .wdg-overlay h2{position:relative;top:0;color:#fff}
+#story_wdg_wide a .wdg-container .wdg-overlay p{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%);color:#fff;width:100%;opacity:0}
+#story_wdg_wide a .wdg-container .wdg-overlay span{position:relative;top:0;color:#fff}
+#story_wdg_wide a .wdg-container:hover{cursor:pointer}
+#story_wdg_wide a .wdg-container:hover .wdg-overlay h2{text-decoration:none}
+#story_wdg_wide a .wdg-container:hover .wdg-overlay p{text-decoration:none}
+#story_wdg_wide a .wdg-container:hover .wdg-overlay a{text-decoration:none}
+
+/** Lee Add to your css, but include border radius top **/
+.dimmedcurve{position:relative}.dimmedcurve:before{content:' ';border-top-left-radius: 50% 15px;border-top-right-radius: 50% 15px;position:absolute;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3))}
+
 /** OTHER **/
 .curve, .curve_btm {
-    height: 15px;
-    width: 100%;
+	height: 15px;
+	width: 100%;
     border-top-left-radius: 50% 15px ;
     border-top-right-radius: 50% 15px ;    
     margin: 0 auto;
     display: block;
-	/* box-shadow 
- -webkit-box-shadow: rgba(0,0,0,0.8) 0px 0 10px;
- -moz-box-shadow: rgba(0,0,0,0.8) 0 0 10px;
- box-shadow: rgba(0,0,0,0.8) 0 0 10px;*/
 }
 
-.addcurve {
+.addcurve, .addcurveminus {
 	border-top-left-radius: 50% 15px ;
     border-top-right-radius: 50% 15px ; 
-	margin-top: -15px
 }
+
+.addcurveminus {margin-top: -15px}
 
 .curveshadow {
 	-moz-box-shadow:    inset 0 8px 15px -10px rgba(0, 0, 0, 0.5);
 	-webkit-box-shadow: inset 0 8px 15px -10px rgba(0, 0, 0, 0.5);
 	box-shadow:         inset 0 8px 15px -10px rgba(0, 0, 0, 0.5);}
 
-.curve_btm {position:absolute; bottom: 15px}
+.curve_btm {position:absolute; bottom: 0px}
 
 .main-footer {}
 main-footer > .ul {list-style-type: none;}
@@ -113,19 +127,16 @@ div.social ul li a:hover {color: rgba(241,102,65,1.00)}
 /*** FOOT SECTION 04 - LEGALS END ***/
 
 
-@import "compass/css3";
 
 .flex-container {
   padding: 0;
   margin: 0;
   list-style: none;
-  
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
-  
   -webkit-flex-flow: row wrap;
   justify-content: space-around;
 }

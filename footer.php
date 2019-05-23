@@ -3,8 +3,6 @@
 
 <section class="main-footer">
 <!--- FOOT SECTION 01 - NEWS START --->
-<div class="container" style="min-height: 250px"></div>
-<div class="curve hmp_orange_bg" style=""></div>
 <div class="container-fluid desaturate" style="background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9) ), url(<?php the_field('footer_news_bg_image', 'option'); ?>); background-repeat: no-repeat; background-position: center; background-size: cover; ">
 	<div class="flex-container overcontent" style="">
 	<div class="container py-5">
@@ -33,7 +31,7 @@
 <!--- FOOT SECTION 01 - NEWS END --->
 
 <!--- FOOT SECTION 02 - SITEMAP START --->
-	<div class="container-fluid hmp_blue_bg py-5 overcontent addcurve" style="">
+	<div class="container-fluid hmp_blue_bg py-5 overcontent addcurveminus" style="">
 	<div class="container">
 		<h2 style="text-align: center"><?php the_field('sitemap_title', 'option'); ?></h2>
 	</div>
@@ -94,7 +92,7 @@
 <!--- FOOT SECTION 03 - SOCIAL END --->
 
 <!--- FOOT SECTION 04 - LEGALS START --->
-	<div class="container-fluid hmp_orange_bg py-4 addcurve curveshadow" style="">
+	<div class="container-fluid hmp_orange_bg py-4 addcurveminus curveshadow" style="">
 		<div class="container">
 			<div class="flex-container legals">
 				<div class="col-3">
