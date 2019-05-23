@@ -78,15 +78,15 @@
 //			'before_title'  => '<h3 class="widget-title">',
 //			'after_title'   => '</h3>',
 //		) );
-	register_sidebar( array(
-			'name'          => __( 'Footer Social Media 3' ),
-			'id'            => 'footer-sm-3',
-			'description'   => __( 'Add widgets here to appear in your Footer Social Column 3.' ),
-			'before_widget' => '<div id="%1$s" class="flex-item">',
-			'after_widget'  => '</div>',
-			'before_title'  => '<h3 class="widget-title">',
-			'after_title'   => '</h3>',
-		) );
+//	register_sidebar( array(
+//			'name'          => __( 'Footer Social Media 3' ),
+//			'id'            => 'footer-sm-3',
+//			'description'   => __( 'Add widgets here to appear in your Footer Social Column 3.' ),
+//			'before_widget' => '<div id="%1$s" class="flex-item">',
+//			'after_widget'  => '</div>',
+//			'before_title'  => '<h3 class="widget-title">',
+//			'after_title'   => '</h3>',
+//		) );
 
 		// Widgets Legal
 //	register_sidebar( array(
@@ -99,9 +99,9 @@
 //			'after_title'   => '</h3>',
 //		) );
 	register_sidebar( array(
-			'name'          => __( 'Footer Legal 2' ),
-			'id'            => 'footer-lgl-2',
-			'description'   => __( 'Add widgets here to appear in your Footer Legal Column 2.' ),
+			'name'          => __( 'Footer Legal 1' ),
+			'id'            => 'footer-lgl-1',
+			'description'   => __( 'Add widgets here to appear in your Footer Legals Nav.' ),
 			'before_widget' => '<div id="%1$s" class="col-6">',
 			'after_widget'  => '</div>',
 			'before_title'  => '<h3 class="widget-title">',

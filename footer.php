@@ -3,26 +3,39 @@
 
 <section class="main-footer">
 <!--- FOOT SECTION 01 - NEWS START --->
-
 <div class="container" style="min-height: 250px"></div>
 <div class="curve hmp_orange_bg" style=""></div>
-<div class="container-fluid news" style="background: url(<?php the_field('footer_news_bg_image', 'option'); ?>)">
-	<div class="flex-container ">
-		<h2>News</h2>
-		  <div>1</div>
-		  <div>2</div>
-		  <div>3</div>  
-		  <div>4</div>
+<div class="container-fluid desaturate" style="background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9) ), url(<?php the_field('footer_news_bg_image', 'option'); ?>); background-repeat: no-repeat; background-position: center; background-size: cover; ">
+	<div class="flex-container overcontent" style="">
+	<div class="container py-5">
+	<h2 style="text-align: center"><?php the_field('news_title', 'option'); ?></h2>
+	</div>
+		<div class="container">
+			<?php $catquery = new WP_Query( 'cat=6&posts_per_page=5' ); ?>
+				<ul>
+					<?php while($catquery->have_posts()) : $catquery->the_post(); ?>
+						<li style="display: inline-block">
+							<a href="<?php the_permalink() ?>" rel="bookmark">
+							 <h3><?php the_title(); ?></h3>
+									<?php if ( has_post_thumbnail() ) : ?>
+										<img title="<?php the_title_attribute(); ?>" src="<?php the_post_thumbnail_url( 'medium' ); ?>"/>
+									<?php endif; ?>
+							 <?php the_excerpt(); ?>
+							</a>
+						</li>
+					<?php endwhile;
+						wp_reset_postdata();
+					?>
+				</ul>
 		</div>
-	<div class="curve_btm hmp_blue_bg" style=""></div>
-</div>
+	</div>
+</div>	
 <!--- FOOT SECTION 01 - NEWS END --->
 
 <!--- FOOT SECTION 02 - SITEMAP START --->
-	
-	<div class="container-fluid hmp_blue_bg py-5">
+	<div class="container-fluid hmp_blue_bg py-5 overcontent addcurve" style="">
 	<div class="container">
-		<h2 style="text-align: center">Welcome to Hampshire, let’s work together.</h2>
+		<h2 style="text-align: center"><?php the_field('sitemap_title', 'option'); ?></h2>
 	</div>
 	<div class="container">
 		<div class="flex-container sitemap">
@@ -73,22 +86,22 @@
 				echo '</div>';
 			endif;
 			?>
- 			<?php if(is_active_sidebar('footer-sm-3')):
-			dynamic_sidebar('footer-sm-3');
-			endif; ?>
+			<div class="flex-item">
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/images/HCC-logo.png" width="190px" height="52px" />
+			</div>
 		</div>
 	</div>
 <!--- FOOT SECTION 03 - SOCIAL END --->
 
 <!--- FOOT SECTION 04 - LEGALS START --->
-	<div class="container-fluid hmp_orange_bg py-2">
+	<div class="container-fluid hmp_orange_bg py-4 addcurve curveshadow" style="">
 		<div class="container">
 			<div class="flex-container legals">
 				<div class="col-3">
 					<p><?php the_field('legals_text', 'option'); ?></p>
 				</div>
-				<?php if(is_active_sidebar('footer-lgl-2')):
-				dynamic_sidebar('footer-lgl-2');
+				<?php if(is_active_sidebar('footer-lgl-1')):
+				dynamic_sidebar('footer-lgl-1');
 				endif; ?>
 			<div class="col-3"><p>© Hampshire County Council <?php echo date("Y"); ?></p></div>
 			</div>
@@ -97,6 +110,8 @@
 <!--- FOOT SECTION 04 - LEGALS END --->
 
 </section>
+
+	
 		<!-- analytics -->
 		<script>
 		(function(f,i,r,e,s,h,l){i['GoogleAnalyticsObject']=s;f[s]=f[s]||function(){

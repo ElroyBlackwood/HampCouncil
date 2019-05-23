@@ -24,16 +24,65 @@
  box-shadow: rgba(0,0,0,0.8) 0 0 10px;*/
 }
 
-.curve_btm {position:absolute; bottom: -25px}
+.addcurve {
+	border-top-left-radius: 50% 15px ;
+    border-top-right-radius: 50% 15px ; 
+	margin-top: -15px
+}
 
+.curveshadow {
+	-moz-box-shadow:    inset 0 8px 15px -10px rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: inset 0 8px 15px -10px rgba(0, 0, 0, 0.5);
+	box-shadow:         inset 0 8px 15px -10px rgba(0, 0, 0, 0.5);}
+
+.curve_btm {position:absolute; bottom: 15px}
 
 .main-footer {}
-  
 main-footer > .ul {list-style-type: none;}
 
 
 /*** FOOT SECTION 01 - NEWS START***/
-.news {min-height: 800px; background-image: cover}
+.news {min-height: 800px; background-repeat: no-repeat; background-position: center; background-size: cover;}
+.overcontent {position: relative}
+
+.desaturate {
+  width: 100%;
+  min-height: 800px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+.desaturate:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: inherit;
+   /*grayscale for background image*/
+  -webkit-filter: grayscale(1); 
+  -webkit-filter: grayscale(100%); 
+  -moz-filter: grayscale(100%);
+  filter: gray; 
+  filter: grayscale(100%);
+  filter: url("data:image/svg+xml;utf8,<svg version='1.1' xmlns='http://www.w3.org/2000/svg' height='0'><filter id='greyscale'><feColorMatrix type='matrix' values='0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0.3333 0.3333 0.3333 0 0 0 0 0 1 0' /></filter></svg>#greyscale");
+}
+/*LEE CURVE
+.desaturate:after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: -3vh;
+    height: 10vh;
+    width: 110%;
+    border-radius: 50%;
+    border: 0 solid #f26640;
+    border-width: 3vh 0 0 0;
+    z-index: 1;
+	transform: translateX(-50%);}*/
+
 
 /*** FOOT SECTION 01 - NEWS END ***/
 
