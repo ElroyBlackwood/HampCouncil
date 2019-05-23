@@ -6,5 +6,6 @@
 
 <?php outputWidgetBlock(); ?>
 <?php outputNewsWdgTwoWide(); ?>
+<?php outputNewsWdgWide(); ?>
 
 <?php get_footer(); ?>
