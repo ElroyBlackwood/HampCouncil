@@ -41,6 +41,7 @@
 
 	// square divs
 	function squareElement() {
+		console.log('square contnet');
 		$('.square').each(function() {
 			$(this).height($(this).width());
 		});
@@ -100,15 +101,22 @@
 // ==========================================
 	// filter functions
 // ==========================================
+// ajax xall for the filter
 $('.fitler_tag').click(function() {
+	
 	var filter = $('#filter');
+	var filter_tag = $(this).attr('value');
+	$('#fitler_tag_id').attr('value', filter_tag);
+
 	$('.active').each(function() {
 		$(this).removeClass('active');
 		console.log('removeClass');
 	});
 	$(this).addClass('active');
+	
 	var label_id = $(this).attr('id');
 	$('.' + label_id).addClass('active');
+	
 	$.ajax({
 		url:filter.attr('action'),
 		data:filter.serialize(), // form data
@@ -130,6 +138,15 @@ $('.fitler_tag').click(function() {
 	// Fileter end
 // ==========================================
 
+// ==========================================
+	// Load More functions
+// ==========================================
+
+
+
+// ==========================================
+	// Load More functions end
+// ==========================================
 })( jQuery );
 
 

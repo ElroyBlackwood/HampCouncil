@@ -53,6 +53,7 @@
 			@include ease(all,0.2s);
 			@include bg_img_cover();
 			position: relative;
+			overflow: hidden;
 			.color-overlay {
 				@include overlay_cover();
 				background-color: #F26640;
@@ -116,22 +117,3 @@
 	}
 }
 // end
-
-// filter system
-#news-filter {
-	@include flexbox();
-	justify-content: center;
-	flex-wrap: wrap;
-	#post-filter {
-		width: 75vw;
-	}
-	#response {
-		width: 75vw;
-		padding: 0 0 15vh;
-		a {
-			.wdg-container.filtered {
-				opacity: 0;
-			}
-		}
-	}
-}

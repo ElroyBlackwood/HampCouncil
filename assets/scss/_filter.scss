@@ -41,32 +41,31 @@
 			}
 		}
 	}
-	// .grey-gradient {
-	// 	width: 100%;
-	// 	position: relative;
-	// }
-	// .grey-gradient:after {
-	// 	content: '';
-	// 	position: absolute;
-	// 	left: 50%;
-	// 	top: -3vh;
-	// 	height: 10vh;
-	// 	width: 110%;
-	// 	border-radius: 50%;
-	// 	border: 0 solid #f26640;
-	// 	border-width: 0vh 0 3vh 0;
-	// 	z-index: 1;
-	// 	transform: translateX(-50%);
-	// 	box-shadow:0 0 18px rgba(0,0,0,0.6);
-	// }
 	#response {
 		width: 75vw;
-		padding: 0 0 15vh; 
+		padding: 0 0 2vh; 
 		a {
 			.wdg-container.filtered {
 				opacity: 0;
 			}
 		}
 	}
+	.loadmore {
+		@include flexbox();
+		align-items: center;
+		position: relative;
+		width: 75vw;
+		.down-arrow {
+			background-image: url('../images/blue-arrow-down.png');
+			@include bg_img_contain;
+			height: 3vh;
+			width: 3vh;
+			margin: 0 1vw 0 0;
+		}
+	}
+	.loadmore:hover {
+		cursor: pointer;
+	}
+	
 }
 
