@@ -54,7 +54,60 @@ function outputHeader() { ?>
 					<h5>Scroll Down</h5>
 				</div>
 			</div>
-		<?php } else { ?>
+		<?php } elseif ($banner_slider == "featpost") { ?>
+				<?php
+				$args = array(
+					'posts_per_page' => -1,
+					'category_name' => 'News',
+				);
+				$the_query = new WP_Query( $args );
+
+				if ( $the_query->have_posts() ) { ?>
+				<div class="container-fluid" id="featpost">
+				<?php
+					while ( $the_query->have_posts() ) {
+						$the_query->the_post();
+						$isfeatured = get_field('featured_post');
+						if ($isfeatured) {
+							$feat_img = get_the_post_thumbnail_url(get_the_ID(), 'full');
+							$cats = get_categories();
+							$cat_name = "";
+							$content = wp_trim_words(get_the_content(), 25);
+							foreach ($cats as $cat) {
+								if($cat->name == "News") {
+
+								} else {
+									$cat_name = $cat->name . " news:";
+								}
+							}
+							?>
+							<div class="static-banner-image dimmed" style="background-image: url(<?php echo $feat_img; ?>);">
+								<div id="static-banner-overlay">
+									<div class="static_banner_overlay_content">
+										<h3><?php echo $cat_name; ?></h3>
+										<h2><strong><?php echo get_the_title(); ?></strong></h2>
+										<p><?php echo $content; ?></p>
+					        			<div class="read-more">
+						        			<div class="blue-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/blue-arrow.png);"></div>
+						        			<span>Read More</span>
+						        		</div>
+						        	</div>
+								</div>
+							</div>
+							<?php
+						}
+						?>
+						<?php
+					}
+				?>
+				</div>
+				<?php
+					wp_reset_postdata();
+				} else {
+
+				}		
+			
+		} else { ?>
 			<div id="carouselHeader" class="carousel slide carousel-fade" data-ride="carousel">
 				<ol class="carousel-indicators">
 					<?php

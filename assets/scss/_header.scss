@@ -214,4 +214,52 @@ header {
 			}
 		}
 	}
+	#banner {
+		#featpost {
+			padding: 0;
+			.static-banner-image {
+				@include bg_img_cover();
+				position: relative;
+				height: 100vh;
+				#static-banner-overlay {
+					position: absolute;
+					top: 50%;
+					width: 75vw;
+					left: 12.5vw;
+					transform: translateY(-50%);
+					.static_banner_overlay_content {
+						color: #fff;
+						width: 33.333333%;
+						h3 {
+
+						}
+						h2 {
+
+						}
+						p {
+
+						}
+						.read-more {
+							@include flexbox();
+							align-items: center;
+							justify-content: flex-start;
+							top: 0;
+							position: relative;
+							.blue-arrow {
+								@include bg_img_contain();
+								height: 1vw;
+								width: 2vw;
+							}
+							span {
+								// @include ease(all, 0.25s);
+								position: relative;
+								top: 0;
+								color: #fff;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
 }

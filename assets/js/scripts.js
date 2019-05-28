@@ -125,11 +125,15 @@ $('.fitler_tag').click(function() {
 			// filter.find('button').text('Processing...'); // changing the button label
 		},
 		success:function(data){
-			// filter.find('button').text('Apply filter'); // changing the button label back
-			// filter.find('label').addClass('active');
-			$('#response').html(data); // insert data
+			$('#response').html(data);
 			$('.filtered').ready(squareElement());
-			$('.filtered').animate({opacity: 1}, 250);
+			$('.filtered').each(function(i) {
+				var elm = $(this);
+				setTimeout(function() {
+					elm.css('transform', 'scale(1)');
+				}, i*300); 
+				i++;
+			});
 		}
 	});
 	return false;

@@ -44,9 +44,13 @@
 	#response {
 		width: 75vw;
 		padding: 0 0 2vh; 
-		a {
+		a {	
+			.wdg-container {
+				@include ease(all,0.6s);
+				transform: scale(0);
+			}
 			.wdg-container.filtered {
-				opacity: 0;
+				transform: scale(0);
 			}
 		}
 	}

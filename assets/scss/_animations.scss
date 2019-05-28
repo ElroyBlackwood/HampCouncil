@@ -1,0 +1,12 @@
+@keyframes zoom-in {
+  0% {
+   transform: scale(.1);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.is-animated-zoom {
+	animation: 0.6s zoom-in;
+}

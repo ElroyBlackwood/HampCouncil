@@ -38,7 +38,7 @@
 }
 // orange wdg area end
 
-// 2 x 2 wdg block
+// 2  wdg block
 #wdg_two_wide, #response {
 	@include flexbox();
 	@include ease(all, 0.25s);

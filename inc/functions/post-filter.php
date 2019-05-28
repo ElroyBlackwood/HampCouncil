@@ -6,7 +6,7 @@ function outputPostFilter() {
 		<h1>News</h1>
 		<div id="post-filter">
 			<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
-				<label>Show me news on:</label>
+				<label><strong>Show me news on:</strong></label>
 				<?php
 					$tags = get_tags(array('get'=>'all'));
 					if( $tags ) : 
@@ -38,6 +38,29 @@ function outputPostFilter() {
 		<div id="response">
 		
 		<script type="text/javascript">
+			function animateFilterBlock() {
+				jQuery('.wdg-container').each(function(i) {
+					console.log(i);
+					var elm = jQuery(this);
+					setTimeout(function() {
+						elm.css('transform', 'scale(1)');
+					}, i*300); 
+					i++;
+				});
+			}
+
+			function animateFilterBlockLoadMore() {
+				jQuery('.loadedmore').each(function(i) {
+					console.log(i);
+					var elm = jQuery(this);
+					setTimeout(function() {
+						elm.css('transform', 'scale(1)');
+					}, i*300); 
+					i++;
+					jQuery(this).removeClass('loadedmore');
+				});
+			}
+
 			function squareElement() {
 				jQuery('.square').each(function() {
 					jQuery(this).height(jQuery(this).width());
@@ -61,7 +84,7 @@ function outputPostFilter() {
 				    $.post(ajaxurl, data, function(response) {
 				        $('#response').append(response);
 				        $('.filtered').ready(squareElement());
-				        $('.filtered').animate({opacity: 1}, 250);
+				        animateFilterBlockLoadMore();
 				        page++;
 				    });
 				    
@@ -114,6 +137,11 @@ function outputPostFilter() {
 		        	</script>
 					<?php
 				}
+				?>
+				<script type="text/javascript">
+					animateFilterBlock();
+				</script>
+				<?php
 				wp_reset_postdata();
 			} else {
 			}
