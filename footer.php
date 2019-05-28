@@ -1,8 +1,54 @@
 		<?php wp_footer(); ?>
-		<?php wp_footer(); ?>
 
 <section class="main-footer">
+	
 <!--- FOOT SECTION 01 - NEWS START --->
+<style>
+
+	</style>
+	
+<script>
+(function($) {
+    $(function () {
+        $('.slider-8').slick({
+		  infinite: false,
+		  speed: 300,
+		  slidesToShow: 4,
+		  slidesToScroll: 4,
+		  responsive: [
+			{
+			  breakpoint: 1024,
+			  settings: {
+				slidesToShow: 3,
+				slidesToScroll: 3,
+				infinite: true,
+				dots: true
+			  }
+			},
+			{
+			  breakpoint: 600,
+			  settings: {
+				slidesToShow: 2,
+				slidesToScroll: 2
+			  }
+			},
+			{
+			  breakpoint: 480,
+			  settings: {
+				slidesToShow: 1,
+				slidesToScroll: 1
+			  }
+			}
+			// You can unslick at a given breakpoint now by adding:
+			// settings: "unslick"
+			// instead of a settings object
+		  ]
+		});
+    });
+})( jQuery );
+</script>
+
+	
 <div class="container-fluid desaturate" style="background: linear-gradient( rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.9) ), url(<?php the_field('footer_news_bg_image', 'option'); ?>); background-repeat: no-repeat; background-position: center; background-size: cover; ">
 	<div class="flex-container overcontent" style="">
 	<div class="container py-5">
@@ -10,9 +56,10 @@
 	</div>
 		<div class="container">
 			<?php $catquery = new WP_Query( 'cat=6&posts_per_page=5' ); ?>
-				<ul>
+			<div class="slick-wrapper">
+				<div class="slider-8">
 					<?php while($catquery->have_posts()) : $catquery->the_post(); ?>
-						<li style="display: inline-block">
+						<div class="slide-content">
 							<a href="<?php the_permalink() ?>" rel="bookmark">
 							 <h3><?php the_title(); ?></h3>
 									<?php if ( has_post_thumbnail() ) : ?>
@@ -20,14 +67,16 @@
 									<?php endif; ?>
 							 <?php the_excerpt(); ?>
 							</a>
-						</li>
+						</div>
 					<?php endwhile;
 						wp_reset_postdata();
 					?>
-				</ul>
+				</div>
+			</div>
 		</div>
 	</div>
-</div>	
+</div>
+
 <!--- FOOT SECTION 01 - NEWS END --->
 
 <!--- FOOT SECTION 02 - SITEMAP START --->
