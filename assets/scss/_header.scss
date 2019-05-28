@@ -79,7 +79,7 @@ header {
 				width: 30%;
 				.logo {
 					@include bg_img_contain();
-					height: 18vh;
+					padding-top: 30%;
 					background-position: left center;
 				}
 			}
@@ -153,7 +153,7 @@ header {
 		padding: 0;
 		#static-banner-image {
 			@include bg_img_cover();
-			height: 100vh;
+			height: 93vh;
 			#static-banner-overlay {
 				position: absolute;
 			    top: 55%;
@@ -197,7 +197,7 @@ header {
 		}
 		.carousel-item {
 			@include bg_img_cover();
-			height: 100vh;
+			height: 93vh;
 			position: relative;
 			.slide-overlay {
 				position: absolute;
@@ -214,13 +214,26 @@ header {
 			}
 		}
 	}
+	.letterbox#banner {
+		#featpost {
+			.static-banner-image {
+				height: 30vh;
+				#static-banner-overlay {
+					display: none;
+				}
+			}
+		}
+	}
+	.letterbox#banner:after {
+		top: 27vh;
+	}
 	#banner {
 		#featpost {
 			padding: 0;
 			.static-banner-image {
 				@include bg_img_cover();
 				position: relative;
-				height: 100vh;
+				height: 93vh;
 				#static-banner-overlay {
 					position: absolute;
 					top: 50%;
@@ -261,5 +274,18 @@ header {
 				}
 			}
 		}
+	}
+	#banner:after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		top: 90vh;
+		height: 10vh;
+		width: 110%;
+		border-radius: 50%;
+		border: 0 solid #f26640;
+		border-width: 3vh 0 0 0;
+		z-index: 1;
+		transform: translateX(-50%);
 	}
 }

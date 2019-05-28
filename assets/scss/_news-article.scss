@@ -1,0 +1,41 @@
+#news-article {
+	padding: 0;
+	width: 75vw;
+	margin: 8vh auto 0;
+	#article-header {
+		margin: 0 0 6vh;
+		h1 {
+
+		}
+		h3 {
+			color: #F26640;
+		}
+	}
+	#article-content {
+		.news-article-feat-img-container {
+			margin: 0 0 4vh;
+			.news-article-feat-img {
+				@include bg_img_cover();
+				padding-top: 50%;
+			}
+			.news-article-feat-img-caption {
+
+			}
+		}
+	}
+	#article-bottom-bar {
+		a {
+			.read-more {
+				.blue-arrow {
+				}
+				span {
+					color: #333;
+				}
+			}
+		}
+		a:hover {
+			text-decoration: none;
+			color: #333;
+		}
+	}
+}

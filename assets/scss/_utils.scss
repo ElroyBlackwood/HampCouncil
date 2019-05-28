@@ -19,3 +19,23 @@ html, body {
 	height: 100%;
 	background-image: linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3))
 }
+
+.read-more {
+	@include flexbox();
+	align-items: center;
+	justify-content: flex-start;
+	top: 0;
+	position: relative;
+	.blue-arrow {
+		background-image: url('../images/blue-arrow.png');
+		@include bg_img_contain();
+		height: 1vw;
+		width: 2vw;
+	}
+	span {
+		// @include ease(all, 0.25s);
+		position: relative;
+		top: 0;
+		color: #fff;
+	}
+}

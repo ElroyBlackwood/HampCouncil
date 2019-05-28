@@ -12,7 +12,7 @@ function outputWidgetBlock() { ?>
 		$bg_img = get_field('wdg_background_image');
 		?>
 		<style type="text/css">
-			#wdgt_block:after {
+			/*#wdgt_block:after {
 				content: '';
 				position: absolute;
 				left: 50%;
@@ -24,7 +24,7 @@ function outputWidgetBlock() { ?>
 				border-width: 3vh 0 0 0;
 				z-index: 1;
 				transform: translateX(-50%);
-			}
+			}*/
 		</style>
 		<div class="container-fluid" id="wdgt_block" style="background: linear-gradient( rgba(<?php echo $rgb_col; ?>), rgba(<?php echo $rgb_col; ?>) ), url(<?php echo $bg_img['url']; ?>); background-repeat: no-repeat; background-position: center; background-size: cover;">
 			<h1><?php echo $block_title; ?></h1>
