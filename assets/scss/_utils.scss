@@ -1,9 +1,16 @@
+$blue : #70D9F5;
+$orange : #F26640;
+
 .container-width {
 	width: 75vw;
 }
 
 html, body {
 	overflow-x: hidden;
+}
+
+a:hover {
+	text-decoration: none;
 }
 
 .dimmed {
@@ -37,5 +44,44 @@ html, body {
 		position: relative;
 		top: 0;
 		color: #fff;
+	}
+}
+
+.intro-padding {
+	margin-top: 4vh;
+}
+
+.page-header {
+	width: 75vw;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.email-icon {
+	background-image: url('../images/email-icon.png');
+	@include bg_img_contain();
+	height: 2vw;
+    width: 2vw;
+    align-items: center;
+}
+
+.social-links {
+	@include flexbox();
+	align-items: center;
+	justify-content: center;
+	a {
+		color: #333;
+		@include flexbox();
+		align-items: center;
+		i {
+			font-size: 1.5vw;
+			margin: 0 1vw;
+		}
+	}
+	a:hover {
+		i {
+			color: $orange;
+		}
 	}
 }
