@@ -3,6 +3,7 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	padding: 0;
 	h1 {
 		text-align: center;
 	}
@@ -24,6 +25,14 @@
 			}
 		}
 	}
+	.overcontent {
+		background-color: rgba(255,255,255,0.9);
+	    width: 100%;
+	}
+}
+
+#news-carousel:before {
+	background-color: rgba(255,255,255,0.9);
 }
 
 #top-footer {
