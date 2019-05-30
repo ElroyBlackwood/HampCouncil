@@ -39,6 +39,18 @@
 	    return max;
 	}
 
+	function getMaxHeight(sel) {
+		var maxHeight = 0;
+		$(sel).each(function(){
+		   if ($(this).height() > maxHeight) { 
+			   maxHeight = $(this).height(); 
+		   }
+		});
+		$(sel).each(function() {
+			$(this).height(maxHeight);
+		});
+	}
+
 	// square divs
 	function squareElement() {
 		console.log('square contnet');
@@ -143,13 +155,24 @@ $('.fitler_tag').click(function() {
 // ==========================================
 
 // ==========================================
-	// Load More functions
+	// carousel function
 // ==========================================
 
+// $(document).ready(function() {
+// 	console.log("size titles");
+// 	sizeCarouselTitle();
+// });
 
+$(window).load(function() {
+	sizeCarouselTitle();
+});
+
+function sizeCarouselTitle() {
+	getMaxHeight('.slick-active .news-carousel-title');
+}
 
 // ==========================================
-	// Load More functions end
+	// carousel function end
 // ==========================================
 })( jQuery );
 

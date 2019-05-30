@@ -13,6 +13,14 @@ a:hover {
 	text-decoration: none;
 }
 
+div:focus, p:focus, h1:focus, h2:focus, h3:focus, h4:focus, h5:focus, h6:focus, span:focus, a:focus {
+	outline: none;
+}
+
+div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:active, span:active, a:active {
+	outline: none;
+}
+
 .dimmed {
 	position: relative;
 }
@@ -76,7 +84,7 @@ a:hover {
 		align-items: center;
 		i {
 			font-size: 1.5vw;
-			margin: 0 1vw;
+			margin: 0 1.5vw;
 		}
 	}
 	a:hover {
@@ -84,4 +92,16 @@ a:hover {
 			color: $orange;
 		}
 	}
+}
+
+.carousel-control-next-icon {
+	background-image: url('../images/shevrons/right-white.png');
+	height: 4vw;
+	width: 2.5vw;
+}
+
+.carousel-control-prev-icon {
+	background-image: url('../images/shevrons/left-white.png');
+	height: 4vw;
+	width: 2.5vw;
 }
