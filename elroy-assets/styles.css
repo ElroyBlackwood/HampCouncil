@@ -15,7 +15,7 @@
 #story_wdg_wide a .wdg-container .wdg-overlay .read-more {justify-content: center}
 #story_wdg_wide{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-transition:ease .25s all;transition:ease .25s all;flex-wrap:nowrap;padding: 0;}
 #story_wdg_wide a{width:100%;margin:0;}
-#story_wdg_wide a .wdg-container{background-size:cover;background-position:center;background-repeat:no-repeat;width:100%;position:relative; min-height:425px}
+#story_wdg_wide a .wdg-container{background-size:cover;background-position:center;background-repeat:no-repeat;width:100%;position:relative;}
 #story_wdg_wide a .wdg-container .color-overlay{position:absolute;width:100%;height:100%;top:0;left:0;background-color:#F26640;opacity:0;z-index:9}
 #story_wdg_wide a .wdg-container .wdg-overlay{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%);-webkit-transition:ease .25s all;transition:ease .25s all;color:#fff;width:70%;text-align:center;z-index:10}
 #story_wdg_wide a .wdg-container .wdg-overlay h2{position:relative;top:0;color:#fff}
@@ -90,8 +90,8 @@ main-footer > .ul {list-style-type: none;}
 .slide-content img { width: 100%}
 .slide-content-img {}
 .slide-content a {text-decoration: none;}
-.slide-content a h3 {color: rgba(241,102,65,1.00); min-height: 100px}
-.slide-content a p{color: rgba(18,33,33,1.00); min-height: 130px}
+.slide-content a h3 {color: rgba(241,102,65,1.00);}
+.slide-content a p{color: rgba(18,33,33,1.00); }
 .hmp_black span {color: rgba(18,33,33,1.00); font-weight: 400}
 
 
@@ -113,6 +113,7 @@ div.social ul li {display:inline-block; font-size:1.5rem; margin:0 0.2rem}
 div.social ul li a {color: rgba(18,33,33,1.00)}
 div.social ul li a span.hidden {display:none}
 div.social ul li a:hover {color: rgba(241,102,65,1.00)}
+
 
 /*** FOOT SECTION 03 - SOCIAL END ***/
 
