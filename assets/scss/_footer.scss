@@ -4,6 +4,7 @@
 	background-position: center;
 	background-size: cover;
 	padding: 0;
+	height: 100%;
 	h1 {
 		text-align: center;
 	}
@@ -28,6 +29,7 @@
 	.overcontent {
 		background-color: rgba(255,255,255,0.9);
 	    width: 100%;
+	    padding: 0 0 8vh;
 	}
 }
 
@@ -41,7 +43,7 @@
 #middle-footer {
 	@include flexbox();
 	justify-content: center;
-	margin: 3vh 0 4vh;
+	padding: 3vh 0 4vh;
 	.flex-container {
 		width: 75vw;
 		justify-content: space-between;
