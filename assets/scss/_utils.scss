@@ -1,9 +1,24 @@
+$blue : #70D9F5;
+$orange : #F26640;
+
 .container-width {
 	width: 75vw;
 }
 
 html, body {
 	overflow-x: hidden;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+div:focus, p:focus, h1:focus, h2:focus, h3:focus, h4:focus, h5:focus, h6:focus, span:focus, a:focus {
+	outline: none;
+}
+
+div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:active, span:active, a:active {
+	outline: none;
 }
 
 .dimmed {
@@ -38,4 +53,55 @@ html, body {
 		top: 0;
 		color: #fff;
 	}
+}
+
+.intro-padding {
+	margin-top: 4vh;
+}
+
+.page-header {
+	width: 75vw;
+	margin-left: auto;
+	margin-right: auto;
+	text-align: center;
+}
+
+.email-icon {
+	background-image: url('../images/email-icon.png');
+	@include bg_img_contain();
+	height: 2vw;
+    width: 2vw;
+    align-items: center;
+}
+
+.social-links {
+	@include flexbox();
+	align-items: center;
+	justify-content: center;
+	a {
+		color: #333;
+		@include flexbox();
+		align-items: center;
+		i {
+			font-size: 1.5vw;
+			margin: 0 1.5vw;
+		}
+	}
+	a:hover {
+		i {
+			color: $orange;
+		}
+	}
+}
+
+.carousel-control-next-icon {
+	background-image: url('../images/shevrons/right-white.png');
+	height: 4vw;
+	width: 2.5vw;
+}
+
+.carousel-control-prev-icon {
+	background-image: url('../images/shevrons/left-white.png');
+	height: 4vw;
+	width: 2.5vw;
 }

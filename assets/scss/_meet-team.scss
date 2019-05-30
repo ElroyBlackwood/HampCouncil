@@ -1,0 +1,37 @@
+#team-members {
+	width: 75vw;
+	.team-member {
+		@include flexbox();
+		flex-wrap: wrap;
+	    padding: 0;
+	    justify-content: center;
+	    margin: 0 0 8vh;
+	    .team-member-img-container {
+	    	width: 30%;
+	    	margin: 0 2% 0 0;
+	    	.team-member-img {
+	    		@include bg_img_cover();
+	    		padding-top: 113.333333%;
+	    	}
+	    }
+		.team-member-content {
+			width: 68%;
+			h2 {
+
+			}
+			p{
+
+			}
+			a{
+				color: $blue;	
+				@include flexbox();
+				justify-content: flex-start;
+				align-items: center;
+				.email-icon {
+					margin: 0 1vw 0 0;
+				}
+			}
+		}
+	}
+}
+

@@ -7,4 +7,9 @@ include_once('post-filter.php');
 include_once('post-filter-ajax.php');
 include_once('post-filter-loadmore-ajax.php');
 include_once('news-post.php');
+include_once('team-members.php');
+include_once('news-carousel.php');
+include_once('our-stories.php');
+include_once('page-taxonomies.php');
+
 ?>
