@@ -11,8 +11,9 @@
 (function($) {
     $(function () {
         $('.slider-8').slick({
-		  infinite: false,
-		  speed: 300,
+		  autoplay:true,
+		  infinite: true,
+		  speed: 1000,
 		  slidesToShow: 4,
 		  slidesToScroll: 4,
 		  responsive: [
@@ -66,6 +67,10 @@
 										<img title="<?php the_title_attribute(); ?>" src="<?php the_post_thumbnail_url( 'medium' ); ?>"/>
 									<?php endif; ?>
 							 <?php the_excerpt(); ?>
+							 <div class="read-more hmp_black">
+								<div class="blue-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/blue-arrow.png);"></div>
+								<span>Read More</span>
+							</div>
 							</a>
 						</div>
 					<?php endwhile;

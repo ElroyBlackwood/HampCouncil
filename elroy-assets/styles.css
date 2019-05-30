@@ -1,4 +1,5 @@
 /*Elroy styles*/
+.hmp_black {color: rgba(18,33,33,1.00)}
 .hmp_blue {color: rgba(113,217,254,1.00)}
 .hmp_blue_bg {background: rgba(113,217,254,1.00); color: rgba(255,254,254,1.00)}
 .hmp_orange {color: rgba(241,102,65,1.00)}
@@ -11,6 +12,7 @@
 
 
 /***** WIDE STORY ********/
+#story_wdg_wide a .wdg-container .wdg-overlay .read-more {justify-content: center}
 #story_wdg_wide{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-transition:ease .25s all;transition:ease .25s all;flex-wrap:nowrap;padding: 0;}
 #story_wdg_wide a{width:100%;margin:0;}
 #story_wdg_wide a .wdg-container{background-size:cover;background-position:center;background-repeat:no-repeat;width:100%;position:relative; min-height:425px}
@@ -20,7 +22,7 @@
 #story_wdg_wide a .wdg-container .wdg-overlay p{position:absolute;top:50%;left:50%;-webkit-transform:translate(-50%, -50%);-moz-transform:translate(-50%, -50%);-ms-transform:translate(-50%, -50%);transform:translate(-50%, -50%);color:#fff;width:100%;opacity:0}
 #story_wdg_wide a .wdg-container .wdg-overlay span{position:relative;top:0;color:#fff}
 #story_wdg_wide a .wdg-container:hover{cursor:pointer}
-#story_wdg_wide a .wdg-container:hover .wdg-overlay h2{text-decoration:none}
+#story_wdg_wide a .wdg-container:hover .wdg-overlay h2{text-decoration:none;}
 #story_wdg_wide a .wdg-container:hover .wdg-overlay p{text-decoration:none}
 #story_wdg_wide a .wdg-container:hover .wdg-overlay a{text-decoration:none}
 
@@ -87,9 +89,11 @@ main-footer > .ul {list-style-type: none;}
 
 .slide-content {padding: 1em;}
 .slide-content img { width: 100%}
+.slide-content-img {}
 .slide-content a {text-decoration: none;}
-.slide-content a h3 {color: rgba(241,102,65,1.00)}
-.slide-content a p{color: rgba(18,33,33,1.00)}
+.slide-content a h3 {color: rgba(241,102,65,1.00); min-height: 100px}
+.slide-content a p{color: rgba(18,33,33,1.00); min-height: 130px}
+.hmp_black span {color: rgba(18,33,33,1.00); font-weight: 400}
 
 
 /*** FOOT SECTION 01 - NEWS END ***/
@@ -151,8 +155,13 @@ div.social ul li a:hover {color: rgba(241,102,65,1.00)}
   flex: 1;
 }
 
+/*** CONTACT FORM - START ***/
+.contactform button, .contactform input, .contactform optgroup, .contactform select, .contactform textarea, .contactform email { 
+	background-color:#F5F6F6;border: none; padding: 10px; width: 100%;}
+.wpcf7-form-control-wrap {color: blue;}
 
 
+/*** CONTACT FORM - END ***/
 
 
 /*end*/
