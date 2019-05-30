@@ -1,0 +1,74 @@
+.stories-carousel {
+	width: 75vw;
+	margin: auto;
+	.slide-content {
+		a {
+			
+			.wdg-container {
+				@include ease(all,0.2s);
+				@include bg_img_cover();
+				position: relative;
+				overflow: hidden;
+				.color-overlay {
+					@include overlay_cover();
+					background-color: #F26640;
+					opacity: 0;
+					z-index: 9;
+				}
+				.wdg-overlay {
+					@include overlay_center();
+					@include ease(all, 0.25s);
+					color: #fff;
+					width: 70%;
+					text-align: center;
+					z-index: 10;
+					pointer-events:none;
+					h2 {
+						// @include ease(all, 0.25s);
+						position: relative;
+						top: 0;
+						color: #fff;
+					}
+					p {
+						@include overlay_center();
+						color: #fff;
+						width: 100%;
+						opacity: 0;
+					}
+					.read-more {
+						@include flexbox();
+						align-items: center;
+						justify-content: center;
+						top: 0;
+						position: relative;
+						.blue-arrow {
+							@include bg_img_contain();
+							height: 1vw;
+							width: 2vw;
+						}
+						span {
+							// @include ease(all, 0.25s);
+							position: relative;
+							top: 0;
+							color: #fff;
+						}
+					}
+				}
+			}
+			.wdg-container:hover {
+				cursor: pointer;
+				.wdg-overlay {
+					h2 {
+						text-decoration: none;
+					}
+					p {
+						text-decoration: none;
+					}
+					a {
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}

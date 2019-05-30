@@ -66,12 +66,12 @@
 .slick-prev:before,
 .slick-next:before
 {
-    font-family: 'slick';
+    /*font-family: 'slick';*/
     font-size: 20px;
     line-height: 1;
 
     opacity: .75;
-    color: white;
+    /*color: white;*/
 
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -89,6 +89,15 @@
 .slick-prev:before
 {
     content: '←';
+    background-image: url('../../images/shevrons/left.png');
+    background-size: contain;
+    height: 4vw;
+    width: 4vw;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translateY(-50%);
+    left: -4vw;
 }
 [dir='rtl'] .slick-prev:before
 {
@@ -107,6 +116,15 @@
 .slick-next:before
 {
     content: '→';
+    background-image: url('../../images/shevrons/right.png');
+    background-size: contain;
+    height: 4vw;
+    width: 4vw;
+    position: absolute;
+    background-repeat: no-repeat;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 3vw;
 }
 [dir='rtl'] .slick-next:before
 {
@@ -178,7 +196,7 @@
 .slick-dots li button:before
 {
     font-family: 'slick';
-    font-size: 6px;
+    font-size: 1.1vw;
     line-height: 20px;
 
     position: absolute;

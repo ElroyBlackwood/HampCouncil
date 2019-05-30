@@ -7,15 +7,16 @@
 		        $('.stories-carousel').slick({
 				  infinite: false,
 				  speed: 300,
-				  slidesToShow: 4,
-				  slidesToScroll: 4,
+				  slidesToShow: 2,
+				  slidesToScroll: 2,
 				  arrows: true,
+				  dots: true,
 				  responsive: [
 					{
 					  breakpoint: 1024,
 					  settings: {
-						slidesToShow: 3,
-						slidesToScroll: 3,
+						slidesToShow: 2,
+						slidesToScroll: 2,
 						infinite: true,
 						dots: true
 					  }
@@ -23,20 +24,10 @@
 					{
 					  breakpoint: 600,
 					  settings: {
-						slidesToShow: 2,
-						slidesToScroll: 2
-					  }
-					},
-					{
-					  breakpoint: 480,
-					  settings: {
 						slidesToShow: 1,
 						slidesToScroll: 1
 					  }
-					}
-					// You can unslick at a given breakpoint now by adding:
-					// settings: "unslick"
-					// instead of a settings object
+					},
 				  ]
 				});
 		    });
@@ -56,7 +47,7 @@
 
 		if ( $the_query->have_posts() ) { ?>
 		<div class="slick-wrapper">
-			<div class="news-carousel">
+			<div class="stories-carousel">
 		<?php while ( $the_query->have_posts() ) {
 				$the_query->the_post(); ?>
 				<?php $feat_img = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
@@ -66,6 +57,8 @@
 			        		<div class="color-overlay"></div>
 			        		<div class="wdg-overlay">
 			        			<h2><?php echo get_the_title(); ?></h2>
+			        			<?php $excert = wp_trim_words(get_the_content(), 15) ?>
+			        			<p><?php echo $excert; ?></p>
 			        			<div class="read-more">
 				        			<div class="blue-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/blue-arrow.png);"></div>
 				        			<span>Read More</span>

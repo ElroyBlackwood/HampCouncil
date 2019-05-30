@@ -59,9 +59,9 @@
 				$('.news-carousel').on('afterChange', function(slick, currentSlide){
 					sizeCarouselTitle();
 				});
-				$('.news-carousel').on('beforeChange', function(slick, currentSlide){
-					sizeCarouselTitle();
-				});
+				// $('.news-carousel').on('beforeChange', function(slick, currentSlide){
+				// 	sizeCarouselTitle();
+				// });
 				$('.news-carousel').on('swipe', function(slick, direction){
 					sizeCarouselTitle();
 				});
@@ -73,7 +73,14 @@
 		})( jQuery );
 		</script>
 		<?php
-		$catquery = new WP_Query( 'cat=4&posts_per_page=-1' ); ?>
+		$tags = get_the_tags(get_the_ID());
+		$tag_id = $tags[0]->term_id;
+		$args = array(
+			'cat' => 4,
+			'posts_per_page' => -1,
+			'tag__not_in' => $tag_id,
+		);
+		$catquery = new WP_Query( $args ); ?>
 		<div class="slick-wrapper">
 			<div class="news-carousel">
 				<?php while($catquery->have_posts()) : $catquery->the_post(); ?>
