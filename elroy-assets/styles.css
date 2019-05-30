@@ -58,12 +58,11 @@ main-footer > .ul {list-style-type: none;}
 
 
 /*** FOOT SECTION 01 - NEWS START***/
-.news {min-height: 800px; background-repeat: no-repeat; background-position: center; background-size: cover;}
+.news { background-repeat: no-repeat; background-position: center; background-size: cover;}
 .overcontent {position: relative}
 
 .desaturate {
   width: 100%;
-  min-height: 800px;
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
