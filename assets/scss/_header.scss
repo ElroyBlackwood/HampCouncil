@@ -289,3 +289,208 @@ header {
 		transform: translateX(-50%);
 	}
 }
+
+// responsive 
+
+@include respond-below(xs) {
+	header {
+		
+		#header-menu {
+			
+			#top-bar {
+				display: none;
+				#top-bar-menu {
+					#menu-top-bar {
+						li {
+							
+						}
+						li.tb-contact {
+							
+							a {
+								
+							}
+						}
+						li.tb-contact:hover {
+							
+							a {
+								
+							}
+						}
+						li.tb-news {
+							
+						}
+						li.tb-news:hover {
+							
+							a {
+							}
+						}
+					}
+				}
+				#ajax-search {
+					
+					#ajaxsearchlite1 {
+						
+						.probox {
+							
+							.promagnifier {
+								
+							}
+							.proinput {
+								
+								form {
+									
+									input {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.header-nav {
+				display: none;
+				#logo_lnk {
+					
+					.logo {
+						
+					}
+				}
+				.header-nav-menu {
+				
+					li {
+						
+						a {
+
+						}
+					}
+					.dropdown {
+						
+						.dropdown-toggle::after {
+							
+						}
+						.dropdown-menu {
+							
+							li {
+								
+								a {
+									
+								}
+							}
+						}
+					}
+					.dropdown:hover {
+						.dropdown-menu {
+						
+						}
+					}
+				}
+			}
+			li {
+				
+				a {
+					
+				}
+			}
+			li.active {
+				
+			}
+			li:hover {
+				
+				a {
+					
+				}
+			}
+			li.active:hover {
+				
+			}
+		}
+		#banner {
+			
+			#static-banner-image {
+				
+				#static-banner-overlay {
+					
+				    h1 {
+				    	
+				    }
+				}
+				.scroll-dwn {
+				
+				}
+			}
+			#carouselHeader{
+				.carousel-indicators {
+					
+					li {
+					
+					}
+					li.active {
+						
+					}
+				}
+			}
+			.carousel-item {
+				
+				.slide-overlay {
+					
+				    h1 {
+				    	width: 90%;
+				    	line-height: 1.1;
+				    	font-size: 6vh;
+				    	margin: auto;
+				    }
+				}
+			}
+		}
+		.letterbox#banner {
+			#featpost {
+				.static-banner-image {
+					height: 40vh;
+					#static-banner-overlay {
+						
+					}
+				}
+			}
+		}
+		.letterbox#banner:after {
+			top: 37vh;
+		}
+		#banner {
+			#featpost {
+				
+				.static-banner-image {
+					
+					#static-banner-overlay {
+						
+						.static_banner_overlay_content {
+							width: 95%;
+							h3 {
+
+							}
+							h2 {
+
+							}
+							p {
+
+							}
+							.read-more {
+								
+								.blue-arrow {
+									height: 4vw;
+									width: 7vw;
+								}
+								span {
+								
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		#banner:after {
+			
+		}
+	}
+}

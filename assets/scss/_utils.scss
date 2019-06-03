@@ -21,6 +21,10 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 	outline: none;
 }
 
+p, a, label {
+	font-size: 1.2vw;
+}
+
 .dimmed {
 	position: relative;
 }
@@ -104,4 +108,70 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 	background-image: url('../images/shevrons/left-white.png');
 	height: 4vw;
 	width: 2.5vw;
+}
+// ======================================
+// text content blocks
+// ======================================
+
+.text-content-block {
+	padding: 0;
+    width: 75vw;
+    margin: 0 auto 12vh;
+	.title {
+		@include flexbox();
+		justify-content: flex-start;
+		align-items: center;
+		margin: 0 0 2vh;
+		.text-content-title-icon {
+			@include bg_img_contain;
+			height: 4vh;
+			width: 4vw;
+			background-position: left;
+		}
+		h2 {
+			margin: 0;
+		}
+	}
+	.text-content {
+
+	}
+}
+
+// ======================================
+// text content blocks end
+// ====================================== 
+
+// ======================================
+	// Title
+// ======================================
+
+.page-title {
+	width: 75vw;
+	text-align: center;
+	margin: 8vh auto;
+}
+
+// ======================================
+	// Title end
+// ======================================
+
+@include respond-below(xs) {
+	.read-more {
+		.blue-arrow {
+			height: 4vw;
+		    width: 7vw;
+		    margin: 0 2vw 0 0;
+		}
+		span {
+		}
+	}
+	.carousel-control-next-icon {
+		height: 9vw;
+		width: 7.5vw;
+	}
+
+	.carousel-control-prev-icon {
+		height: 9vw;
+		width: 7.5vw;
+	}
 }

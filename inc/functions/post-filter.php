@@ -6,12 +6,15 @@ function outputPostFilter() {
 		<h1>News</h1>
 		<div id="post-filter">
 			<form action="<?php echo site_url() ?>/wp-admin/admin-ajax.php" method="POST" id="filter">
+				<div class="filter-links">
 				<label><strong>Show me news on:</strong></label>
 				<?php
+				// output form filter tags for desktop. 
 					$tags = get_tags(array('get'=>'all'));
 					if( $tags ) : 
 						foreach ( $tags as $tag ) :
 							if ($tag->term_id == '10') {
+								// all news tag
 								echo "<label class='chk-wrapper'>";
 					 			echo "<input class='fitler_tag' type='checkbox' value='$tag->term_id' name='$tag->name' id='filter_tag_$tag->term_id'>";
 					 			echo "<label class='filter_tag_$tag->term_id active' for='filter_tag_$tag->term_id'>$tag->name</label>";
@@ -26,7 +29,39 @@ function outputPostFilter() {
 						endforeach;
 					endif;
 				?>
-			
+				</div>
+				<div class="hamburger-container">
+					<div class="hamburger">
+						<div class="hamburger-bar"></div>
+						<div class="hamburger-bar"></div>
+						<div class="hamburger-bar"></div>
+					</div>
+
+					<div class="filter-dropdown">
+						<?php
+						// output form filter tags for mobile. 
+							$tags = get_tags(array('get'=>'all'));
+							if( $tags ) : 
+								foreach ( $tags as $tag ) :
+									if ($tag->term_id == '10') {
+										// all news tag
+										echo "<label class='chk-wrapper'>";
+							 			echo "<input class='fitler_tag' type='checkbox' value='$tag->term_id' name='$tag->name' id='filter_tag_$tag->term_id'>";
+							 			echo "<label class='filter_tag_$tag->term_id active' for='filter_tag_$tag->term_id'>$tag->name</label>";
+							 			echo "</label>";
+									} else {
+										echo "<label class='chk-wrapper'>";
+							 			echo "<input class='fitler_tag' type='checkbox' value='$tag->term_id' name='$tag->name' id='filter_tag_$tag->term_id'>";
+							 			echo "<label class='filter_tag_$tag->term_id' for='filter_tag_$tag->term_id'>$tag->name</label>";
+							 			echo "</label>";
+									}
+									
+								endforeach;
+							endif;
+						?>
+					</div>
+				</div>
+
 				<input type="hidden" name="action" value="myfilter">
 				<input type="hidden" name="fitler_tag_id" value="" id="fitler_tag_id">
 			</form>

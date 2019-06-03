@@ -64,3 +64,78 @@
 
 #bottom-footer {
 }
+
+@include respond-below(xs) {
+	#news-carousel {
+	
+		h1 {
+			
+		}
+		.news-carousel {
+			width: 90vw;
+			margin: auto;
+		}
+		.container {
+			padding: 0;
+		}
+		.slide-content {
+			padding: 0;
+			a {
+				h3 {
+					
+				}
+				.slide-thumbnail {
+					
+				}
+			}
+			.read-more {
+				span {
+					
+				}
+			}
+		}
+		.overcontent {
+			padding: 0 0 5vh;
+		}
+	}
+
+	#news-carousel:before {
+		
+	}
+
+	#top-footer {
+	}
+
+	#middle-footer {
+		
+		.flex-container {
+			justify-content: center;
+			#business-hamp-logo {
+				order: 1;
+				width: 70%;
+				margin: 0 0 5vh;
+			}
+			#hamp-cc-logo {
+				order: 2;
+			    width: 70%;
+			    margin: 0 0 5vh;
+			}
+			.social-links {
+				order: 3;
+			    width: 90vw;
+				a {
+					i {
+						font-size: 8vw;
+					    margin: 0 5vw;
+					}
+				}
+				p {
+					
+				}
+			}
+		}
+	}
+
+	#bottom-footer {
+	}
+}

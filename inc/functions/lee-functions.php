@@ -11,5 +11,7 @@ include_once('team-members.php');
 include_once('news-carousel.php');
 include_once('our-stories.php');
 include_once('page-taxonomies.php');
-
+include_once('location-map.php');
+include_once('text-content-block.php');
+include_once('page-title.php');
 ?>

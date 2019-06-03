@@ -74,12 +74,20 @@
 		</script>
 		<?php
 		$tags = get_the_tags(get_the_ID());
-		$tag_id = $tags[0]->term_id;
-		$args = array(
-			'cat' => 4,
-			'posts_per_page' => -1,
-			'tag__not_in' => $tag_id,
-		);
+		if(!empty($tags)) {
+			$tag_id = $tags[0]->term_id;
+			$args = array(
+				'cat' => 4,
+				'posts_per_page' => -1,
+				'tag__not_in' => $tag_id,
+			);
+		} else {
+			$args = array(
+				'cat' => 4,
+				'posts_per_page' => -1,
+			);
+		}
+		
 		$catquery = new WP_Query( $args ); ?>
 		<div class="slick-wrapper">
 			<div class="news-carousel">

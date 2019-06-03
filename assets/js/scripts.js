@@ -9,7 +9,7 @@
 	    function checkWidth() {
 	        var windowsize = $(window).width();
 	        if (windowsize > 255 && windowsize < 601) {
-
+	        	squareElement();
 	        } else if (windowsize > 600 && windowsize < 1201) {
 	        	squareElement();
 	        } else if (windowsize > 1200 && windowsize < 1601) {
@@ -155,6 +155,28 @@ $('.fitler_tag').click(function() {
 // ==========================================
 
 // ==========================================
+	// Filter mobile
+// ==========================================
+$('.hamburger-container').on('touch click', function(e) {
+	var hamburger = $(this);
+
+	if (hamburger.hasClass('active')) {
+		hamburger.find('.filter-dropdown').animate({opacity : 0}, 250, function() {
+			hamburger.find('.filter-dropdown').css('display', 'none');
+			hamburger.removeClass('active');
+		});
+	} else {
+		hamburger.addClass('active');
+		hamburger.find('.filter-dropdown').css('display', 'flex');
+		hamburger.find('.filter-dropdown').animate({opacity : 1}, 250);
+	}
+	
+});
+// ==========================================
+	// Filter mobile End
+// ==========================================
+
+// ==========================================
 	// carousel function
 // ==========================================
 
@@ -174,6 +196,8 @@ function sizeCarouselTitle() {
 // ==========================================
 	// carousel function end
 // ==========================================
+
+
 })( jQuery );
 
 

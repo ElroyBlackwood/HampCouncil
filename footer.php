@@ -50,7 +50,7 @@
 <!--- FOOT SECTION 03 - SOCIAL START -->
 	<div id="middle-footer">
 		<div class="flex-container py-4">
- 			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/footerlogo.png" width="190px" height="60px" />
+ 			<img id="business-hamp-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/footerlogo.png" width="190px" height="60px" />
 			<div class="social-links">
 				<p>Connect with us</p>
 			<?php
@@ -71,7 +71,7 @@
 				endif;
 			?>
 			</div>
-			<img src="<?php echo get_template_directory_uri(); ?>/assets/images/HCC-logo.png" width="190px" height="52px" />
+			<img id="hamp-cc-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/HCC-logo.png" width="190px" height="52px" />
 		</div>
 	</div>
 <!--- FOOT SECTION 03 - SOCIAL END -->
@@ -105,12 +105,6 @@
 		ga('send', 'pageview');
 		</script>
 
-		<script async defer
-		    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB2naPwVfA54GAnMCuatv8kvgrhDj8TO5o&callback=initMap">
-		    </script>
-
 	</body>
 </html>
 
-	</body>
-</html>

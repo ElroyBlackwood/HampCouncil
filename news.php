@@ -6,4 +6,6 @@
 
 <?php outputPostFilter(); ?>
 
+<?php outputTextContentBlock('updates_block'); ?>
+
 <?php get_footer(); ?>

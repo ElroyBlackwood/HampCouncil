@@ -1,0 +1,19 @@
+#google-maps {
+	padding: 0;
+	width: 75vw;
+	margin: 8vh auto;
+	h1 {
+		text-align: center;
+		margin: 0 0 4vh;
+	}
+	#gmap {
+		height: 90vh;
+	}
+	.read-more {
+		margin: 1vh 0;
+	    justify-content: flex-end; 
+	    span {
+	    	color: #333;
+	    }
+	}
+}

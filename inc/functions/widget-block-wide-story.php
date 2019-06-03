@@ -1,11 +1,11 @@
 <?php
     function outputNewsWdgWide() {
         
-        if( have_rows('home_story_wide', 'option') ):
+        if( have_rows('home_story_wide') ):
         ?>
         <div class="container-fluid" id="story_wdg_wide">
         <?php
-            while ( have_rows('home_story_wide', 'option') ) : the_row();
+            while ( have_rows('home_story_wide') ) : the_row();
             $wdg_content = get_sub_field('wide_text_content');
             $feat_img = get_sub_field('wide_background_image');
             $link = get_sub_field('wide_link');
