@@ -157,10 +157,31 @@ p, a, label {
 	margin: 8vh auto;
 }
 
+.in-page-title {
+	width: 75vw;
+	text-align: center;
+	margin: 4vh auto;
+}
+
 // ======================================
 	// Title end
 // ======================================
 
+// ======================================
+	// Page Content
+// ======================================
+
+#page_content {
+	padding: 0;
+	width: 60vw;
+	h3 {
+		color: #70D9F5;
+	}
+}
+
+// ======================================
+	// Page Content end
+// ======================================
 @include respond-below(xs) {
 	.read-more {
 		.blue-arrow {

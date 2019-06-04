@@ -46,32 +46,37 @@
 		$the_query = new WP_Query( $args );
 
 		if ( $the_query->have_posts() ) { ?>
-		<div class="slick-wrapper">
-			<div class="stories-carousel">
-		<?php while ( $the_query->have_posts() ) {
-				$the_query->the_post(); ?>
-				<?php $feat_img = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
-				<div class="slide-content">
-			        <a href="<?php the_permalink(); ?>">
-			        	<div class="wdg-container square dimmed" style="background-image: url(<?php echo $feat_img; ?>);">
-			        		<div class="color-overlay"></div>
-			        		<div class="wdg-overlay">
-			        			<h2><?php echo get_the_title(); ?></h2>
-			        			<?php $excert = wp_trim_words(get_the_content(), 15) ?>
-			        			<p><?php echo $excert; ?></p>
-			        			<div class="read-more">
-				        			<div class="blue-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/blue-arrow.png);"></div>
-				        			<span>Read More</span>
+		<div class="container-fluid" id="our-stories">
+			<div class="in-page-title orange-text">
+				<h1>Our Stories</h1>
+			</div>
+			<div class="slick-wrapper">
+				<div class="stories-carousel">
+			<?php while ( $the_query->have_posts() ) {
+					$the_query->the_post(); ?>
+					<?php $feat_img = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
+					<div class="slide-content">
+				        <a href="<?php the_permalink(); ?>">
+				        	<div class="wdg-container square dimmed" style="background-image: url(<?php echo $feat_img; ?>);">
+				        		<div class="color-overlay"></div>
+				        		<div class="wdg-overlay">
+				        			<h2><?php echo get_the_title(); ?></h2>
+				        			<?php $excert = wp_trim_words(get_the_content(), 15) ?>
+				        			<p><?php echo $excert; ?></p>
+				        			<div class="read-more">
+					        			<div class="blue-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/blue-arrow.png);"></div>
+					        			<span>Read More</span>
+					        		</div>
 				        		</div>
-			        		</div>
-			        	</div>
-			        </a>
+				        	</div>
+				        </a>
+					</div>
+			<?php }
+				wp_reset_postdata();
+			} else {
+			}
+		?>
 				</div>
-		<?php }
-			wp_reset_postdata();
-		} else {
-		}
-	?>
 			</div>
 		</div>
 <?php
