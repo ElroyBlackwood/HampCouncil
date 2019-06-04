@@ -7,10 +7,12 @@ function outputWidgetBlock() { ?>
 	if ($display_block == "yes") {
 		$block_title = get_field('block_title');
 		$hex = get_field('image_overlay_colour');
+		$hex = "#" . $hex;
 		list($r, $g, $b) = sscanf($hex, "#%02x%02x%02x");
-		$rgb_col = "$r, $g, $b, 0.8";
+		$rgb_col = "$r, $g, $b, 0.9";
 		$bg_img = get_field('wdg_background_image');
 		$text_col = get_field('text_colour');
+		$text_col = "#" . $text_col;
 		?>
 		<style type="text/css">
 			/*#wdgt_block:after {
@@ -27,7 +29,7 @@ function outputWidgetBlock() { ?>
 				transform: translateX(-50%);
 			}*/
 		</style>
-		<div class="container-fluid" id="wdgt_block" style="background: linear-gradient( rgba(<?php echo $rgb_col; ?>), rgba(<?php echo $rgb_col; ?>) ), url(<?php echo $bg_img['url']; ?>); background-repeat: no-repeat; background-position: center; background-size: cover; color: <?php echo $text_col; ?>">
+		<div class="container-fluid" id="wdgt_block" style="background: linear-gradient( rgba(<?php echo $rgb_col; ?>), rgba(<?php echo $rgb_col; ?>) ), url(<?php echo $bg_img['url']; ?>); background-repeat: no-repeat; background-position: center; background-size: cover; color: <?php echo $text_col; ?>;">
 			<h1><?php echo $block_title; ?></h1>
 			<div class="widget-container container-width">
 	<?php
