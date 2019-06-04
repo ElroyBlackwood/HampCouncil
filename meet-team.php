@@ -3,7 +3,7 @@
 ?>
 
 <?php get_header(); ?>
-<div class="page-header intro-padding">
+<div class="page-title">
 	<h1><?php echo get_the_title(); ?></h1>
 </div>
 <?php outputTeamMembers(); ?>

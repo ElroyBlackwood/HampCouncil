@@ -182,6 +182,20 @@ p, a, label {
 // ======================================
 	// Page Content end
 // ======================================
+
+// ======================================
+	// shiftnav hacks
+// ======================================
+#shiftnav-main {
+	#logo_lnk {
+		.logo {
+			@include bg_img_contain();
+			padding-top: 20%;
+			background-position: center;
+		}
+	}
+}
+
 @include respond-below(xs) {
 	.read-more {
 		.blue-arrow {
@@ -200,5 +214,11 @@ p, a, label {
 	.carousel-control-prev-icon {
 		height: 9vw;
 		width: 7.5vw;
+	}
+
+	#page_content {
+		width: 80vw;
+		h3 {
+		}
 	}
 }

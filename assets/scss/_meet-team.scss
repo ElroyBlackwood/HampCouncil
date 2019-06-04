@@ -35,3 +35,34 @@
 	}
 }
 
+@include respond-below(xs) {
+	#team-members {
+		width: 90vw;
+		.team-member {
+			flex-direction: column;
+		    .team-member-img-container {
+		    	width: 100%;
+		    	.team-member-img {
+		    		padding-top: 100%;
+		    		margin: 0 0 3vh;
+		    	}
+		    }
+			.team-member-content {
+				width: 100%;
+				h2 {
+
+				}
+				p{
+
+				}
+				a{
+					
+					.email-icon {
+						height: 6vw;
+					    width: 6vw;
+					}
+				}
+			}
+		}
+	}
+}

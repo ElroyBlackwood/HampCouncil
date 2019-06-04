@@ -9,6 +9,7 @@ header {
 		width: 75vw;
 		transform: translateX(-50%);
 		left: 50%;
+		@include ease(all,0.25s);
 		#top-bar {
 			@include flexbox();
 			justify-content: flex-end;
@@ -74,10 +75,14 @@ header {
 		.header-nav {
 			@include flexbox();
 			align-items: center;
+			width: 75vw;
+			margin: auto;
+			height: 100%;
 			#logo_lnk {
 				position: absolute;
 				width: 30%;
 				.logo {
+					@include ease(all,0.25s);
 					@include bg_img_contain();
 					padding-top: 20%;
 					background-position: left center;

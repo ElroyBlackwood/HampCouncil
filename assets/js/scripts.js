@@ -22,6 +22,7 @@
 	    }
 	    // Execute on load
 	    checkWidth();
+	    shiftNavhack();
 	    // Bind event listener
 	    $(window).resize(checkWidth);
 	    
@@ -197,6 +198,37 @@ function sizeCarouselTitle() {
 	// carousel function end
 // ==========================================
 
+// ==========================================
+	// shiftnav
+// ==========================================
+
+function shiftNavhack() {
+	var html_logo = '<a href="http://localhost/hampcouncil" id="logo_lnk"><div class="logo" style="background-image: url(http://localhost/hampcouncil/wp-content/themes/HampCouncil/assets/images/logo.png);"></div></a>';
+	$('.shiftnav-site-title').html(html_logo);
+}
+
+// ==========================================
+	// shiftnav end
+// ==========================================
+
+// ==========================================
+	// sticky menu
+// ==========================================
+
+$(document).scroll(function() {
+	// var scroll_pos = $('header').outerHeight();
+	// scroll_pos = scroll_pos / 2;
+	console.log('scroll');
+	if ( $(document).scrollTop() >= 2 ) {
+		$('#header-menu').addClass("sticky");
+	} else {
+		$('#header-menu').removeClass("sticky");
+	}
+});
+
+// ==========================================
+	// sticky menu end
+// ==========================================
 
 })( jQuery );
 
