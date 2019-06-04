@@ -14,4 +14,5 @@ include_once('page-taxonomies.php');
 include_once('location-map.php');
 include_once('text-content-block.php');
 include_once('page-title.php');
+include_once('contact-details-text-block.php');
 ?>

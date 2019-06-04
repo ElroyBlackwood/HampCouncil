@@ -116,7 +116,7 @@ p, a, label {
 .text-content-block {
 	padding: 0;
     width: 75vw;
-    margin: 0 auto 12vh;
+    margin: 0 auto 5vh;
 	.title {
 		@include flexbox();
 		justify-content: flex-start;
@@ -134,6 +134,12 @@ p, a, label {
 	}
 	.text-content {
 
+	}
+}
+
+#location_map_top_content {
+	.text-content-title-icon {
+		height: 7vh;
 	}
 }
 
