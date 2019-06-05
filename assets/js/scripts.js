@@ -23,6 +23,7 @@
 	    // Execute on load
 	    checkWidth();
 	    shiftNavhack();
+	    triggerSticky();
 	    // Bind event listener
 	    $(window).resize(checkWidth);
 	    
@@ -232,15 +233,16 @@ function shiftNavhack() {
 // ==========================================
 
 $(document).scroll(function() {
-	// var scroll_pos = $('header').outerHeight();
-	// scroll_pos = scroll_pos / 2;
-	console.log('scroll');
+	triggerSticky();
+});
+
+function triggerSticky() {
 	if ( $(document).scrollTop() >= 2 ) {
 		$('#header-menu').addClass("sticky");
 	} else {
 		$('#header-menu').removeClass("sticky");
 	}
-});
+}
 
 // ==========================================
 	// sticky menu end
@@ -251,11 +253,60 @@ $(document).scroll(function() {
 // ==========================================
 
 $(document).on('mouseenter', '.dropdown', function() {
-	console.log('mouse enter');
+	// console.log('mouse enter');
+	if($('.active-dd').length) {
+		$('.active-dd').each(function() {
+			$(this).removeClass('active-dd');
+		});
+	} else {
+		
+	}
 	var menuItem = $(this);
 	var dropdown = menuItem.find('.dropdown-menu');
 	dropdown.addClass('active-dd');
 });
+
+$(document).on('mouseenter', '#header-menu', function(event) {
+	if($('.active-dd').length) {
+		event.stopImmediatePropagation();
+	} else {
+
+	}
+});
+
+$(document).on('mouseleave', '#header-menu', function(event) {
+	$('.active-dd').each(function() {
+		$(this).removeClass('active-dd');
+	});
+});
+
+
+// $(document).on('mouseleave', '.dropdown', function() {
+// 	// console.log("mouse leave");
+// 	var isHoveredheader = $('#header-menu').is(":hover");
+// 	var menuItem = $(this);
+// 	var dropdown = menuItem.find('.dropdown-menu');
+// 	$('dropdown-menu').each(function() {
+// 		$(this).removeClass('active-dd');
+// 	});
+// 	// console.log("is hovered = " + isHovered);
+// 	// do {
+// 	// 	isHovered = $('#header-menu').is(":hover");
+// 	// 	console.log("still hovvered");
+// 	// }
+// 	// while(isHovered == false);
+// 	// var menuItem = $(this);
+// 	// var dropdown = menuItem.find('.dropdown-menu');
+// 	// dropdown.removeClass('active-dd');
+// 	if (isHoveredheader == false) {
+// 		$('dropdown-menu').each(function() {
+// 			$(this).removeClass('active-dd');
+// 		});
+// 		// dropdown.removeClass('active-dd');
+// 	} else {
+// 		// console.log("still hovered");
+// 	}
+// });
 
 // ==========================================
 	// nav menu hover end
