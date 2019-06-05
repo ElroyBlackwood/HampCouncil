@@ -119,20 +119,31 @@ header {
 							}
 						}
 					}
-				}
-				.dropdown:hover {
-					.dropdown-menu {
+					.active-dd {
 						@include flexbox();
 						min-width: auto;
 					    padding: 0;
 					    border: none;
 					    border-radius: 0;
 					    opacity: 1;
-					    background: rgba(0,0,0,0.5);
+					    background: rgba(18,33,33,0.9);
 					    width: auto;
 					    margin: 0;
 					}
 				}
+				// .dropdown:hover {
+				// 	.dropdown-menu {
+				// 		@include flexbox();
+				// 		min-width: auto;
+				// 	    padding: 0;
+				// 	    border: none;
+				// 	    border-radius: 0;
+				// 	    opacity: 1;
+				// 	    background: rgba(18,33,33,0.9);
+				// 	    width: auto;
+				// 	    margin: 0;
+				// 	}
+				// }
 			}
 		}
 		li {
@@ -146,7 +157,7 @@ header {
 		}
 		li:hover {
 			cursor: pointer;
-			background-color: rgba(0,0,0,0.5);
+			background-color: rgba(18,33,33,0.9);
 			a {
 				text-decoration: none;
 			}

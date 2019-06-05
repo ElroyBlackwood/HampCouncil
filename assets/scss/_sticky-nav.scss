@@ -19,5 +19,12 @@
 				padding-top: 15%;
 			}
 		}
+		.header-nav-menu {
+			.dropdown {
+				.dropdown-menu {
+					top: calc(100% + 1vh + 1px);
+				}
+			}
+		}
 	}
 }

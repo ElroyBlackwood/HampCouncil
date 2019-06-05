@@ -56,7 +56,8 @@
         wp_register_script('slick-js', get_template_directory_uri() . '/assets/plugins/slick/slick.min.js', array('jquery'), '1.0.0', true); // Custom scripts
         wp_enqueue_script('slick-js');
         
-        wp_register_script('lgo-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), '1.0.0', true); // Custom scripts
+        // wp_register_script('lgo-scripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery'), '1.0.0', true); // Custom scripts
+        wp_register_script('lgo-scripts', get_template_directory_uri() . '/assets/scripts/scripts.min.js', array('jquery'), '1.0.0', true); // Custom scripts
         wp_enqueue_script('lgo-scripts');
 
         wp_register_script('elroy-scripts', get_template_directory_uri() . '/elroy-assets/scripts.js', array('jquery'), '1.0.0', true); // Custom scripts

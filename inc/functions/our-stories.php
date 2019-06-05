@@ -35,13 +35,20 @@
 		</script>
 		<?php
 		$tags = get_the_tags(get_the_ID());
-		$tag_id = $tags[0]->term_id;
-		// echo "tag id = " . $tag_id;
-		// var_dump($tags);
-		$args = array(
-			'posts_per_page' => -1,
-			'tag_id' => $tag_id,
-		);
+		if (!empty($tags)) {
+			$tag_id = $tags[0]->term_id;
+			// echo "tag id = " . $tag_id;
+			// var_dump($tags);
+			$args = array(
+				'posts_per_page' => -1,
+				'tag_id' => $tag_id,
+			);
+		} else {
+			$args = array(
+				'posts_per_page' => -1,
+				'category_name' => 'News',
+			);
+		}
 
 		$the_query = new WP_Query( $args );
 

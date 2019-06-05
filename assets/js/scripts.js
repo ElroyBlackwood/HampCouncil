@@ -246,4 +246,18 @@ $(document).scroll(function() {
 	// sticky menu end
 // ==========================================
 
+// ==========================================
+	// nav menu hover
+// ==========================================
+
+$(document).on('mouseenter', '.dropdown', function() {
+	console.log('mouse enter');
+	var menuItem = $(this);
+	var dropdown = menuItem.find('.dropdown-menu');
+	dropdown.addClass('active-dd');
+});
+
+// ==========================================
+	// nav menu hover end
+// ==========================================
 })( jQuery );
