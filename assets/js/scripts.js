@@ -274,7 +274,7 @@ $(document).on('mouseenter', '.dropdown', function() {
 
 	}
 	var menuItem = $(this);
-	var dropdown = menuItem.find('.dropdown-menu');
+	var dropdown = menuItem.find('.dropdown-menu-custom');
 	dropdown.addClass('active-dd');
 });
 
@@ -296,4 +296,70 @@ $(document).on('mouseleave', '#header-menu', function(event) {
 // ==========================================
 	// nav menu hover end
 // ==========================================
+
+// ==========================================
+	// elm in viewport detect 
+// ==========================================
+$(document).ready(function(){
+	$('.dropdown-menu-custom').each(function() {
+		$(this).addClass('left-menu');
+	});
+});
+
+var isOutOfViewport = function (elem) {
+
+	// Get element's bounding
+	var bounding = elem[0].getBoundingClientRect();
+
+	// Check if it's out of the viewport on each side
+	var out = {};
+	out.top = bounding.top < 0;
+	out.left = bounding.left < 0;
+	out.bottom = bounding.bottom > (window.innerHeight || document.documentElement.clientHeight);
+	out.right = bounding.right > (window.innerWidth || document.documentElement.clientWidth);
+	out.any = out.top || out.left || out.bottom || out.right;
+	out.all = out.top && out.left && out.bottom && out.right;
+
+	return out;
+
+};
+
+$(document).on('mouseenter', '.dropdown', function() {
+	var elm = $(this).find('.active-dd');
+	// console.log(elm);
+	var isOut = isOutOfViewport(elm);
+	var outofVP = false;
+	if (isOut.top) {
+		outofVP = true;
+	}
+
+	if (isOut.left) {
+		outofVP = true;
+	}
+
+	if (isOut.bottom) {
+		outofVP = true;
+	}
+
+	if (isOut.right) {
+		outofVP = true;
+	}
+	if (isOut.any) {
+		outofVP = true;
+	}
+	if (isOut.all) {
+		outofVP = true;
+	}
+
+	if (outofVP) {
+		elm.removeClass('left-menu');
+		elm.addClass('right-menu');
+	}
+});
+
+
+// ==========================================
+	// elm in viewport end
+// ==========================================
+
 })( jQuery );

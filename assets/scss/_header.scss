@@ -106,7 +106,30 @@ header {
 					.dropdown-toggle::after {
 						display: none;
 					}
-					.dropdown-menu {
+					.left-menu {
+						left: 0;
+					}
+
+					.right-menu {
+						right: 0;
+					}
+					.dropdown-menu-custom {
+						position: absolute;
+					    top: 100%;
+					    z-index: 1000;
+					    display: none;
+					    float: left;
+					    min-width: 10rem;
+					    padding: .5rem 0;
+					    margin: .125rem 0 0;
+					    font-size: 1rem;
+					    color: #212529;
+					    text-align: left;
+					    list-style: none;
+					    background-color: #fff;
+					    background-clip: padding-box;
+					    border: 1px solid rgba(0,0,0,.15);
+					    border-radius: .25rem;
 						@include ease(all, 0.25s);
 						opacity: 0;
 						li {
@@ -219,10 +242,10 @@ header {
 			.slide-overlay {
 				position: absolute;
 			    top: 55%;
-			    left: 50%;
+			    left: 35%;
 			    transform: translate(-50%,-50%);
 			    color: #fff;
-			    width: 75vw;
+			    width: 40%;
 			    h1 {
 			    	width: 40%;
 			    	line-height: 1.2;
@@ -714,3 +737,4 @@ header {
 		}
 	}
 }
+

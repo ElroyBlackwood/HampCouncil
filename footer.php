@@ -77,16 +77,18 @@
 <!--- FOOT SECTION 03 - SOCIAL END -->
 
 <!--- FOOT SECTION 04 - LEGALS START -->
-	<div class="container-fluid hmp_orange_bg py-4 addcurveminus curveshadow" id="bottom-footer">
-		<div class="container">
-			<div class="flex-container legals">
-				<div class="col-3">
+	<div class="container-fluid hmp_orange_bg addcurveminus curveshadow" id="bottom-footer">
+		<div class="container-fluid">
+			<div class="flex-container">
+				<div class="legal">
 					<p><?php the_field('legals_text', 'option'); ?></p>
 				</div>
-				<?php if(is_active_sidebar('footer-lgl-1')):
-				dynamic_sidebar('footer-lgl-1');
-				endif; ?>
-			<div class="col-3"><p>© Hampshire County Council <?php echo date("Y"); ?></p></div>
+				<div class="privacy">
+					<?php if(is_active_sidebar('footer-lgl-1')):
+					dynamic_sidebar('footer-lgl-1');
+					endif; ?>
+				</div>
+			<div class="copywite"><p>© Hampshire County Council <?php echo date("Y"); ?></p></div>
 			</div>
 		</div>
 	</div> 
