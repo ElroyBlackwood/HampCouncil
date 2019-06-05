@@ -1,6 +1,5 @@
 #contact-details-text-block {
 	padding: 0;
-	width: 75vw;
 	.icon-text {
 		@include flexbox();
 		align-items: center;
@@ -28,6 +27,29 @@
 		}
 		a {
 
+		}
+	}
+}
+
+@include respond-between(xs, sm) {
+	#contact-details-text-block {
+		.icon-text {
+		}
+		.icon-text#email_address {
+			.icon {
+				margin: 0 1vw 0 0;
+			}
+			a {
+
+			}
+		}
+		.icon-text#phone_number {
+			.icon {
+				margin: 0 1vw 0 0;
+			}
+			a {
+
+			}
 		}
 	}
 }

@@ -156,7 +156,7 @@ $('.fitler_tag').click(function() {
 		},
 		success:function(data){
 			$('#response').html(data);
-			$('.filtered').ready(squareElement());
+			$('.filtered').ready(squarePosts());
 			$('.filtered').each(function(i) {
 				var elm = $(this);
 				setTimeout(function() {
@@ -233,7 +233,19 @@ function shiftNavhack() {
 // ==========================================
 
 $(document).scroll(function() {
-	triggerSticky();
+	var windowsize = $(window).width();
+	if (windowsize > 255 && windowsize < 601) {
+		
+	} else if (windowsize > 600 && windowsize < 1201) {
+		
+	} else if (windowsize > 1200 && windowsize < 1601) {
+		triggerSticky();
+	} else if (windowsize > 1600 && windowsize < 1921) {
+		triggerSticky();
+	} else if (windowsize > 1920) {
+		triggerSticky();
+	}
+	
 });
 
 function triggerSticky() {
@@ -259,7 +271,7 @@ $(document).on('mouseenter', '.dropdown', function() {
 			$(this).removeClass('active-dd');
 		});
 	} else {
-		
+
 	}
 	var menuItem = $(this);
 	var dropdown = menuItem.find('.dropdown-menu');
@@ -280,33 +292,6 @@ $(document).on('mouseleave', '#header-menu', function(event) {
 	});
 });
 
-
-// $(document).on('mouseleave', '.dropdown', function() {
-// 	// console.log("mouse leave");
-// 	var isHoveredheader = $('#header-menu').is(":hover");
-// 	var menuItem = $(this);
-// 	var dropdown = menuItem.find('.dropdown-menu');
-// 	$('dropdown-menu').each(function() {
-// 		$(this).removeClass('active-dd');
-// 	});
-// 	// console.log("is hovered = " + isHovered);
-// 	// do {
-// 	// 	isHovered = $('#header-menu').is(":hover");
-// 	// 	console.log("still hovvered");
-// 	// }
-// 	// while(isHovered == false);
-// 	// var menuItem = $(this);
-// 	// var dropdown = menuItem.find('.dropdown-menu');
-// 	// dropdown.removeClass('active-dd');
-// 	if (isHoveredheader == false) {
-// 		$('dropdown-menu').each(function() {
-// 			$(this).removeClass('active-dd');
-// 		});
-// 		// dropdown.removeClass('active-dd');
-// 	} else {
-// 		// console.log("still hovered");
-// 	}
-// });
 
 // ==========================================
 	// nav menu hover end

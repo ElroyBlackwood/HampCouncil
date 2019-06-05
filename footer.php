@@ -9,7 +9,7 @@
 	<div class="container py-5">
 	<h1>You may also be interested in</h1>
 	</div>
-		<div class="container">
+		<div class="container-fluid container-width">
 			<?php outputNewsCarousel(); ?>
 		</div>
 	</div>

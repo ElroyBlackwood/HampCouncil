@@ -92,15 +92,15 @@
 			#filter {
 				justify-content: space-between;
 				.filter-links {
-					display: none;
 				}
 				label {
 					
 				}
 				.chk-wrapper {
 					padding: 2vw 4vw;
+					display: none;
 					.fitler_tag {
-						
+						display: none;
 					}
 					label {
 						
@@ -144,6 +144,9 @@
 					-moz-box-shadow: -2px 6px 10px 0px rgba(0,0,0,1);
 					box-shadow: -2px 6px 10px 0px rgba(0,0,0,1);
 					flex-direction: column;
+					.chk-wrapper {
+						display: block !important;
+					}
 				}
 			}
 		}
@@ -224,6 +227,104 @@
 		}
 		#response {
 			
+			a {	
+				.wdg-container {
+					
+				}
+				.wdg-container.filtered {
+					
+				}
+			}
+		}
+		.loadmore {
+			
+			.down-arrow {
+				
+			}
+		}
+		.loadmore:hover {
+			
+		}
+		
+	}
+}
+
+@include respond-between(xs, sm) {
+	#news-filter {
+		
+		h1{
+			margin: 7vh 0 6vh;
+		}
+		#post-filter {
+			width: 85vw;
+			#filter {
+				
+				.filter-links {
+					width: auto;
+				}
+				label {
+					display: block;
+				}
+				.chk-wrapper {
+					.fitler_tag {
+						display: none;
+					}
+					label {
+						display: none;
+					}
+					.active {
+						
+					}
+				}
+				.chk-wrapper:hover {
+					label {
+						
+					}
+				}
+			}
+			.hamburger-container {
+				position: relative;
+				.hamburger {
+					.hamburger-bar {
+						width: 5vw;
+					    height: 1vh;
+					    margin: 0 0 0.5vh;
+					    background: #122121;
+					    border-radius: 5%;
+					}
+				}
+				.hamburger:active, .hamburger:focus {
+					.hamburger-bar {
+						background: #F26640;
+					}
+				}
+				.filter-dropdown {
+					display: none;
+					opacity: 0;
+					position: absolute;
+					z-index: 10;
+					background: #fff;
+					left: -26vw;
+					width: 35vw;
+					top: 110%;
+					-webkit-box-shadow: -2px 6px 10px 0px rgba(0,0,0,1);
+					-moz-box-shadow: -2px 6px 10px 0px rgba(0,0,0,1);
+					box-shadow: -2px 6px 10px 0px rgba(0,0,0,1);
+					flex-direction: column;
+					.chk-wrapper-mobile {
+						padding: 1vh 2vw 0;
+						.fitler_tag {
+							display: none;
+						}
+						label {
+							display: block;
+						}
+					}
+				}
+			}
+		}
+		#response {
+			width: 85vw;
 			a {	
 				.wdg-container {
 					

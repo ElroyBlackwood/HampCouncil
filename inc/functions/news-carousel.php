@@ -12,7 +12,7 @@
 				  arrows: true,
 				  responsive: [
 					{
-					  breakpoint: 1024,
+					  breakpoint: 1200,
 					  settings: {
 						slidesToShow: 3,
 						slidesToScroll: 3,

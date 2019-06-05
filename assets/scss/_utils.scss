@@ -197,6 +197,10 @@ p, a, label {
 }
 
 @include respond-below(xs) {
+	p, a, label {
+		font-size: 4vw;
+	}
+
 	.read-more {
 		.blue-arrow {
 			height: 4vw;
@@ -219,6 +223,37 @@ p, a, label {
 	#page_content {
 		width: 80vw;
 		h3 {
+		}
+	}
+}
+
+@include respond-between(xs, sm) {
+	.container-width {
+		width: 85vw;
+	}
+
+	p, a, label {
+		font-size: 2vw;
+	}
+
+	#page_content {
+		width: 65vw;
+		h3 {
+		}
+	}
+
+	.text-content-block {
+		
+		.title {
+			
+			.text-content-title-icon {
+				margin: 0 1vw 0 0;
+			}
+			h2 {
+			}
+		}
+		.text-content {
+
 		}
 	}
 }

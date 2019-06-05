@@ -6,7 +6,7 @@ function outputContactDetailsTextBlock() {
 	$telephone = $contact_details_group['phone_number'];
 	$email = $contact_details_group['email_address'];
 ?>
-	<div class="container-fluid" id="contact-details-text-block">	
+	<div class="container-fluid container-width" id="contact-details-text-block">	
 		<p><?php echo $address; ?></p>
 		<div class="icon-text" id="email_address">
 			<div class="icon"></div>

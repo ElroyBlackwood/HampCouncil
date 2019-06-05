@@ -20,3 +20,25 @@
 		}
 	}
 }
+
+@include respond-between(xs, sm) {
+	#location-map-wrapper {
+		#google-maps {
+			width: 85vw;
+			margin: 4vh auto;
+			h1 {
+				
+			}
+			#gmap {
+				height: 90vh;
+			}
+			.read-more {
+				margin: 1vh 0;
+			    justify-content: flex-end; 
+			    span {
+			    	color: #333;
+			    }
+			}
+		}
+	}
+}

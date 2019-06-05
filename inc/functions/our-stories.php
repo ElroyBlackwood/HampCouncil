@@ -58,7 +58,7 @@
 				<h1>Our Stories</h1>
 			</div>
 			<div class="slick-wrapper">
-				<div class="stories-carousel">
+				<div class="stories-carousel container-width">
 			<?php while ( $the_query->have_posts() ) {
 					$the_query->the_post(); ?>
 					<?php $feat_img = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>

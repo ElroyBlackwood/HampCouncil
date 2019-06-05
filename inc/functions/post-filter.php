@@ -45,12 +45,12 @@ function outputPostFilter() {
 								foreach ( $tags as $tag ) :
 									if ($tag->term_id == '10') {
 										// all news tag
-										echo "<label class='chk-wrapper'>";
+										echo "<label class='chk-wrapper-mobile'>";
 							 			echo "<input class='fitler_tag' type='checkbox' value='$tag->term_id' name='$tag->name' id='filter_tag_$tag->term_id'>";
 							 			echo "<label class='filter_tag_$tag->term_id active' for='filter_tag_$tag->term_id'>$tag->name</label>";
 							 			echo "</label>";
 									} else {
-										echo "<label class='chk-wrapper'>";
+										echo "<label class='chk-wrapper-mobile'>";
 							 			echo "<input class='fitler_tag' type='checkbox' value='$tag->term_id' name='$tag->name' id='filter_tag_$tag->term_id'>";
 							 			echo "<label class='filter_tag_$tag->term_id' for='filter_tag_$tag->term_id'>$tag->name</label>";
 							 			echo "</label>";
@@ -96,8 +96,9 @@ function outputPostFilter() {
 				});
 			}
 
-			function squareElement() {
-				jQuery('.square').each(function() {
+			function squarePosts() {
+				console.log("square posts");
+				jQuery('.square-posts').each(function() {
 					jQuery(this).height(jQuery(this).width());
 				});
 			}
@@ -118,7 +119,7 @@ function outputPostFilter() {
 
 				    $.post(ajaxurl, data, function(response) {
 				        $('#response').append(response);
-				        $('.filtered').ready(squareElement());
+				        $('.filtered').ready(squarePosts());
 				        animateFilterBlockLoadMore();
 				        page++;
 				    });
@@ -145,7 +146,7 @@ function outputPostFilter() {
 			        $wdg_content = wp_trim_words(get_the_content(), 25); 
 					?>
 						<a href="<?php the_permalink(); ?>">
-							<div class="wdg-container square-posts dimmed" style="background-image: url(<?php echo esc_url($feat_img) ?>);">
+							<div class="wdg-container filtered square-posts dimmed" style="background-image: url(<?php echo esc_url($feat_img) ?>);">
 								<div class="color-overlay"></div>
 								<div class="wdg-overlay">
 									<h2><?php echo get_the_title(); ?></h2>
