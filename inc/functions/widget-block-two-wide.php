@@ -12,7 +12,7 @@ function outputWdgTwoWide() {
 	        $title = get_sub_field('sq_title');
 	        ?>
 	        <a href="<?php echo $link['url']; ?>">
-	        	<div class="wdg-container square dimmed" style="background-image: url(<?php echo $feat_img['url']; ?>);">
+	        	<div class="wdg-container square-sectors dimmed" style="background-image: url(<?php echo $feat_img['url']; ?>);">
 	        		<div class="color-overlay"></div>
 	        		<div class="wdg-overlay">
 	        			<h2><?php echo $title; ?></h2>

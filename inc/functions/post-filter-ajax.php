@@ -34,7 +34,7 @@ function filter_function(){
 			$wdg_content = wp_trim_words(get_the_content(), 25);
 			?>
 				<a href="<?php the_permalink(); ?>">
-					<div class="wdg-container square dimmed filtered" style="background-image: url(<?php echo esc_url($feat_img) ?>);">
+					<div class="wdg-container square-posts dimmed filtered" style="background-image: url(<?php echo esc_url($feat_img) ?>);">
 						<div class="color-overlay"></div>
 						<div class="wdg-overlay">
 							<h2><?php echo get_the_title(); ?></h2>

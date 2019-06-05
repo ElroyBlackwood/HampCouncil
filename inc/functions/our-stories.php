@@ -57,7 +57,7 @@
 					<?php $feat_img = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
 					<div class="slide-content">
 				        <a href="<?php the_permalink(); ?>">
-				        	<div class="wdg-container square dimmed" style="background-image: url(<?php echo $feat_img; ?>);">
+				        	<div class="wdg-container square-story dimmed" style="background-image: url(<?php echo $feat_img; ?>);">
 				        		<div class="color-overlay"></div>
 				        		<div class="wdg-overlay">
 				        			<h2><?php echo get_the_title(); ?></h2>

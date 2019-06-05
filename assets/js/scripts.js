@@ -9,15 +9,15 @@
 	    function checkWidth() {
 	        var windowsize = $(window).width();
 	        if (windowsize > 255 && windowsize < 601) {
-	        	squareElement();
+	        	initSquare();
 	        } else if (windowsize > 600 && windowsize < 1201) {
-	        	squareElement();
+	        	initSquare();
 	        } else if (windowsize > 1200 && windowsize < 1601) {
-	        	squareElement();
+	        	initSquare();
 	        } else if (windowsize > 1600 && windowsize < 1921) {
-	        	squareElement();
+	        	initSquare();
 	        } else if (windowsize > 1920) {
-	        	squareElement();
+	        	initSquare();
 	        }
 	    }
 	    // Execute on load
@@ -53,11 +53,27 @@
 	}
 
 	// square divs
-	function squareElement() {
-		console.log('square contnet');
-		$('.square').each(function() {
-			$(this).height($(this).width());
+	function squareElement(elm) {
+		// console.log('square contnet');
+		var width = $(elm).outerWidth();
+		console.log(width);
+		$(elm).each(function() {
+			$(this).height(width);
 		});
+	}
+
+	function initSquare() {
+		setTimeout(function(){
+			if ($('.square-sectors').length) {
+		    	squareElement('.square-sectors');
+			}
+			if ($('.square-posts').length) {
+		    	squareElement('.square-posts');
+			}
+			if ($('.square-story').length) {
+				squareElement('.square-story');
+			}
+		},100);
 	}
 // ==========================================
 	// hover functions for 2 wide widgets
