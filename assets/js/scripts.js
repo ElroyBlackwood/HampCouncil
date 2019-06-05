@@ -54,7 +54,7 @@
 
 	// square divs
 	function squareElement(elm) {
-		// console.log('square contnet');
+		console.log('square element ' + elm);
 		var width = $(elm).outerWidth();
 		console.log(width);
 		$(elm).each(function() {
