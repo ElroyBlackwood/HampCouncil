@@ -8,7 +8,7 @@
         wp_register_style('slick-css', get_template_directory_uri() . '/assets/plugins/slick/slick.css', array(), '1.0', 'all');
         wp_enqueue_style('slick-css');  
 
-        wp_register_style('lgo-styles', get_template_directory_uri() . '/assets/css/styles.min.css', array(), '1.0', 'all');
+        wp_register_style('lgo-styles', get_template_directory_uri() . '/assets/css/styles.min.css?' . date('l jS \of F Y h:i:s A'), array(), '1.0', 'all');
         wp_enqueue_style('lgo-styles'); 
 
         wp_register_style('elroy-styles', get_template_directory_uri() . '/elroy-assets/styles.css', array(), '1.0', 'all');
