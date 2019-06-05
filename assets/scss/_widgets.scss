@@ -1,10 +1,15 @@
 // orange widgets under banner
-#wdgt_block {
+#wdgt_block_outer {
+	padding: 0;
+	position: relative;
+}
+.colour-overlay {
 	position: relative;
 	padding: 7.5vh 0;
 	color: #fff;
 	@include bg_img_cover();
 	margin: 0 0 6vh;
+	z-index: 10;
 	h1 {
 		width: 100%;
 		text-align: center;
@@ -23,7 +28,12 @@
 			    margin: 0 0 2vh;
 			}
 			.widget-text {
-
+				h2 {
+					margin: 0 0 1vh;
+				}
+				p {
+					line-height: 1.2;
+				}
 			}
 		}
 		.three_wdg{
@@ -36,6 +46,15 @@
 			width: 20%;
 		}
 	}
+}
+
+#wdgt_block {
+	position: absolute;
+    top: 0;
+    height: 100%;
+    z-index: 9;
+    -webkit-filter: grayscale(100%);
+    filter: grayscale(100%);
 }
 // orange wdg area end
 
@@ -119,7 +138,7 @@
 }
 // end
 @include respond-below(xs) {
-	#wdgt_block {
+	.colour-overlay {
 		
 		h1 {
 			
@@ -199,7 +218,7 @@
 }
 
 @include respond-between(xs, sm) {
-	#wdgt_block {
+	.colour-overlay {
 		
 		h1 {
 			

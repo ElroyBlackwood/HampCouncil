@@ -25,6 +25,26 @@ p, a, label {
 	font-size: 1.2vw;
 }
 
+h1 {
+	font-size: 3vw;
+}
+
+h2 {
+	font-size: 2vw;
+}
+
+h3 {
+	font-size: 1.8vw;
+}
+
+h4 {
+	font-size: 1.6vw;
+}
+
+h5 {
+	font-size: 1.2vw;
+}
+
 .dimmed {
 	position: relative;
 }
@@ -198,6 +218,26 @@ p, a, label {
 
 @include respond-below(xs) {
 	p, a, label {
+		font-size: 4vw;
+	}
+
+	h1 {
+		font-size: 7vw;
+	}
+
+	h2 {
+		font-size: 6vw;
+	}
+
+	h3 {
+		font-size: 5vw;
+	}
+
+	h4 {
+		font-size: 4vw;
+	}
+
+	h5 {
 		font-size: 4vw;
 	}
 

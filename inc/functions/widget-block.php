@@ -29,43 +29,48 @@ function outputWidgetBlock() { ?>
 				transform: translateX(-50%);
 			}*/
 		</style>
-		<div class="container-fluid" id="wdgt_block" style="background: linear-gradient( rgba(<?php echo $rgb_col; ?>), rgba(<?php echo $rgb_col; ?>) ), url(<?php echo $bg_img['url']; ?>); background-repeat: no-repeat; background-position: center; background-size: cover; color: <?php echo $text_col; ?>;">
+		<div class="container-fluid" id="wdgt_block_outer">
+			<div class="colour-overlay" style="background: linear-gradient( rgba(<?php echo $rgb_col; ?>), rgba(<?php echo $rgb_col; ?>) );">
 			<h1><?php echo $block_title; ?></h1>
-			<div class="widget-container container-width">
-	<?php
-			if( have_rows('widgets') ):
-				$wdg_count = count(get_field('widgets'));
-				$wdg_css_class = "";
+				<div class="widget-container container-width">
+		<?php
+				if( have_rows('widgets') ):
+					$wdg_count = count(get_field('widgets'));
+					$wdg_css_class = "";
 
-				if ($wdg_count == 3) {
-					$wdg_css_class = "three_wdg";
-				} elseif ($wdg_count == 4) {
-					$wdg_css_class = "four_wdg";
-				}  elseif ($wdg_count == 5) {
-					$wdg_css_class = "five_wdg";
-				}
-			    while ( have_rows('widgets') ) : the_row();
+					if ($wdg_count == 3) {
+						$wdg_css_class = "three_wdg";
+					} elseif ($wdg_count == 4) {
+						$wdg_css_class = "four_wdg";
+					}  elseif ($wdg_count == 5) {
+						$wdg_css_class = "five_wdg";
+					}
+				    while ( have_rows('widgets') ) : the_row();
 
-			        $wdg_icon = get_sub_field('widget_icon');
-			        $wdg_title = get_sub_field('widget_title');
-			        $wdg_txt = get_sub_field('widget_text');
-			        ?>
-			        	<div class="widget <?php echo $wdg_css_class; ?>">
-			        		<div class="widget-icon" style="background-image: url(<?php echo $wdg_icon['url']; ?>);">
-			        		</div>
-			        		<div class="widget-text">
-			        			<h4><?php echo $wdg_title; ?></h4>
-			        			<p><?php echo $wdg_txt; ?></p>
-			        		</div>
-			        	</div>
-			        <?php
-			    endwhile;
-			    ?>
-		    <?php
-			else :
+				        $wdg_icon = get_sub_field('widget_icon');
+				        $wdg_title = get_sub_field('widget_title');
+				        $wdg_txt = get_sub_field('widget_text');
+				        ?>
+				        	<div class="widget <?php echo $wdg_css_class; ?>">
+				        		<div class="widget-icon" style="background-image: url(<?php echo $wdg_icon['url']; ?>);">
+				        		</div>
+				        		<div class="widget-text">
+				        			<h2><?php echo $wdg_title; ?></h2>
+				        			<p><?php echo $wdg_txt; ?></p>
+				        		</div>
+				        	</div>
+				        <?php
+				    endwhile;
+				    ?>
+			    <?php
+				else :
 
-			endif;
-		?>
+				endif;
+			?>
+				</div>
+			</div>
+			<div class="container-fluid" id="wdgt_block" style="background-image: url(<?php echo $bg_img['url']; ?>); background-repeat: no-repeat; background-position: center; background-size: cover; color: <?php echo $text_col; ?>;">
+				
 			</div>
 		</div>
 		<?php
