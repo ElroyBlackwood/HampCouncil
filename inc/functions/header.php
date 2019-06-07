@@ -84,6 +84,7 @@ function ouputFeatBanner() {
 				}
 				?>
 				<div class="static-banner-image dimmed" style="background-image: url(<?php echo $feat_img; ?>);">
+		            <div class="orange-curve bottom-curve"></div>
 					<div id="static-banner-overlay">
 						<div class="static_banner_overlay_content">
 							<h3><?php echo $cat_name; ?></h3>
@@ -138,6 +139,7 @@ function ouputSlider() {
 				?>
 			</ol>
 		  	<div class="carousel-inner">
+	            <div class="orange-curve bottom-curve"></div>
 			<?php
 			$count_ban = 0;
 			if( have_rows('banner_images') ):
@@ -192,6 +194,7 @@ function outputSingleBanner() {
 		$static_banner_overlay = get_field('static_banner_overlay');
 	?>
 	<div id="static-banner-image" class="dimmed" style="background-image: url(<?php echo $static_banner_image['url']; ?>);">
+        <div class="orange-curve bottom-curve"></div>
 		<div id="static-banner-overlay">
 			<?php echo $static_banner_overlay; ?>
 		</div>

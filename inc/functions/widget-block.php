@@ -30,7 +30,6 @@ function outputWidgetBlock() { ?>
 			}*/
 		</style>
 		<div class="container-fluid" id="wdgt_block_outer">
-            <div class="orange-curve top-curve"></div>
 			<div class="colour-overlay" style="background: linear-gradient( rgba(<?php echo $rgb_col; ?>), rgba(<?php echo $rgb_col; ?>) );">
 			<h1><?php echo $block_title; ?></h1>
 				<div class="widget-container container-width">

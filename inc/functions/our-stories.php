@@ -35,8 +35,11 @@
 		</script>
 		<?php
 		$tags = get_the_tags(get_the_ID());
+		$tag_name = "";
 		if (!empty($tags)) {
 			$tag_id = $tags[0]->term_id;
+			$tag_name = $tags[0]->name;
+			
 			// echo "tag id = " . $tag_id;
 			// var_dump($tags);
 			$args = array(
@@ -55,7 +58,7 @@
 		if ( $the_query->have_posts() ) { ?>
 		<div class="container-fluid" id="our-stories">
 			<div class="in-page-title orange-text">
-				<h1>Our Stories</h1>
+				<h1><?php echo $tag_name; ?> Stories</h1>
 			</div>
 			<div class="slick-wrapper">
 				<div class="stories-carousel container-width">

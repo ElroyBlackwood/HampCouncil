@@ -149,7 +149,7 @@ header {
 					    border: none;
 					    border-radius: 0;
 					    opacity: 1;
-					    background: rgba(18,33,33,0.9);
+					    background: rgba(18,33,33,0.8);
 					    width: auto;
 					    margin: 0;
 					}
@@ -180,7 +180,7 @@ header {
 		}
 		li:hover {
 			cursor: pointer;
-			background-color: rgba(18,33,33,0.9);
+			background-color: rgba(18,33,33,0.8);
 			a {
 				text-decoration: none;
 			}
@@ -198,7 +198,7 @@ header {
 		padding: 0;
 		#static-banner-image {
 			@include bg_img_cover();
-			height: 93vh;
+			height: 83vh;
 			#static-banner-overlay {
 				position: absolute;
 			    top: 55%;
@@ -282,7 +282,7 @@ header {
 			.static-banner-image {
 				@include bg_img_cover();
 				position: relative;
-				height: 93vh;
+				height: 83vh;
 				#static-banner-overlay {
 					position: absolute;
 					top: 50%;

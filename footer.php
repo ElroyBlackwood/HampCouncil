@@ -3,18 +3,26 @@
 <section id="main-footer">
 	
 <!--- FOOT SECTION 01 - NEWS START -->
+<?php 
+	$page_tempate = get_page_template();
 
-<div class="container-fluid desaturate" style="background-image: url(<?php the_field('footer_news_bg_image', 'option'); ?>);" id="news-carousel">
-    <div class="orange-curve top-curve"></div>
-	<div class="flex-container overcontent">
-		<div class="container py-5">
-			<h1>You may also be interested in</h1>
+	if (strpos($page_tempate, 'news.php') !== false) {
+		
+	} else { ?>
+		<div class="container-fluid desaturate" style="background-image: url(<?php the_field('footer_news_bg_image', 'option'); ?>);" id="news-carousel">
+		    <div class="orange-curve top-curve"></div>
+			<div class="flex-container overcontent">
+				<div class="container py-5">
+					<h1>You may also be interested in</h1>
+				</div>
+				<div class="container-fluid container-width">
+					<?php outputNewsCarousel(); ?>
+				</div>
+			</div>
 		</div>
-		<div class="container-fluid container-width">
-			<?php outputNewsCarousel(); ?>
-		</div>
-	</div>
-</div>
+	<?php
+	}
+?>
 
 <!--- FOOT SECTION 01 - NEWS END -->
 
