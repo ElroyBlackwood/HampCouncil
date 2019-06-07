@@ -30,6 +30,7 @@ function outputWidgetBlock() { ?>
 			}*/
 		</style>
 		<div class="container-fluid" id="wdgt_block_outer">
+            <div class="orange-curve top-curve"></div>
 			<div class="colour-overlay" style="background: linear-gradient( rgba(<?php echo $rgb_col; ?>), rgba(<?php echo $rgb_col; ?>) );">
 			<h1><?php echo $block_title; ?></h1>
 				<div class="widget-container container-width">
@@ -49,14 +50,14 @@ function outputWidgetBlock() { ?>
 
 				        $wdg_icon = get_sub_field('widget_icon');
 				        $wdg_title = get_sub_field('widget_title');
-				        $wdg_txt = get_sub_field('widget_text');
+				        $wdg_txt = get_sub_field('widget_text', false);
 				        ?>
 				        	<div class="widget <?php echo $wdg_css_class; ?>">
 				        		<div class="widget-icon" style="background-image: url(<?php echo $wdg_icon['url']; ?>);">
 				        		</div>
 				        		<div class="widget-text">
-				        			<h2><?php echo $wdg_title; ?></h2>
-				        			<p><?php echo $wdg_txt; ?></p>
+				        			<h3 style="color: <?php echo $text_col; ?>"><?php echo $wdg_title; ?></h3>
+				        			<p  style="color: <?php echo $text_col; ?>"><?php echo $wdg_txt; ?></p>
 				        		</div>
 				        	</div>
 				        <?php

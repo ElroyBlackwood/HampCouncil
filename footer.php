@@ -5,10 +5,11 @@
 <!--- FOOT SECTION 01 - NEWS START -->
 
 <div class="container-fluid desaturate" style="background-image: url(<?php the_field('footer_news_bg_image', 'option'); ?>);" id="news-carousel">
-	<div class="flex-container overcontent" style="">
-	<div class="container py-5">
-	<h1>You may also be interested in</h1>
-	</div>
+    <div class="orange-curve top-curve"></div>
+	<div class="flex-container overcontent">
+		<div class="container py-5">
+			<h1>You may also be interested in</h1>
+		</div>
 		<div class="container-fluid container-width">
 			<?php outputNewsCarousel(); ?>
 		</div>
@@ -18,9 +19,11 @@
 <!--- FOOT SECTION 01 - NEWS END -->
 
 <!--- FOOT SECTION 02 - SITEMAP START -->
-	<div class="container-fluid hmp_blue_bg py-5 overcontent addcurveminus" style="">
+	<div class="container-fluid hmp_blue_bg py-5" id="footer_menus">
+		<div class="blue-curve top-curve">
+		</div>
 	<div class="container">
-		<h2 style="text-align: center"><?php the_field('sitemap_title', 'option'); ?></h2>
+		<h2><?php the_field('sitemap_title', 'option'); ?></h2>
 	</div>
 	<div class="container" id="top-footer">
 		<div class="flex-container sitemap">
@@ -77,19 +80,17 @@
 <!--- FOOT SECTION 03 - SOCIAL END -->
 
 <!--- FOOT SECTION 04 - LEGALS START -->
-	<div class="container-fluid hmp_orange_bg addcurveminus curveshadow" id="bottom-footer">
-		<div class="container-fluid">
-			<div class="flex-container">
-				<div class="legal">
-					<p><?php the_field('legals_text', 'option'); ?></p>
-				</div>
-				<div class="privacy">
-					<?php if(is_active_sidebar('footer-lgl-1')):
-					dynamic_sidebar('footer-lgl-1');
-					endif; ?>
-				</div>
-			<div class="copywite"><p>© Hampshire County Council <?php echo date("Y"); ?></p></div>
-			</div>
+	<div class="container-fluid hmp_orange_bg" id="bottom-footer">
+		<div class="legal">
+			<p><?php the_field('legals_text', 'option'); ?></p>
+		</div>
+		<div class="privacy">
+			<?php if(is_active_sidebar('footer-lgl-1')):
+			dynamic_sidebar('footer-lgl-1');
+			endif; ?>
+		</div>
+		<div class="copywrite">
+			<p>© Hampshire County Council <?php echo date("Y"); ?></p></div>
 		</div>
 	</div> 
 <!--- FOOT SECTION 04 - LEGALS END -->

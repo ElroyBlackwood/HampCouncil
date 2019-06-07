@@ -13,17 +13,20 @@ function outputPostFilter() {
 					$tags = get_tags(array('get'=>'all'));
 					if( $tags ) : 
 						foreach ( $tags as $tag ) :
-							if ($tag->term_id == '10') {
-								// all news tag
-								echo "<label class='chk-wrapper'>";
-					 			echo "<input class='fitler_tag' type='checkbox' value='$tag->term_id' name='$tag->name' id='filter_tag_$tag->term_id'>";
-					 			echo "<label class='filter_tag_$tag->term_id active' for='filter_tag_$tag->term_id'>$tag->name</label>";
-					 			echo "</label>";
-							} else {
-								echo "<label class='chk-wrapper'>";
-					 			echo "<input class='fitler_tag' type='checkbox' value='$tag->term_id' name='$tag->name' id='filter_tag_$tag->term_id'>";
-					 			echo "<label class='filter_tag_$tag->term_id' for='filter_tag_$tag->term_id'>$tag->name</label>";
-					 			echo "</label>";
+							$display_in_filter = get_field('display_in_news_filter', $tag);
+							if ($display_in_filter == 'yes') {
+								if ($tag->term_id == '10') {
+									// all news tag
+									echo "<label class='chk-wrapper'>";
+						 			echo "<input class='fitler_tag' type='checkbox' value='$tag->term_id' name='$tag->name' id='filter_tag_$tag->term_id'>";
+						 			echo "<label class='filter_tag_$tag->term_id active' for='filter_tag_$tag->term_id'>$tag->name</label>";
+						 			echo "</label>";
+								} else {
+									echo "<label class='chk-wrapper'>";
+						 			echo "<input class='fitler_tag' type='checkbox' value='$tag->term_id' name='$tag->name' id='filter_tag_$tag->term_id'>";
+						 			echo "<label class='filter_tag_$tag->term_id' for='filter_tag_$tag->term_id'>$tag->name</label>";
+						 			echo "</label>";
+								}	
 							}
 							
 						endforeach;
@@ -43,17 +46,20 @@ function outputPostFilter() {
 							$tags = get_tags(array('get'=>'all'));
 							if( $tags ) : 
 								foreach ( $tags as $tag ) :
-									if ($tag->term_id == '10') {
-										// all news tag
-										echo "<label class='chk-wrapper-mobile'>";
-							 			echo "<input class='fitler_tag' type='checkbox' value='$tag->term_id' name='$tag->name' id='filter_tag_$tag->term_id'>";
-							 			echo "<label class='filter_tag_$tag->term_id active' for='filter_tag_$tag->term_id'>$tag->name</label>";
-							 			echo "</label>";
-									} else {
-										echo "<label class='chk-wrapper-mobile'>";
-							 			echo "<input class='fitler_tag' type='checkbox' value='$tag->term_id' name='$tag->name' id='filter_tag_$tag->term_id'>";
-							 			echo "<label class='filter_tag_$tag->term_id' for='filter_tag_$tag->term_id'>$tag->name</label>";
-							 			echo "</label>";
+									$display_in_filter = get_field('display_in_news_filter', $tag);
+									if ($display_in_filter == 'yes') {
+										if ($tag->term_id == '10') {
+											// all news tag
+											echo "<label class='chk-wrapper-mobile'>";
+								 			echo "<input class='fitler_tag' type='checkbox' value='$tag->term_id' name='$tag->name' id='filter_tag_$tag->term_id'>";
+								 			echo "<label class='filter_tag_$tag->term_id active' for='filter_tag_$tag->term_id'>$tag->name</label>";
+								 			echo "</label>";
+										} else {
+											echo "<label class='chk-wrapper-mobile'>";
+								 			echo "<input class='fitler_tag' type='checkbox' value='$tag->term_id' name='$tag->name' id='filter_tag_$tag->term_id'>";
+								 			echo "<label class='filter_tag_$tag->term_id' for='filter_tag_$tag->term_id'>$tag->name</label>";
+								 			echo "</label>";
+										}
 									}
 									
 								endforeach;
@@ -67,7 +73,7 @@ function outputPostFilter() {
 			</form>
 		</div>
 		
-		<div class="grey-gradient">
+		<div class="grey-curve">
 		</div>
 
 		<div id="response">

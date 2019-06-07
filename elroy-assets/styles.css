@@ -27,7 +27,7 @@
 #story_wdg_wide a .wdg-container:hover .wdg-overlay a{text-decoration:none}
 
 /** Lee Add to your css, but include border radius top **/
-.dimmedcurve{position:relative}.dimmedcurve:before{content:' ';border-top-left-radius: 50% 15px;border-top-right-radius: 50% 15px;position:absolute;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3))}
+.dimmedcurve{position:relative}.dimmedcurve:before{content:' ';border-top-left-radius: 50% 1vw;border-top-right-radius: 50% 1vw;position:absolute;top:0;left:0;width:100%;height:100%;background-image:linear-gradient(to bottom, rgba(0,0,0,0.3), rgba(0,0,0,0.3))}
 
 /** OTHER **/
 .curve, .curve_btm {
@@ -100,9 +100,12 @@ main-footer > .ul {list-style-type: none;}
 /*** FOOT SECTION 02 - SITEMAP START***/
 .sitemap {color: #ffffff}
 .sitemap ul { padding-left: 0px;}
-.sitemap ul li {font-size: 0.875em}
+.sitemap ul li {
+  font-size: 0.9vw;
+  margin: 0 0 0.75vh;
+}
 .sitemap ul li a {color: rgba(255,255,255,1.00)}
-.sitemap ul li a:hover {color: rgba(241,102,65,1.00)}
+.sitemap ul li a:hover {color: #122121}
 
 /*** FOOT SECTION 02 - SITEMAP END ***/
 

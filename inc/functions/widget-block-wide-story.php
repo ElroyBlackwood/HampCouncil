@@ -12,17 +12,16 @@
             $title = get_sub_field('wide_title');
             ?>
         <a href="<?php echo $link['url']; ?>">
-            <div class="wdg-container dimmedcurve curveshadow" style="background-image: url(<?php echo $feat_img['url']; ?>);border-top-left-radius: 50% 15px;border-top-right-radius: 50% 15px;">
+            <div class="wdg-container dimmedcurve curveshadow" style="background-image: url(<?php echo $feat_img['url']; ?>);">
                 <div class="color-overlay addcurve"></div>
                 <div class="wdg-overlay">
                     <h2><?php echo $title; ?></h2>
                     <?php echo $wdg_content; ?>
                     <div class="read-more">
                         <div class="blue-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/blue-arrow.png);"></div>
-                    <span>Read More</span>
+                        <span><strong>Read More</strong></span>
                     </div>
                 </div>
-            <div class="curve_btm hmp_orange_bg" style=""></div>
             </div>
         </a>
         <?php

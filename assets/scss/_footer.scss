@@ -37,6 +37,13 @@
 	background-color: rgba(255,255,255,0.9);
 }
 
+#footer_menus {
+	position: relative;
+	h2 {
+		margin: 0 0 4vh;
+	}
+}
+
 #top-footer {
 }
 
@@ -44,6 +51,13 @@
 	@include flexbox();
 	justify-content: center;
 	padding: 3vh 0 4vh;
+	background-image: url(../images/Footer_Curve.svg);
+	background-color: transparent;
+	background-size: 101%;
+	background-repeat: no-repeat;
+	z-index: 2;
+	position: relative;
+	background-position: bottom;
 	.flex-container {
 		width: 75vw;
 		justify-content: space-between;
@@ -63,6 +77,61 @@
 }
 
 #bottom-footer {
+	@include flexbox();
+	padding: 0;
+	position: relative;
+	z-index: 1;
+	margin-top: -1vw;
+	.legal {
+		@include flexbox();
+		align-items: center;
+		width: 35%;
+		background-color: #122121;
+		color: #fff;
+		justify-content: flex-end;
+		padding: 2vh 0;
+		p {
+			width: 61%;
+			margin: 0 4% 0 0;
+			font-weight: bold;
+			color: #fff;
+		}
+	}
+	.privacy {
+		@include flexbox();
+		width: 35%;
+		align-items: center;
+		padding: 2vh 0;
+		#nav_menu-2 {
+			padding: 0;
+		    max-width: 100%;
+		    align-items: center;
+		    ul {
+		    	list-style-type: none;
+	    	    margin: 0;
+	    	    padding: 0;
+	    	    display: flex;
+	    	    align-items: center;
+	    	    li {
+	    	    	padding: 0 0 0 3vw;
+	    	    	a {
+	    	    		font-weight: bold;
+	    	    		color: #000;
+	    	    	}
+	    	    }
+		    }
+		}
+	}
+	.copywrite {
+		@include flexbox;
+		align-items: center;
+		padding: 2vh 0;
+		p {
+			margin: 0;
+			font-weight: bold;
+			color: #122121;
+		}
+	}
 }
 
 @include respond-below(xs) {

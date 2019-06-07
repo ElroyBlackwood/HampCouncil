@@ -57,16 +57,16 @@
 				}
 
 				$('.news-carousel').on('afterChange', function(slick, currentSlide){
+					// sizeCarouselTitle();
+				});
+				$('.news-carousel').on('beforeChange', function(slick, currentSlide){
 					sizeCarouselTitle();
 				});
-				// $('.news-carousel').on('beforeChange', function(slick, currentSlide){
-				// 	sizeCarouselTitle();
-				// });
 				$('.news-carousel').on('swipe', function(slick, direction){
-					sizeCarouselTitle();
+					// sizeCarouselTitle();
 				});
 				$('.news-carousel').on('reInit', function(slick){
-					sizeCarouselTitle();
+					// sizeCarouselTitle();
 				});
 		    });
 

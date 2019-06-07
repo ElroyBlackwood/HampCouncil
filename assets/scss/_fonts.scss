@@ -6,6 +6,37 @@ h1, h2, h3, h4, h5, h6, p, a {
 	font-family: $maven_pro;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	line-height: 1.1;
+	font-weight: bold;
+}
+
+p, a, label {
+	font-size: 1.1vw;
+	line-height: 1.1;
+	color: #404D4D;
+}
+
+h1 {
+	font-size: 3vw;
+}
+
+h2 {
+	font-size: 2.5vw;
+}
+
+h3 {
+	font-size: 2vw;
+}
+
+h4 {
+	font-size: 1.5vw;
+}
+
+h5 {
+	font-size: 1.2vw;
+}
+
 .blue-text {
 	color: $blue;
 }

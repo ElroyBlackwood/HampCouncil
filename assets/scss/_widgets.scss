@@ -5,7 +5,7 @@
 }
 .colour-overlay {
 	position: relative;
-	padding: 7.5vh 0;
+	padding: 5vh 0;
 	color: #fff;
 	@include bg_img_cover();
 	margin: 0 0 6vh;
@@ -25,7 +25,7 @@
 			.widget-icon {
 				@include bg_img_contain();
 				padding-top: 30%;
-			    margin: 0 0 2vh;
+			    margin: 0 0 1vh;
 			}
 			.widget-text {
 				h2 {

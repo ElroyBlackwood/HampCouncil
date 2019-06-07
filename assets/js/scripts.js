@@ -115,8 +115,10 @@
 	}
 
 	function moveElmWdg(elm, change) {
+		var heading_height = elm.find('h2').height();
 		var half = change / 2;
-		elm.find('h2').animate({top: "-" + change}, 250);
+		var three_quarters = (change / 1.5) + (heading_height / 2.5);
+		elm.find('h2').animate({top: "-" + three_quarters}, 250);
 		elm.find('.read-more').animate({top: half}, 250);
 	}
 

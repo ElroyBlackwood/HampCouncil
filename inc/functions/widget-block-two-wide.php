@@ -19,7 +19,7 @@ function outputWdgTwoWide() {
 	        			<?php echo $wdg_content; ?>
 	        			<div class="read-more">
 		        			<div class="blue-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/blue-arrow.png);"></div>
-		        			<span>Read More</span>
+		        			<span><strong>Read More</strong></span>
 		        		</div>
 	        		</div>
 	        	</div>
