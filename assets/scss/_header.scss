@@ -216,11 +216,19 @@ header {
 			}
 			.scroll-dwn {
 				position: absolute;
-			    top: 90%;
+			    top: 85%;
 			    left: 50%;
-			    transform: translateX(-50%);
-			    color: #fff;
-			    letter-spacing: 2px;
+			    transform: translateX(-50%) rotate(90deg);
+			    background-image: url('../images/shevrons/right-white.png');
+			    height: 4vw;
+		        width: 3vw;
+		        background-repeat: no-repeat;
+		        opacity: 0.75;
+		        @include ease(all,0.25s);
+			}
+			.scroll-dwn:hover{
+				opacity: 1;
+				cursor: pointer;
 			}
 		}
 		#carouselHeader{

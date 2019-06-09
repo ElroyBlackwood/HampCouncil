@@ -364,4 +364,23 @@ $(document).on('mouseenter', '.dropdown', function() {
 	// elm in viewport end
 // ==========================================
 
+
+// ==========================================
+	// scroll down on banner
+// ==========================================
+
+$(document).on('touch click', '.scroll-dwn', function() {
+	scrollToAnchor('#banner-anch');
+	// alert("hello");
+});
+
+function scrollToAnchor(aid){
+    var aTag = $(aid);
+    console.log(aTag.offset());
+    $('html, body').animate({scrollTop: aTag.offset().top}, 800);
+}
+// ==========================================
+	// scroll down on banner end
+// ==========================================
+
 })( jQuery );

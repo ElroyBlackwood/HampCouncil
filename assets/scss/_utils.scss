@@ -208,6 +208,21 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 			background-position: center;
 		}
 	}
+	.sub-menu {
+		li {
+			a {
+				padding: 1vh 15%;
+			}
+		}
+	}
+}
+
+// ======================================
+	// shiftnav hacks end
+// ======================================
+
+#top-anch {
+	position: relative;
 }
 
 @include respond-below(xs) {
@@ -346,3 +361,4 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 .alignright {
 	margin: auto 0 auto auto;
 }
+

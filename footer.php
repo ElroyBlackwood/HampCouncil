@@ -72,9 +72,9 @@
 						?>
 						<?php
 						if ($socialchannel == "r fa-envelope") { ?>
-							<a href="mailto:<?php echo $socialurl; ?>" rel="nofollow noopener noreferrer"><i class="fa<? echo $socialchannel; ?>" aria-hidden="true"></i></a>
+							<a href="mailto:<?php echo $socialurl; ?>"><i class="fa<? echo $socialchannel; ?>" aria-hidden="true"></i></a>
 						<?php } else { ?>
-							<a href="<?php echo $socialurl; ?>" rel="nofollow noopener noreferrer" target="_blank"><i class="fa<? echo $socialchannel; ?>" aria-hidden="true"></i></a>
+							<a href="<?php echo $socialurl; ?>" target="_blank"><i class="fa<? echo $socialchannel; ?>" aria-hidden="true"></i></a>
 						<?php } ?>
 
 						<?php

@@ -97,6 +97,7 @@ function ouputFeatBanner() {
 			        	</div>
 					</div>
 				</div>
+				<div id="banner-anch"></div>
 				<?php
 			}
 			?>
@@ -185,6 +186,7 @@ function ouputSlider() {
 			?>
 		</div>
 	</div>
+	<div id="banner-anch"></div>
 	<?php
 }
 
@@ -199,8 +201,9 @@ function outputSingleBanner() {
 			<?php echo $static_banner_overlay; ?>
 		</div>
 		<div class="scroll-dwn">
-			<h5>Scroll Down</h5>
+			
 		</div>
 	</div>
+	<div id="banner-anch"></div>
 	<?php
 }
