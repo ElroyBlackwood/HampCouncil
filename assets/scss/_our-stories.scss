@@ -43,6 +43,7 @@
 							justify-content: center;
 							top: 0;
 							position: relative;
+							margin: auto;
 							.blue-arrow {
 								@include bg_img_contain();
 								height: 1vw;

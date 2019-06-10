@@ -3,6 +3,7 @@
 function outputTeamMembers() {
 	?>
 	<div class="container-fluid" id="team-members">
+		<?php outputTextContentBlock('meet_the_team_top_content'); ?>
 		<?php
 		if( have_rows('team_members') ):
 
@@ -21,8 +22,8 @@ function outputTeamMembers() {
 						</div>
 					</div>
 		       		<div class="team-member-content">
-		       			<h2><?php echo $tm_name; ?></h2>
-		       			<h2 class="blue-text"><?php echo $tm_position; ?></h2>
+		       			<h3><?php echo $tm_name; ?></h3>
+		       			<h3 class="blue-text"><?php echo $tm_position; ?></h3>
 		       			<p><?php echo $tm_bio; ?></p>
 		       			<a href="mailto:<?php echo $tm_email_address; ?>"><div class="email-icon"></div>Email <?php echo $first_name; ?></a>
 		       		</div>

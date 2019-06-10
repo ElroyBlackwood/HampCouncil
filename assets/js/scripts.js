@@ -10,14 +10,29 @@
 	        var windowsize = $(window).width();
 	        if (windowsize > 255 && windowsize < 601) {
 	        	initSquare();
+	        	alignHeaderCurve();
+	        	alignNewsCurve();
+	        	alignBlueFooterCurve();
 	        } else if (windowsize > 600 && windowsize < 1201) {
 	        	initSquare();
+	        	alignHeaderCurve();
+	        	alignNewsCurve();
+	        	alignBlueFooterCurve();
 	        } else if (windowsize > 1200 && windowsize < 1601) {
 	        	initSquare();
+	        	alignHeaderCurve();
+	        	alignNewsCurve();
+	        	alignBlueFooterCurve();
 	        } else if (windowsize > 1600 && windowsize < 1921) {
 	        	initSquare();
+	        	alignHeaderCurve();
+	        	alignNewsCurve();
+	        	alignBlueFooterCurve();
 	        } else if (windowsize > 1920) {
 	        	initSquare();
+	        	alignHeaderCurve();
+	        	alignNewsCurve();
+	        	alignBlueFooterCurve();
 	        }
 	    }
 	    // Execute on load
@@ -55,9 +70,9 @@
 
 	// square divs
 	function squareElement(elm) {
-		console.log('square element ' + elm);
+		// console.log('square element ' + elm);
 		var width = $(elm).outerWidth();
-		console.log(width);
+		// console.log(width);
 		$(elm).each(function() {
 			$(this).height(width);
 		});
@@ -142,7 +157,7 @@ $('.fitler_tag').click(function() {
 
 	$('.active').each(function() {
 		$(this).removeClass('active');
-		console.log('removeClass');
+		// console.log('removeClass');
 	});
 	$(this).addClass('active');
 	
@@ -247,11 +262,12 @@ $(document).scroll(function() {
 	} else if (windowsize > 1920) {
 		triggerSticky();
 	}
-	
+
 });
 
 function triggerSticky() {
-	if ( $(document).scrollTop() >= 2 ) {
+	var height = $('#banner').height();
+	if ( $(document).scrollTop() >= height ) {
 		$('#header-menu').addClass("sticky");
 	} else {
 		$('#header-menu').removeClass("sticky");
@@ -376,7 +392,7 @@ $(document).on('touch click', '.scroll-dwn', function() {
 
 function scrollToAnchor(aid){
     var aTag = $(aid);
-    console.log(aTag.offset());
+    // console.log(aTag.offset());
     $('html, body').animate({scrollTop: aTag.offset().top}, 800);
 }
 // ==========================================
@@ -393,6 +409,39 @@ $('#checkboxG4').click(function(){
 
 // ==========================================
 	// checkbox stuff end
+// ==========================================
+
+// ==========================================
+	// curve alignment
+// ==========================================
+
+function alignHeaderCurve() {
+	var banner = $('#banner');
+	var banner_height = banner.height();
+	var orange_curve = banner.find('.orange-curve');
+	var orange_curve_height = orange_curve.outerHeight();
+	var top = banner_height - orange_curve_height + 2;
+	orange_curve.css('top', top);
+}
+
+function alignNewsCurve() {
+	var newsBlock = $('#news-carousel');
+	var newsBlockHeight = newsBlock.height();
+	var orange_curve = newsBlock.find('.orange-curve');
+	var orange_curve_height = orange_curve.outerHeight() - 2;
+	var top = -Math.abs(orange_curve_height);
+	orange_curve.css('top', top);
+}
+
+function alignBlueFooterCurve() {
+	var footerBlock = $('#footer_menus');
+	var blueCurve = footerBlock.find('.blue-curve');
+	var blueCurveHeight = blueCurve.outerHeight();
+	var top = -Math.abs(blueCurveHeight);
+	blueCurve.css('top', top);
+}
+// ==========================================
+	// curve alignment end
 // ==========================================
 
 })( jQuery );

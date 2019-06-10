@@ -1,19 +1,18 @@
-// orange widgets under banner
+// coloured widgets under banner
 #wdgt_block_outer {
 	padding: 0;
 	position: relative;
 }
 .colour-overlay {
 	position: relative;
-	padding: 5vh 0;
+	padding: 4vh 0;
 	color: #fff;
 	@include bg_img_cover();
-	margin: 0 0 6vh;
 	z-index: 10;
 	h1 {
 		width: 100%;
 		text-align: center;
-		margin: 0 0 7vh;
+		margin: 0 0 4vh;
 	}
 	.widget-container {
 		@include flexbox();
@@ -24,12 +23,13 @@
 			height: 100%;
 			.widget-icon {
 				@include bg_img_contain();
-				padding-top: 30%;
+				padding-top: 25%;
 			    margin: 0 0 1vh;
 			}
 			.widget-text {
-				h2 {
+				h3 {
 					margin: 0 0 1vh;
+					line-height: 1;
 				}
 				p {
 					line-height: 1.2;
@@ -56,7 +56,7 @@
     -webkit-filter: grayscale(100%);
     filter: grayscale(100%);
 }
-// orange wdg area end
+// coloured wdg area end
 
 // 2  wdg block
 #wdg_two_wide, #response {
@@ -106,6 +106,7 @@
 					justify-content: center;
 					top: 0;
 					position: relative;
+					margin: auto;
 					.blue-arrow {
 						@include bg_img_contain();
 						height: 1vw;

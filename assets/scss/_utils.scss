@@ -32,7 +32,7 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 	left: 0;
 	width: 100%;
 	height: 100%;
-	background-image: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(0,0,0,0.4))
+	background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.25))
 }
 
 .read-more {
@@ -41,6 +41,7 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 	justify-content: flex-start;
 	top: 0;
 	position: relative;
+	width: fit-content;
 	.blue-arrow {
 		background-image: url('../images/blue-arrow.png');
 		@include bg_img_contain();
@@ -170,15 +171,18 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 #page_content {
 	padding: 0;
 	width: 60vw;
+	margin: 7vh auto 11vh;
 	h3 {
 		color: #70D9F5;
+		margin: 0 0 2vh;
 	}
 	a {
 		position: relative;
 		@include flexbox();
 		align-items: center;
 		color: #122121;
-
+		width: fit-content;
+	    font-weight: 500;
 	}
 	a:before {
 		content: ' ';
@@ -310,43 +314,45 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 // curves
 .blue-curve {
 	background-image: url('../images/Curve blue below.svg');
-    left: 0;
-    padding-top: 2vw;
+    left: 50%;
+    padding-top: 1vw;
     position: absolute;
     width: 100vw;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     z-index: 10;
+    background-position: center;
+    transform: translateX(-50%);
 }
 
 .orange-curve {
 	background-image: url('../images/Curve red below.svg');
-    left: 0;
-    padding-top: 2vw;
-    position: absolute;
-    width: 100vw;
-    background-size: contain;
-    background-repeat: no-repeat;
-    z-index: 10;
+	left: 50%;
+	padding-top: 1vw;
+	position: absolute;
+	width: 100vw;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 10;
+	background-position: bottom center;
+	transform: translateX(-50%);
 }
 
 .grey-curve {
 	background-image: url('../images/Curve white above.svg');
 	left: 0;
-    padding-top: 2vw;
+    padding-top: 1vw;
     width: 100vw;
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     z-index: 10;
     margin: 0 0 5vh;
 }
 
 .top-curve {
-	top: -1vw;
 }
 
 .bottom-curve {
-	bottom: -2vh;
 }
 
 // images on posts the content

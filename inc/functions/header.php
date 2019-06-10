@@ -56,7 +56,7 @@ function outputHeader() { ?>
 <?php }
 
 function ouputFeatBanner() {
-	
+
 	$args = array(
 		'posts_per_page' => -1,
 		'category_name' => 'News',
@@ -90,10 +90,12 @@ function ouputFeatBanner() {
 							<h3><?php echo $cat_name; ?></h3>
 							<h2><strong><?php echo get_the_title(); ?></strong></h2>
 							<p><?php echo $content; ?></p>
-		        			<div class="read-more">
-			        			<div class="blue-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/blue-arrow.png);"></div>
-			        			<span>Read More</span>
-			        		</div>
+							<a href="<?php the_permalink(); ?>">
+			        			<div class="read-more">
+				        			<div class="blue-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/blue-arrow.png);"></div>
+				        			<span>Read More</span>
+				        		</div>
+							</a>
 			        	</div>
 					</div>
 				</div>
@@ -113,8 +115,10 @@ function ouputFeatBanner() {
 }
 
 function ouputSlider() {
+	$is_subpage = is_subpage();
+	// alert($is_subpage);
 	?>
-		<div id="carouselHeader" class="carousel slide carousel-fade" data-ride="carousel">
+		<div id="carouselHeader" class="carousel slide carousel-fade <?php if($is_subpage == true){ echo "subpage"; } ?>" data-ride="carousel" data-interval="4000">
 			<ol class="carousel-indicators">
 				<?php
 					$count_ind = 0;
@@ -149,21 +153,54 @@ function ouputSlider() {
 
 			        $banner_img = get_sub_field('banner_image');
 			        $banner_overlay = get_sub_field('banner_overlay');
+			        $do_you_want_a_banner_link = get_sub_field('do_you_want_a_banner_link');
 			        
-			        if ($count_ban == 0) { ?>
+			        if ($count_ban == 0) { 
+			        	
+			        	?>
 			        	<div class="carousel-item active dimmed" style="background-image: url(<?php echo $banner_img['url']; ?>);">
-			        		<div class="slide-overlay">
-			        			<?php echo $banner_overlay; ?>
-			        		</div>
+			        		<?php
+			        			if ($do_you_want_a_banner_link == 'yes') { 
+			        				$banner_link = get_sub_field('banner_link');
+			        				?>
+			        				<a href="<?php echo $banner_link['url']; ?>">
+			        			<?php
+			        			}
+			        			?>
+						        		<div class="slide-overlay">
+						        			<?php echo $banner_overlay; ?>
+						        		</div>
+				        		<?php
+						        if ($do_you_want_a_banner_link == 'yes') { ?>
+						        	</a>
+						        <?php
+						        }
+						        ?>
 			        	</div>
+			        	<?php
+			        	
+			        	?>
 			        <?php
-			        } else { ?>
-				        <div class="carousel-item dimmed" style="background-image: url(<?php echo $banner_img['url']; ?>);">
-				        	<div class="slide-overlay">
-				        		<?php echo $banner_overlay; ?>
-				        	</div>
-				        </div>
+			        } else { 
+			        
+			        	?>
+			        <div class="carousel-item dimmed" style="background-image: url(<?php echo $banner_img['url']; ?>);">
+			        	<?php
+			        	if ($do_you_want_a_banner_link == 'yes') { 
+			        		?>
+			        		<a href="<?php echo $banner_link['url']; ?>">
+			        	<?php
+			        	}
+			        	?>
+			        	<div class="slide-overlay">
+			        		<?php echo $banner_overlay; ?>
+			        	</div>
+			        </div>
 			        <?php
+				        if ($do_you_want_a_banner_link == 'yes') { ?>
+				        	</a>
+				        <?php
+				        }
 			        }
 			        ?>
 			        	
@@ -184,6 +221,7 @@ function ouputSlider() {
 			  </a>
 			<?php
 			?>
+			<div class="scroll-dwn"></div>
 		</div>
 	</div>
 	<div id="banner-anch"></div>
@@ -191,18 +229,16 @@ function ouputSlider() {
 }
 
 function outputSingleBanner() {
-
+		$is_subpage = is_subpage();
 		$static_banner_image = get_field('static_banner_image');
 		$static_banner_overlay = get_field('static_banner_overlay');
 	?>
-	<div id="static-banner-image" class="dimmed" style="background-image: url(<?php echo $static_banner_image['url']; ?>);">
+	<div id="static-banner-image" class="dimmed <?php if($is_subpage == true){ echo "subpage"; } ?>" style="background-image: url(<?php echo $static_banner_image['url']; ?>);">
         <div class="orange-curve bottom-curve"></div>
 		<div id="static-banner-overlay">
 			<?php echo $static_banner_overlay; ?>
 		</div>
-		<div class="scroll-dwn">
-			
-		</div>
+		<div class="scroll-dwn"></div>
 	</div>
 	<div id="banner-anch"></div>
 	<?php

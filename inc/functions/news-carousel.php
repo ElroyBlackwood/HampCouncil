@@ -92,8 +92,19 @@
 		<div class="slick-wrapper">
 			<div class="news-carousel">
 				<?php while($catquery->have_posts()) : $catquery->the_post(); ?>
+					<?php 
+						$external_post = get_field('external_blog_link');
+						$is_external = false;
+						$external_link = "";
+
+						if ($external_post == 'yes') {
+							$is_external = true;
+							$external_link = get_field('link_to_story');
+							$external_link = strip_tags($external_link);
+						}
+					 ?>
 					<div class="slide-content">
-						<a href="<?php the_permalink() ?>" rel="bookmark">
+						<a href="<?php if($is_external == true){ echo $external_link; } else { the_permalink(); } ?>" <?php if($is_external == true){ echo "target='_blank'"; } ?> >
 							 <h3 class="news-carousel-title"><?php the_title(); ?></h3>
 							<?php if ( has_post_thumbnail() ) : ?>
 							<?php $thumburl = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>

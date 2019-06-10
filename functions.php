@@ -31,4 +31,16 @@
 	    echo "<script type='text/javascript'>alert('$msg');</script>";
 	}
 
+	function is_subpage() {
+		global $post;
+		$is_subpage = false;
 
+		if ( is_page() && $post->post_parent ) {
+			// alert("in if");
+			$is_subpage = true;
+		} else {
+		    
+		}
+
+		return $is_subpage;
+	}

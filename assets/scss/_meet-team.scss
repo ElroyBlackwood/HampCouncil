@@ -16,17 +16,22 @@
 	    }
 		.team-member-content {
 			width: 68%;
-			h2 {
-
+			h3:first-of-type {
+				margin: 0;
+			}
+			h3:last-of-type {
+				font-weight: 600;
 			}
 			p{
 
 			}
 			a{
-				color: $blue;	
+				color: #404D4D;	
 				@include flexbox();
 				justify-content: flex-start;
 				align-items: center;
+				width: fit-content;
+				font-weight: 500;
 				.email-icon {
 					margin: 0 1vw 0 0;
 				}
