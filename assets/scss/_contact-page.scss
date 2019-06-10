@@ -1,0 +1,39 @@
+#contact_top_content {
+	margin: 4vh auto;
+}
+
+#contact_info {
+	@include flexbox();
+	width: 75vw;
+	padding: 0;
+	#contact-details {
+		width: 50%;
+	}
+	#contact-form {
+		width: 50%;
+		.wpcf7-acceptance {
+			span {
+				label {
+					@include flexbox();
+				}
+			}
+			span.wpcf7-list-item:before {
+				content: ' ';
+			}
+			input {
+				display: none;
+			}
+		}
+		.container {
+			position: relative;
+			.checkmark {
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 25px;
+				width: 25px;
+				background-color: #eee;
+			}
+		}
+	}
+}
