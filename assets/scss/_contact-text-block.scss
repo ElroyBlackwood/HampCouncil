@@ -9,8 +9,8 @@
 		.icon {
 			@include bg_img_contain();
 			background-image: url('../images/email-icon-blue.png');
-			height: 4vh;
-			width: 4vw;
+			height: 3vh;
+			width: 3vw;
 			background-position: left;
 		}
 		a {
@@ -21,7 +21,7 @@
 		.icon {
 			@include bg_img_contain();
 			background-image: url('../images/phone-icon.png');
-			height: 6vh;
+			height: 5vh;
 			width: 4vw;
 			background-position: left;
 		}

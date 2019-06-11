@@ -25,6 +25,21 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 	outline: none;
 }
 
+#contact-form {
+	input[type='submit'] {
+		width: 25%;
+		margin: 4vh 0 4vh auto;
+		display: block;
+		justify-content: center;
+		background: #70D9F5;
+		@include ease(all, 0.25s);
+	}
+	input[type="submit"]:hover {
+		background: #404D4D;
+		color: #fff;
+	}
+}
+
 .dimmed {
 	position: relative;
 }
@@ -125,7 +140,7 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 		margin: 0 0 2vh;
 		.text-content-title-icon {
 			@include bg_img_contain;
-			height: 7vh;
+			height: 5vh;
 			width: 5vw;
 			background-position: left;
 		}
@@ -237,6 +252,37 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 // ======================================
 	// shiftnav hacks end
 // ======================================
+
+// ======================================
+	// shiftnav hacks end
+// ======================================
+
+.checkmark:hover {
+	cursor: pointer;
+}
+
+.checkmark {
+	.fa-check {
+		opacity: 0;
+	}
+}
+
+.checkbox-active {
+	position: relative;
+	.fa-check {
+		opacity: 1;
+	}
+}
+
+.checkbox-active:before {
+	
+}
+
+// ======================================
+	// shiftnav hacks end
+// ======================================
+
+
 
 #top-anch {
 	position: relative;

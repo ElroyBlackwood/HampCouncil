@@ -408,8 +408,19 @@ function scrollToAnchor(aid){
 	// checkbox stuff
 // ==========================================
 
-$('#checkboxG4').click(function(){
-	$('#checkmark-checkboxG4').css();
+$('#checkboxG4').change(function() {
+	var checkbox = $('#checkmark-checkboxG4');
+	
+	if (checkbox.hasClass('checkbox-active')) {
+		checkbox.removeClass('checkbox-active');
+	} else {
+		checkbox.addClass('checkbox-active');
+	}
+
+});
+
+$('#checkmark-checkboxG4').click(function() {
+	$('#checkboxG4').click();
 });
 
 // ==========================================
