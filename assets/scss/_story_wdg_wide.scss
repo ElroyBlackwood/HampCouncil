@@ -2,5 +2,10 @@
 	.wdg-container {
 		border-top-left-radius: 50% 1vw;
 	    border-top-right-radius: 50% 1vw;
+	    .wdg-overlay {
+	    	.read-more {
+	    		margin: auto;
+	    	}
+	    }
 	}
 }
