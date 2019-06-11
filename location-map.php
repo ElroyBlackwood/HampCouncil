@@ -15,8 +15,8 @@
 	<?php outputTextContentBlock('location_map_top_content'); ?>
 	<?php outputLocationMap(); ?>
 	<?php outputTextContentBlock('location_map_bottom_content'); ?>
-	<?php outputStories(); ?>
 	<?php outputContactDetailsTextBlock(); ?>
+	<?php outputStories(); ?>
 </div>
 
 <?php get_footer(); ?>
