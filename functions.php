@@ -15,6 +15,7 @@
 
 	include_once(ABSPATH . 'wp-content/themes/HampCouncil/inc/functions/elroy-functions.php');
 
+
 	// Register custom navigation walker
 	require_once(get_template_directory() . '/wp-bootstrap-navwalker.php');
 	

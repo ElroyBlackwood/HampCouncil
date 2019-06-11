@@ -3,9 +3,13 @@
 ?>
 
 <?php get_header(); ?>
-<div class="page-title">
-	<h1><?php echo get_the_title(); ?></h1>
-</div>
+<?php 
+	$displayTitle = get_field('display_page_title');
+
+	if ($displayTitle == 'yes') {
+		outputTitle();
+	}
+?>
 <?php outputTeamMembers(); ?>
 
 <?php get_footer(); ?>

@@ -13,6 +13,7 @@ function outputWidgetBlock() { ?>
 		$bg_img = get_field('wdg_background_image');
 		$text_col = get_field('text_colour');
 		$text_col = "#" . $text_col;
+		alert($text_col);
 		?>
 		<style type="text/css">
 			/*#wdgt_block:after {

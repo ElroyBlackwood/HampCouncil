@@ -310,6 +310,11 @@ $(document).on('mouseleave', '#header-menu', function(event) {
 	});
 });
 
+$(document).on('mouseenter', '#top-bar', function(event) {
+	$('.active-dd').each(function() {
+		$(this).removeClass('active-dd');
+	});
+});
 
 // ==========================================
 	// nav menu hover end

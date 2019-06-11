@@ -56,7 +56,8 @@ function outputHeader() { ?>
 <?php }
 
 function ouputFeatBanner() {
-
+	$is_subpage = is_subpage();
+	// alert($is_subpage);
 	$args = array(
 		'posts_per_page' => -1,
 		'category_name' => 'News',
@@ -65,7 +66,7 @@ function ouputFeatBanner() {
 	$the_query = new WP_Query( $args );
 
 	if ( $the_query->have_posts() ) { ?>
-	<div class="container-fluid" id="featpost">
+	<div class="container-fluid <?php if($is_subpage == true){ echo "subpage"; } ?>" id="featpost">
 	<?php
 		while ( $the_query->have_posts() ) {
 			$the_query->the_post();

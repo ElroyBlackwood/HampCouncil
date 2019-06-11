@@ -362,6 +362,11 @@ header {
 		#static-banner-image.subpage {
 			height: 70vh;
 		}
+		#featpost.subpage {
+			.static-banner-image {
+				height: 70vh;
+			}
+		}
 	}
 	#banner:after {
 		// content: '';

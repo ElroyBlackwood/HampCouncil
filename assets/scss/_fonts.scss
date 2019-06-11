@@ -2,13 +2,19 @@
 
 $maven_pro : 'Maven Pro';
 
-h1, h2, h3, h4, h5, h6, p, a {
+h1, h2, h3, h4, h5, h6, p, a, li {
 	font-family: $maven_pro;
 }
 
 h1, h2, h3, h4, h5, h6 {
 	line-height: 1.1;
 	font-weight: 450;
+}
+
+li {
+	font-size: 1.2vw;
+	line-height: 1.2;
+	color: #404D4D;
 }
 
 p, a, label {

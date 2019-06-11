@@ -9,6 +9,10 @@ html, body {
 	overflow-x: hidden;
 }
 
+a {
+	@include ease(all, 0.25s);
+}
+
 a:hover {
 	text-decoration: none;
 }
@@ -176,24 +180,33 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 		color: #70D9F5;
 		margin: 0 0 2vh;
 	}
-	a {
-		position: relative;
-		@include flexbox();
-		align-items: center;
-		color: #122121;
-		width: fit-content;
-	    font-weight: 500;
+	code {
+		a {
+			position: relative;
+			@include flexbox();
+			align-items: center;
+			color: #122121;
+			width: fit-content;
+		    font-weight: 500;
+		}
+		a:before {
+			content: ' ';
+			background-image: url('../images/blue-arrow.png');
+			height: 1.5vw;
+		    width: 2vw;
+		    margin: 0 1vw 0 0;
+		    background-size: contain;
+		    position: relative;
+		    background-repeat: no-repeat;
+		    display: inline-block;
+		}
 	}
-	a:before {
-		content: ' ';
-		background-image: url('../images/blue-arrow.png');
-		height: 1.5vw;
-	    width: 2vw;
-	    margin: 0 1vw 0 0;
-	    background-size: contain;
-	    position: relative;
-	    background-repeat: no-repeat;
-	    display: inline-block;
+	a{
+		color: #002EB5;
+		font-weight: 500;
+	}
+	a:hover {
+		color: #F26640;
 	}
 }
 
