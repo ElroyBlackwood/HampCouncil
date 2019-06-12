@@ -7,6 +7,7 @@ $orange : #F26640;
 
 html, body {
 	overflow-x: hidden;
+	overflow-y: hidden;
 }
 
 a {
@@ -23,6 +24,41 @@ div:focus, p:focus, h1:focus, h2:focus, h3:focus, h4:focus, h5:focus, h6:focus, 
 
 div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:active, span:active, a:active {
 	outline: none;
+}
+
+#preLoader {
+	position: fixed;
+	width: 100vw;
+	height: 100vh;
+	background: #404D4D;
+	z-index: 1000;
+	@include flexbox();
+	align-items: center;
+	justify-content: center;
+	opacity: 1;
+	.logo {
+		background-image: url('../images/HAM001-logoRGB-icononly.png');
+		@include bg_img_contain();
+		padding: 4vw;
+	    transform: rotateY(0deg);
+	    width: auto;
+	}	
+}
+
+.spin {
+	animation-name: spin;
+	animation-duration: 5s;
+	animation-iteration-count: infinite;
+}
+
+@-webkit-keyframes spin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
+}
+
+@keyframes spin {
+  from { transform: rotateY(0deg); }
+  to { transform: rotateY(360deg); }
 }
 
 #contact-form {
@@ -223,6 +259,11 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 	a:hover {
 		color: #F26640;
 	}
+	img {
+		max-width: 100%;
+		height: auto;
+		padding: 1vh 0 2vh;
+	}
 }
 
 // ======================================
@@ -412,6 +453,19 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
     background-repeat: no-repeat;
     z-index: 10;
     margin: 0 0 5vh;
+}
+
+.white-curve {
+	background-image: url('../images/Curve white above.svg');
+	left: 50%;
+	padding-top: 1vw;
+	position: absolute;
+	width: 101vw;
+	background-size: cover;
+	background-repeat: no-repeat;
+	z-index: 10;
+	background-position: bottom center;
+	transform: translateX(-50%);
 }
 
 .top-curve {
