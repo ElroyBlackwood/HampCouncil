@@ -1,4 +1,4 @@
-#contact-details-text-block {
+#contact-details-text-block, .agent-contact-details {
 	padding: 0;
 	.icon-text {
 		@include flexbox();
@@ -27,6 +27,30 @@
 		}
 		a {
 
+		}
+	}
+}
+
+.agent-contact {
+	.agent-contact-header {
+		@include flexbox();
+		margin: 6vh 0 2vh;
+		.icon {
+			background-size: contain;
+		    background-position: center;
+		    background-repeat: no-repeat;
+		    width: 100%;
+		    height: 5vh;
+		    width: 4vw;
+		    background-position: center left;
+		}
+		h3 {
+			margin: 0;
+		}
+	}
+	.agent-contact-details {
+		p {
+			margin: 0 0 4vh;
 		}
 	}
 }

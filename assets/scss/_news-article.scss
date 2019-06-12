@@ -1,4 +1,4 @@
-#news-article {
+#news-article, #single-property {
 	padding: 0;
 	width: 75vw;
 	margin: 8vh auto;
@@ -41,6 +41,22 @@
 			a:hover {
 				text-decoration: none;
 				color: #333;
+			}
+		}
+	}
+}
+
+#single-property {
+	#article-content {
+		#article-header {
+			@include flexbox();
+			.agent-logo {
+				@include bg_img_contain;
+				padding-top: 4vh;
+				width: 20%;
+			}
+			.agent-title{
+				width: 80%;
 			}
 		}
 	}

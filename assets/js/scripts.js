@@ -502,4 +502,48 @@ $(document).ready(function() {
 // ==========================================
 	// preloader end
 // ==========================================
+
+// ==========================================
+	// nav
+// ==========================================
+
+$(document).ready(function() {
+	var navitem = $('#menu-main-menu li');
+	var link;
+
+	navitem.click(function() {
+		console.log('clicked');
+		link = $(this).find('a').attr('href');
+		window.location.href = link;
+	});
+});
+
+// ==========================================
+	// nav end
+// ==========================================
+
+
+// ==========================================
+	// post gallery
+// ==========================================
+
+	 $('.main-image-gallery').slick({
+	  slidesToShow: 1,
+	  slidesToScroll: 1,
+	  arrows: false,
+	  fade: true,
+	  asNavFor: '.nav-main-image-gallery'
+	});
+	$('.nav-main-image-gallery').slick({
+	  slidesToShow: 3,
+	  slidesToScroll: 1,
+	  asNavFor: '.main-image-gallery',
+	  dots: false,
+	  centerMode: true,
+	  focusOnSelect: true
+	});
+
+// ==========================================
+	// post gallery end
+// ==========================================
 })( jQuery );

@@ -1,0 +1,27 @@
+#post-gallery {
+	.main-image-gallery {
+		.slide {
+			.slide-img {
+				@include bg_img_cover();
+				padding-top: 50%;
+			}
+			.slide-img:hover {
+				cursor: pointer;
+			}
+		}
+	}
+	.nav-main-image-gallery {
+		width: 80%;
+		margin: 4vh auto;
+		.slide {
+			.slide-img {
+				@include bg_img_cover();
+				padding-top: 50%;
+				width: 95%;
+			}
+			.slide-img:hover {
+				cursor: pointer;
+			}
+		}
+	}
+}

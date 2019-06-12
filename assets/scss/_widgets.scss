@@ -59,7 +59,7 @@
 // coloured wdg area end
 
 // 2  wdg block
-#wdg_two_wide, #response {
+#wdg_two_wide, #response, #featured-properties, #property-search-links {
 	@include flexbox();
 	@include ease(all, 0.25s);
 	flex-wrap: wrap;
@@ -84,7 +84,7 @@
 				@include overlay_center();
 				@include ease(all, 0.25s);
 				color: #fff;
-				width: 70%;
+				width: 80%;
 				text-align: center;
 				z-index: 10;
 				pointer-events:none;
@@ -136,6 +136,10 @@
 			}
 		}
 	}
+}
+
+#featured-properties, #property-search-links {
+	padding: 0 0 15vh;
 }
 // end
 @include respond-below(xs) {

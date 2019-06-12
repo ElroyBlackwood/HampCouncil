@@ -16,5 +16,9 @@ include_once('text-content-block.php');
 include_once('page-title.php');
 include_once('contact-details-text-block.php');
 include_once('show-hide.php');
+include_once('featured-properties.php');
+include_once('property-links.php');
+include_once('property.php');
+include_once('post-gallery.php');
 
 ?>
