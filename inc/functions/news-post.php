@@ -10,6 +10,8 @@
 					$feat_img = get_the_post_thumbnail_url(get_the_ID(), 'full');
 					$post_thumbnail_id = get_post_thumbnail_id();
 					$caption = wp_get_attachment_caption($post_thumbnail_id);
+					$static_or_gallery = get_field('do_you_want_a_static_image_or_gallery');
+
 					// echo "post thumb id " . $post_thumbnail_id;
 					foreach ($cats as $cat) {
 						array_push($list_of_cats, $cat->name);
@@ -27,9 +29,11 @@
 					<h1><?php echo get_the_title(); ?></h1>
 				</div>
 				<?php
-					if ($do_you_want_a_static_image_or_gallery == 'static') { ?>
+					if ($static_or_gallery == 'static') { ?>
 						<div id="news-article-feat-img-container">
-							<div class="news-article-feat-img" style="background-image: url(<?php echo $feat_img; ?>);"></div>
+							<a href="<?php echo $feat_img; ?>" data-rel="lightbox">
+								<div class="news-article-feat-img" style="background-image: url(<?php echo $feat_img; ?>);"></div>
+							</a>
 							<div class="news-article-feat-img-caption">
 								<?php echo $caption; ?>
 							</div>

@@ -13,7 +13,7 @@
 					$agent_address = get_field('agent_address');
 					$agent_email = get_field('agent_email');
 					$agent_phone_number = get_field('agent_phone_number');
-					$do_you_want_a_static_image_or_gallery = get_field('do_you_want_a_static_image_or_gallery');
+					$static_or_gallery = get_field('do_you_want_a_static_image_or_gallery');
 
 				?>
 				<div id="article-header">
@@ -26,7 +26,7 @@
 					</div>
 				</div>
 				<?php
-					if ($do_you_want_a_static_image_or_gallery == 'static') { ?>
+					if ($static_or_gallery == 'static') { ?>
 						<div id="news-article-feat-img-container">
 							<div class="news-article-feat-img" style="background-image: url(<?php echo $feat_img; ?>);"></div>
 							<div class="news-article-feat-img-caption">
