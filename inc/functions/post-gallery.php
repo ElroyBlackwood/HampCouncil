@@ -8,8 +8,10 @@
 				<?php
 				foreach ($gallery_images as $image) { ?>
 					<div class="slide">
-						<div class="slide-img" style="background-image: url('<?php echo $image['url']; ?>');">
-						</div>
+						<a href="<?php echo $image['url']; ?>" data-rel="lightbox">
+							<div class="slide-img" style="background-image: url('<?php echo $image['url']; ?>');">
+							</div>
+						</a>
 					</div>
 				<?php
 				}
@@ -20,7 +22,7 @@
 				<?php
 				foreach ($gallery_images as $image) { ?>
 					<div class="slide">
-						<div class="slide-img lightbox" style="background-image: url('<?php echo $image['url']; ?>');">
+						<div class="slide-img" style="background-image: url('<?php echo $image['url']; ?>');">
 						</div>
 					</div>
 				<?php
