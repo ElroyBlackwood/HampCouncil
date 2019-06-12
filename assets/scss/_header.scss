@@ -54,10 +54,13 @@ header {
 					.probox {
 						height: 100%;
 						background: rgba(0,0,0,0.5);
+						align-items: center;
 						.promagnifier {
 							height: 100%;
 							background: transparent;
 							border: transparent;
+							@include flexbox();
+							align-items: center;
 						}
 						.proinput {
 							@include flexbox();
@@ -67,6 +70,9 @@ header {
 								input {
 									height: 100%;
 									font-size: 1vw;
+								}
+								input.autocomplete {
+									display: none;
 								}
 							}
 						}
