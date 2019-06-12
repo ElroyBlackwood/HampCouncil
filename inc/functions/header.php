@@ -17,7 +17,7 @@ function outputHeader() { ?>
 					?>
 			</div>
 			<div id="ajax-search">
-				<?php echo do_shortcode('[wpdreams_ajaxsearchlite]'); ?>
+				<?php echo do_shortcode('[wd_asp id=1]'); ?>
 			</div>
 		</div>
 		<div class="header-nav">
