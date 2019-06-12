@@ -26,12 +26,18 @@
 					<h3><?php echo $sub_cat; ?></h3>
 					<h1><?php echo get_the_title(); ?></h1>
 				</div>
-				<div id="news-article-feat-img-container">
-					<div class="news-article-feat-img dimmed" style="background-image: url(<?php echo $feat_img; ?>);"></div>
-					<div class="news-article-feat-img-caption">
-						<?php echo $caption; ?>
-					</div>
-				</div>
+				<?php
+					if ($do_you_want_a_static_image_or_gallery == 'static') { ?>
+						<div id="news-article-feat-img-container">
+							<div class="news-article-feat-img" style="background-image: url(<?php echo $feat_img; ?>);"></div>
+							<div class="news-article-feat-img-caption">
+								<?php echo $caption; ?>
+							</div>
+						</div>
+				<?php } else {
+					ouputPostGallery();
+				}
+				?>
 				<div id="article-text">
 					<?php the_content(); ?>
 				</div>
