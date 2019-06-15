@@ -55,6 +55,50 @@
 	}
 }
 
+@include respond-below(xs) {
+	#contact-details-text-block, .agent-contact-details {
+
+		.icon-text {
+
+		}
+		.icon-text#email_address {
+			.icon {
+				height: 3vh;
+				width: 8vw;
+				margin: 0 2vw 0 0;
+			}
+			a {
+
+			}
+		}
+		.icon-text#phone_number {
+			.icon {
+				height: 5vh;
+				width: 7vw;
+				margin: 0 1vw 0 0;
+			}
+			a {
+
+			}
+		}
+	}
+
+	.agent-contact {
+		.agent-contact-header {
+
+			.icon {
+		
+			}
+			h3 {
+			}
+		}
+		.agent-contact-details {
+			p {
+			}
+		}
+	}
+}
+
 @include respond-between(xs, sm) {
 	#contact-details-text-block {
 		.icon-text {

@@ -11,6 +11,18 @@
 	}
 	#contact-form {
 		width: 50%;
+		input[type='submit'] {
+			width: 25%;
+			margin: 4vh 0 4vh auto;
+			display: block;
+			justify-content: center;
+			background: #70D9F5;
+			@include ease(all, 0.25s);
+		}
+		input[type="submit"]:hover {
+			background: #404D4D;
+			color: #fff;
+		}
 		.wpcf7-acceptance {
 			span {
 				label {
@@ -33,6 +45,44 @@
 			    height: 2vw;
 			    width: 2vw;
 				background-color: #eee;
+			}
+		}
+	}
+}
+
+@include respond-below(xs) {
+	#contact_top_content {
+	}
+
+	#contact_info {
+		width: 90vw;
+		flex-wrap: wrap;
+		#contact-details {
+			width: 100%;
+			order: 2;
+			margin: 0 0 4vh;
+		}
+		#contact-form {
+			width: 100%;
+			.wpcf7-acceptance {
+				span {
+					label {
+					}
+				}
+				span.wpcf7-list-item:before {
+				}
+				input {
+				}
+			}
+			.container {
+				.checkmark {
+					height: 4vw;
+					width: 4vw;
+				}
+			}
+			input[type="submit"] {
+				width: 33%;
+				margin: 1vh 0 1vh auto;
 			}
 		}
 	}

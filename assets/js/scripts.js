@@ -214,16 +214,35 @@ $('.fitler_tag').click(function() {
 // ==========================================
 $('.hamburger-container').on('touch click', function(e) {
 	var hamburger = $(this);
+	var hamburger_bg = $('.hamburger-bg');
 
 	if (hamburger.hasClass('active')) {
 		hamburger.find('.filter-dropdown').animate({opacity : 0}, 250, function() {
 			hamburger.find('.filter-dropdown').css('display', 'none');
 			hamburger.removeClass('active');
+			hamburger_bg.toggle();
 		});
 	} else {
 		hamburger.addClass('active');
 		hamburger.find('.filter-dropdown').css('display', 'flex');
 		hamburger.find('.filter-dropdown').animate({opacity : 1}, 250);
+		hamburger_bg.toggle();
+	}
+	
+});
+
+$('.hamburger-bg').on('touch click', function(e) {
+	var hamburger = $('.hamburger-container');
+	var hamburger_bg = $(this);
+
+	if (hamburger.hasClass('active')) {
+		hamburger.find('.filter-dropdown').animate({opacity : 0}, 250, function() {
+			hamburger.find('.filter-dropdown').css('display', 'none');
+			hamburger.removeClass('active');
+			hamburger_bg.toggle();
+		});
+	} else {
+
 	}
 	
 });
@@ -257,7 +276,7 @@ function sizeCarouselTitle() {
 // ==========================================
 
 function shiftNavhack() {
-	var html_logo = '<a href="http://localhost/hampcouncil" id="logo_lnk"><div class="logo" style="background-image: url(http://localhost/hampcouncil/wp-content/themes/HampCouncil/assets/images/logo.png);"></div></a>';
+	var html_logo = '<a href="http://hampshire.ounodemo.co.uk" id="logo_lnk"><div class="logo" style="background-image: url(/hampcouncil/wp-content/themes/HampCouncil/assets/images/logo.png);"></div></a>';
 	$('.shiftnav-site-title').html(html_logo);
 }
 

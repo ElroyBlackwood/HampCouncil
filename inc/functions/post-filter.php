@@ -2,6 +2,7 @@
 
 function outputPostFilter() {
 	?>
+	<div class="hamburger-bg"></div>
 	<div id="news-filter">
 		<h1>News</h1>
 		<div id="post-filter">

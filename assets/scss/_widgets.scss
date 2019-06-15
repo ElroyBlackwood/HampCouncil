@@ -150,6 +150,7 @@
 		}
 		.widget-container {
 			flex-wrap: wrap;
+			justify-content: center;
 			.widget {
 				
 				.widget-icon {
@@ -170,9 +171,7 @@
 			}
 		}
 	}
-	.container-width {
-		width: 95vw;
-	}
+	
 
 	#wdg_two_wide, #response {
 		width: 90vw;
@@ -196,7 +195,8 @@
 					.read-more {
 						
 						.blue-arrow {
-							
+							height: 4vw;
+							width: 7vw;
 						}
 						span {
 							
@@ -218,6 +218,13 @@
 					}
 				}
 			}
+		}
+	}
+	#wdg_two_wide, #response, #featured-properties, #property-search-links {
+		width: 90vw;
+		a {
+			width: 100%;
+			margin: 0 0 2vh;
 		}
 	}
 }

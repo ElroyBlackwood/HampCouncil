@@ -54,3 +54,41 @@ h5 {
 .orange-text {
 	color: $orange;
 }
+
+@include respond-below(xs) {
+	li {
+		font-size: 3.5vw;
+		line-height: 1.2;
+		color: #404D4D;
+	}
+
+	input {
+		font-size: 4vw;
+	}
+
+	p, a, label {
+		font-size: 4vw;
+		line-height: 1.2;
+		color: #404D4D;
+	}
+
+	h1 {
+		font-size: 10vw;
+	}
+
+	h2 {
+		font-size: 8vw;
+	}
+
+	h3 {
+		font-size: 6vw;
+	}
+
+	h4 {
+		font-size: 5vw;
+	}
+
+	h5 {
+		font-size: 4vw;
+	}
+}

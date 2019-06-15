@@ -3,6 +3,7 @@ $orange : #F26640;
 
 .container-width {
 	width: 75vw;
+	padding: 0;
 }
 
 html, body {
@@ -59,21 +60,6 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 @keyframes spin {
   from { transform: rotateY(0deg); }
   to { transform: rotateY(360deg); }
-}
-
-#contact-form {
-	input[type='submit'] {
-		width: 25%;
-		margin: 4vh 0 4vh auto;
-		display: block;
-		justify-content: center;
-		background: #70D9F5;
-		@include ease(all, 0.25s);
-	}
-	input[type="submit"]:hover {
-		background: #404D4D;
-		color: #fff;
-	}
 }
 
 .dimmed {
@@ -295,7 +281,7 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 // ======================================
 
 // ======================================
-	// shiftnav hacks end
+	// checkbox custom
 // ======================================
 .checkboxG4 {
 	.wpcf7-list-item {
@@ -326,96 +312,8 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 }
 
 // ======================================
-	// shiftnav hacks end
+	// check box custom end
 // ======================================
-
-
-
-#top-anch {
-	position: relative;
-}
-
-@include respond-below(xs) {
-	p, a, label {
-		font-size: 4vw;
-	}
-
-	h1 {
-		font-size: 7vw;
-	}
-
-	h2 {
-		font-size: 6vw;
-	}
-
-	h3 {
-		font-size: 5vw;
-	}
-
-	h4 {
-		font-size: 4vw;
-	}
-
-	h5 {
-		font-size: 4vw;
-	}
-
-	.read-more {
-		.blue-arrow {
-			height: 4vw;
-		    width: 7vw;
-		    margin: 0 2vw 0 0;
-		}
-		span {
-		}
-	}
-	.carousel-control-next-icon {
-		height: 9vw;
-		width: 7.5vw;
-	}
-
-	.carousel-control-prev-icon {
-		height: 9vw;
-		width: 7.5vw;
-	}
-
-	#page_content {
-		width: 80vw;
-		h3 {
-		}
-	}
-}
-
-@include respond-between(xs, sm) {
-	.container-width {
-		width: 85vw;
-	}
-
-	p, a, label {
-		font-size: 2vw;
-	}
-
-	#page_content {
-		width: 65vw;
-		h3 {
-		}
-	}
-
-	.text-content-block {
-		
-		.title {
-			
-			.text-content-title-icon {
-				margin: 0 1vw 0 0;
-			}
-			h2 {
-			}
-		}
-		.text-content {
-
-		}
-	}
-}
 
 // curves
 .blue-curve {
@@ -490,4 +388,175 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 // slick dots
 .slick-dots {
 	margin: 2vh auto;
+}
+
+
+#top-anch {
+	position: relative;
+}
+
+@include respond-below(xs) {
+	.container-width {
+		width: 90vw;
+	}
+
+	p, a, label {
+		font-size: 4vw;
+	}
+
+	h1 {
+		font-size: 7vw;
+	}
+
+	h2 {
+		font-size: 6vw;
+	}
+
+	h3 {
+		font-size: 5vw;
+	}
+
+	h4 {
+		font-size: 4vw;
+	}
+
+	h5 {
+		font-size: 4vw;
+	}
+
+	.read-more {
+		.blue-arrow {
+			height: 4vw;
+		    width: 7vw;
+		    margin: 0 2vw 0 0;
+		}
+		span {
+		}
+	}
+	.carousel-control-next-icon {
+		height: 9vw;
+		width: 7.5vw;
+	}
+
+	.carousel-control-prev-icon {
+		height: 9vw;
+		width: 7.5vw;
+	}
+
+	#page_content {
+		width: 90vw;
+		h3 {
+		}
+	}
+
+	.text-content-block {
+		
+		.title {
+			
+			.text-content-title-icon {
+				margin: 0 2vw 0 0;
+				height: 5vh;
+				width: 15vw;
+			
+			}
+			h2 {
+				
+			}
+		}
+		.text-content {
+
+		}
+	}
+}
+
+.hamburger-bg{
+	position: fixed;
+	background: transparent;
+	height: 100vh;
+	width: 100vw;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	display: none;
+}
+
+@include respond-between(xs, sm) {
+	.container-width {
+		width: 85vw;
+	}
+
+	p, a, label {
+		font-size: 2vw;
+	}
+
+	#page_content {
+		width: 65vw;
+		h3 {
+		}
+	}
+
+	.text-content-block {
+		
+		.title {
+			
+			.text-content-title-icon {
+				margin: 0 1vw 0 0;
+			}
+			h2 {
+			}
+		}
+		.text-content {
+
+		}
+	}
+}
+
+@include respond-below(xs) {
+	#preLoader {
+		.logo {
+			padding: 12vw;
+		}
+	}
+
+	#page_content {
+		margin: 4vh auto 4vh;
+		code {
+			a:before {
+				height: 5vw;
+			    width: 12vw;
+			}
+		}
+	}
+	.page-title {
+		width: 75vw;
+		text-align: center;
+		margin: 4vh auto;
+	}
+
+	.in-page-title {
+		width: 90vw;
+		text-align: center;
+		margin: 4vh auto;
+	}
+
+	.text-content-block {
+	    margin: 0 auto 5vh;
+		.title {
+			
+			.text-content-title-icon {
+				
+			}
+			h2 {
+				
+			}
+		}
+		.text-content {
+
+		}
+	}
+	.checkmark {
+		.fa-check {
+			font-size: 4vw;
+		}
+	}
 }

@@ -45,3 +45,27 @@
 		}
 	}
 }
+
+@include respond-below(xs) {
+	#location-map-wrapper {
+		.text-content-block {
+			margin: 4vh auto 4vh;
+		}
+		#google-maps {
+		    padding: 0;
+		    width: 90vw;
+		    margin: 0 auto 4vh;
+		    #gmap {
+		    	height: 50vh;
+		    }
+		}
+	}
+	#location_map_top_content {
+		.text-content-block {
+			margin: 4vh auto 4vh;
+		}
+		.text-content-title-icon {
+			height: 5vh;
+		}
+	}
+}
