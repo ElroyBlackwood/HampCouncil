@@ -351,6 +351,7 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
     background-repeat: no-repeat;
     z-index: 10;
     margin: 0 0 5vh;
+    background-position: center;
 }
 
 .white-curve {
@@ -489,6 +490,16 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 		font-size: 2vw;
 	}
 
+	.read-more {
+		.blue-arrow {
+			height: 2vw;
+		    width: 2vw;
+		    margin: 0 1vw 0 0;
+		}
+		span {
+		}
+	}
+
 	#page_content {
 		width: 65vw;
 		h3 {
@@ -508,6 +519,25 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 		.text-content {
 
 		}
+	}
+	// curves
+	.blue-curve {
+	    padding-top: 1.5vw;
+	}
+
+	.orange-curve {
+	    padding-top: 1.5vw;
+		
+	}
+
+	.grey-curve {
+	    padding-top: 1.5vw;
+		
+	}
+
+	.white-curve {
+	    padding-top: 1.5vw;
+		
 	}
 }
 

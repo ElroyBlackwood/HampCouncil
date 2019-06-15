@@ -13,13 +13,11 @@
 	        	alignHeaderCurve();
 	        	alignNewsCurve();
 	        	alignBlueFooterCurve();
-	        	alignBlueFooterCurve();
 
 	        } else if (windowsize > 600 && windowsize < 1201) {
 	        	initSquare();
 	        	alignHeaderCurve();
 	        	alignNewsCurve();
-	        	alignBlueFooterCurve();
 	        	alignBlueFooterCurve();
 
 	        } else if (windowsize > 1200 && windowsize < 1601) {
@@ -27,20 +25,17 @@
 	        	alignHeaderCurve();
 	        	alignNewsCurve();
 	        	alignBlueFooterCurve();
-	        	alignBlueFooterCurve();
 
 	        } else if (windowsize > 1600 && windowsize < 1921) {
 	        	initSquare();
 	        	alignHeaderCurve();
 	        	alignNewsCurve();
 	        	alignBlueFooterCurve();
-	        	alignBlueFooterCurve();
 
 	        } else if (windowsize > 1920) {
 	        	initSquare();
 	        	alignHeaderCurve();
 	        	alignNewsCurve();
-	        	alignBlueFooterCurve();
 	        	alignBlueFooterCurve();
 	        }
 	    }
@@ -489,6 +484,7 @@ function alignNewsCurve() {
 }
 
 function alignBlueFooterCurve() {
+	console.log('blue menu');
 	var footerBlock = $('#footer_menus');
 	var blueCurve = footerBlock.find('.blue-curve');
 	var blueCurveHeight = blueCurve.outerHeight();
@@ -496,13 +492,7 @@ function alignBlueFooterCurve() {
 	blueCurve.css('top', top);
 }
 
-function alignBlueFooterCurve() {
-	// var fullwidthBlock = $('#story_wdg_wide');
-	// var whiteCurve = fullwidthBlock.find('.white-curve');
-	// var whiteCurveHeight = whiteCurve.outerHeight();
-	// var top = -Math.abs(whiteCurveHeight);
-	// whiteCurve.css('top', top);
-}
+
 // ==========================================
 	// curve alignment end
 // ==========================================
