@@ -271,7 +271,7 @@ function sizeCarouselTitle() {
 // ==========================================
 
 function shiftNavhack() {
-	var html_logo = '<a href="http://hampshire.ounodemo.co.uk" id="logo_lnk"><div class="logo" style="background-image: url(/hampcouncil/wp-content/themes/HampCouncil/assets/images/logo.png);"></div></a>';
+	var html_logo = '<a href="http://hampshire.ounodemo.co.uk" id="logo_lnk"><div class="logo" style="background-image: url(/wp-content/themes/HampCouncil/assets/images/logo.png);"></div></a>';
 	$('.shiftnav-site-title').html(html_logo);
 }
 
