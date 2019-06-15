@@ -17,6 +17,7 @@ header {
 		    margin: 0 0 4vh 0;
 			#top-bar-menu {
 				#menu-top-bar {
+					height: 100%;
 					li {
 						width: 8vw;
 						text-align: center;
@@ -70,6 +71,7 @@ header {
 								input {
 									height: 100%;
 									font-size: 1vw;
+									padding: 0 !important;
 								}
 								input.autocomplete {
 									display: none;
