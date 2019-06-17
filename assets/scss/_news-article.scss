@@ -63,7 +63,7 @@
 }
 
 @include respond-below(xs) {
-	#news-article {
+	#news-article, #single-property {
 		width: 90vw;
 	    margin: 5vh auto 1vh;
 		#article-content {
@@ -124,6 +124,23 @@
 				}
 				a:hover {
 					
+				}
+			}
+		}
+	}
+	#single-property {
+		#article-content {
+			#article-header {
+				flex-direction: column;
+				margin: 0 0 2vh;
+				.agent-logo {
+					padding-top: 12vh;
+					width: 50%;
+					background-position: left;
+					margin: 0 0 2vh;
+				}
+				.agent-title{
+					width: 100%;
 				}
 			}
 		}

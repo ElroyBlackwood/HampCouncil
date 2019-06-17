@@ -84,10 +84,15 @@
 	}
 
 	.agent-contact {
+		margin: 0 0 6vh;
 		.agent-contact-header {
-
+			align-items: center;
+			margin: 4vh 0 1vh;
 			.icon {
-		
+				height: 5vh;
+				width: 10vw;
+				background-position: center left;
+				margin: 0 2vw 0 0;
 			}
 			h3 {
 			}

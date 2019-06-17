@@ -25,3 +25,27 @@
 		}
 	}
 }
+
+@include respond-below(xs) {
+	#post-gallery {
+		.main-image-gallery {
+			.slide {
+				.slide-img {
+					padding-top: 65%;
+				}
+				.slide-img:hover {
+				}
+			}
+		}
+		.nav-main-image-gallery {
+			
+			.slide {
+				.slide-img {
+					padding-top: 65%;
+				}
+				.slide-img:hover {
+				}
+			}
+		}
+	}
+}
