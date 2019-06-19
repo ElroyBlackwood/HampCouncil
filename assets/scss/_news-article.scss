@@ -24,6 +24,34 @@
 		}
 		#article-text {
 			margin: 0 0 6vh;
+			a{
+				color: #002EB5;
+				font-weight: 500;
+			}
+			a:hover {
+				color: #F26640;
+			}
+			code {
+				a {
+					position: relative;
+					@include flexbox();
+					align-items: center;
+					color: #122121;
+					width: fit-content;
+				    font-weight: 500;
+				}
+				a:before {
+					content: ' ';
+					background-image: url('../images/blue-arrow.png');
+					height: 1.5vw;
+				    width: 2vw;
+				    margin: 0 1vw 0 0;
+				    background-size: contain;
+				    position: relative;
+				    background-repeat: no-repeat;
+				    display: inline-block;
+				}
+			}
 		}
 		#article-bottom-bar {
 			@include flexbox();

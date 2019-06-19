@@ -11,8 +11,8 @@
 					$post_thumbnail_id = get_post_thumbnail_id();
 					$caption = wp_get_attachment_caption($post_thumbnail_id);
 					$static_or_gallery = get_field('do_you_want_a_static_image_or_gallery');
-
-					// echo "post thumb id " . $post_thumbnail_id;
+					$post_date = get_the_date( 'l F jS, Y' );
+					// echo "post thumb id " . $post_thumbnail_id;	
 					foreach ($cats as $cat) {
 						array_push($list_of_cats, $cat->name);
 					}
@@ -25,22 +25,15 @@
 					}
 				?>
 				<div id="article-header">
-					<h3><?php echo $sub_cat; ?></h3>
+					<h3>News</h3>
 					<h1><?php echo get_the_title(); ?></h1>
+					<p><?php echo $post_date; ?></p>
 				</div>
 				<?php
-					if ($static_or_gallery == 'static') { ?>
-						<div id="news-article-feat-img-container">
-							<a href="<?php echo $feat_img; ?>" data-rel="lightbox">
-								<div class="news-article-feat-img" style="background-image: url(<?php echo $feat_img; ?>);"></div>
-							</a>
-							<div class="news-article-feat-img-caption">
-								<?php echo $caption; ?>
-							</div>
-						</div>
+					if ($static_or_gallery == 'no') { ?>
 				<?php } else {
 					ouputPostGallery();
-				}
+				}s
 				?>
 				<div id="article-text">
 					<?php the_content(); ?>

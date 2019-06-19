@@ -26,13 +26,7 @@
 					</div>
 				</div>
 				<?php
-					if ($static_or_gallery == 'static') { ?>
-						<div id="news-article-feat-img-container">
-							<div class="news-article-feat-img" style="background-image: url(<?php echo $feat_img; ?>);"></div>
-							<div class="news-article-feat-img-caption">
-								<?php echo $caption; ?>
-							</div>
-						</div>
+					if ($static_or_gallery == 'no') { ?>
 				<?php } else {
 					ouputPostGallery();
 				}

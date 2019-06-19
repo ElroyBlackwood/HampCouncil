@@ -171,7 +171,14 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 		}
 	}
 	.text-content {
-
+		a {
+			color: #002EB5;
+			font-weight: 500;
+			@include ease(all,0.25);
+		}
+		a:hover {
+			color: #F26640
+		}
 	}
 }
 
@@ -249,6 +256,13 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 		max-width: 100%;
 		height: auto;
 		padding: 1vh 0 2vh;
+	}
+	a {
+		span {
+			strong {
+				color: #404D4D;
+			}
+		}
 	}
 }
 

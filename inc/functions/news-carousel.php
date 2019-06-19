@@ -108,7 +108,9 @@
 							 <h3 class="news-carousel-title"><?php the_title(); ?></h3>
 							<?php if ( has_post_thumbnail() ) : ?>
 							<?php $thumburl = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
-							<div class="slide-thumbnail dimmed" style="background-image: url(<?php echo $thumburl; ?>);">
+							<div class="slide-thumbnail" style="background-image: url(<?php echo $thumburl; ?>);">
+								<div class="colour-overlay">
+								</div>
 							</div>
 							<?php endif; ?>
 							<?php $excert = wp_trim_words(get_the_content(), 15) ?>

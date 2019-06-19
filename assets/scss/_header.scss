@@ -310,12 +310,18 @@ header {
 	}
 	.letterbox#banner {
 		#featpost {
-			.static-banner-image {
+			#static-banner-image {
 				height: 30vh;
 				#static-banner-overlay {
 					display: none;
 				}
 			}
+		}
+		#static-banner-image {
+			height: 30vh;
+		}
+		.scroll-dwn {
+			display: none;
 		}
 	}
 	.letterbox#banner:after {
