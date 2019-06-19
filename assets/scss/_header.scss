@@ -22,6 +22,9 @@ header {
 						width: 8vw;
 						text-align: center;
 						@include ease(all, 0.25s);
+						@include flexbox();
+						align-items: center;
+						justify-content: center;
 					}
 					li.tb-contact {
 						background: #D1D4D4;
