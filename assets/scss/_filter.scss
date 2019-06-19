@@ -365,3 +365,79 @@
 		
 	}
 }
+
+@include respond-between(xs, sm) {
+	#news-filter {
+		h1{
+		}
+		#post-filter {
+			width: 80vw;
+			#filter {
+				.filter-links {
+				}
+				label {
+				}
+				.chk-wrapper {
+					.fitler_tag {
+					}
+					label {
+					}
+					.active {
+						
+					}
+				}
+				.chk-wrapper:hover {
+					label {
+						
+					}
+				}
+			}
+			.hamburger-container {
+				position: relative;
+				margin: 0 3vw;
+				.hamburger {
+					.hamburger-bar {
+					    
+					}
+				}
+				.hamburger:active, .hamburger:focus {
+					.hamburger-bar {
+						background: #F26640;
+					}
+				}
+				.filter-dropdown {
+					
+					.chk-wrapper-mobile {
+						.fitler_tag {
+						}
+						label {
+						}
+					}
+				}
+			}
+		}
+		#response {
+			width: 80vw;
+			a {	
+				.wdg-container {
+					
+				}
+				.wdg-container.filtered {
+					
+				}
+			}
+		}
+		.loadmore {
+			
+			.down-arrow {
+				
+			}
+		}
+		.loadmore:hover {
+			
+		}
+		
+	}
+}
+
+

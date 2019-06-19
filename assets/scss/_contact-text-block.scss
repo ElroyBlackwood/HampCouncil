@@ -8,9 +8,10 @@
 	.icon-text#email_address {
 		.icon {
 			@include bg_img_contain();
-			background-image: url('../images/email-icon-blue.png');
-			height: 3vh;
+			background-image: url('../images/icon-email.png');
+			height: 5vh;
 			width: 3vw;
+			margin: 0 1vw 0 0;
 			background-position: left;
 		}
 		a {
@@ -20,10 +21,11 @@
 	.icon-text#phone_number {
 		.icon {
 			@include bg_img_contain();
-			background-image: url('../images/phone-icon.png');
+			background-image: url('../images/icon-phone.png');
 			height: 5vh;
-			width: 4vw;
+			width: 3vw;
 			background-position: left;
+			margin: 0 1vw 0 0;
 		}
 		a {
 
@@ -63,8 +65,7 @@
 		}
 		.icon-text#email_address {
 			.icon {
-				height: 3vh;
-				width: 8vw;
+				
 				margin: 0 2vw 0 0;
 			}
 			a {
@@ -73,8 +74,7 @@
 		}
 		.icon-text#phone_number {
 			.icon {
-				height: 5vh;
-				width: 7vw;
+				
 				margin: 0 1vw 0 0;
 			}
 			a {

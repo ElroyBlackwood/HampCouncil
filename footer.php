@@ -12,7 +12,7 @@
 		<div class="container-fluid desaturate" style="background-image: url(<?php the_field('footer_news_bg_image', 'option'); ?>);" id="news-carousel">
 		    <div class="orange-curve top-curve"></div>
 			<div class="flex-container overcontent">
-				<div class="container py-5">
+				<div class="container">
 					<h1>You may also be interested in</h1>
 				</div>
 				<div class="container-fluid container-width">
@@ -30,10 +30,10 @@
 	<div class="container-fluid hmp_blue_bg py-5" id="footer_menus">
 		<div class="blue-curve top-curve">
 		</div>
-	<div class="container">
+	<div class="container-width">
 		<h2><?php the_field('sitemap_title', 'option'); ?></h2>
 	</div>
-	<div class="container" id="top-footer">
+	<div class="container-width" id="top-footer">
 		<div class="flex-container sitemap">
  			<?php if(is_active_sidebar('footer-smp-1')):
 			dynamic_sidebar('footer-smp-1');

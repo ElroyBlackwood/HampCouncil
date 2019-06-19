@@ -259,7 +259,7 @@ $(window).load(function() {
 });
 
 function sizeCarouselTitle() {
-	getMaxHeight('.slick-active .news-carousel-title');
+	getMaxHeight('.slick-slide .news-carousel-title');
 }
 
 // ==========================================

@@ -154,7 +154,7 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 .text-content-block {
 	padding: 0;
     width: 75vw;
-    margin: 0 auto 12vh;
+    margin: 6vh auto;
 	.title {
 		@include flexbox();
 		justify-content: flex-start;
@@ -163,8 +163,9 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 		.text-content-title-icon {
 			@include bg_img_contain;
 			height: 5vh;
-			width: 5vw;
+			width: 3vw;
 			background-position: left;
+			margin: 0 2vw 0 0;
 		}
 		h2 {
 			margin: 0;
@@ -588,7 +589,7 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 	}
 
 	.text-content-block {
-	    margin: 0 auto 5vh;
+	    margin: 5vh auto 5vh;
 		.title {
 			
 			.text-content-title-icon {
@@ -606,5 +607,37 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 		.fa-check {
 			font-size: 4vw;
 		}
+	}
+	// curves
+	.blue-curve {
+	    padding-top: 2vw;
+	}
+
+	.orange-curve {
+	    padding-top: 2vw;
+		
+	}
+
+	.grey-curve {
+	    padding-top: 2vw;
+		
+	}
+
+	.white-curve {
+	    padding-top: 2vw;
+		
+	}
+	.slick-prev:before, .slick-next:before {
+		width: 8vw !important;
+		height: 8vw !important;
+	}
+}
+
+@include respond-between(sm, md) {
+	.container-width {
+		width: 80vw;
+	}
+	#page_content {
+		width: 70vw;
 	}
 }

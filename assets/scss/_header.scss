@@ -562,7 +562,7 @@ header {
 				    	width: 90%;
 				    	line-height: 1.1;
 				    	font-size: 4vh;
-				    	margin: auto;
+				    	margin: 0 auto 0 0;
 				    }
 				}
 			}
@@ -628,7 +628,8 @@ header {
 				#top-bar-menu {
 					#menu-top-bar {
 						li {
-							
+							width: 13vw;
+							padding: 1vh 2vw;
 						}
 						li.tb-contact {
 							
@@ -765,7 +766,7 @@ header {
 				    	width: 90%;
 				    	line-height: 1.1;
 				    	font-size: 6vh;
-				    	margin: auto;
+				    	margin: 0 auto 0 0;
 				    }
 				}
 			}
@@ -822,3 +823,18 @@ header {
 	}
 }
 
+@include respond-between(sm, md) {
+	header {
+		#header-menu {
+			width: 80vw;
+			.header-nav {
+				width: 80vw;
+			}
+		}
+		#header-menu.sticky {
+			.header-nav {
+				width: 80vw;
+			}
+		}
+	}
+}

@@ -23,13 +23,6 @@
 					{
 					  breakpoint: 600,
 					  settings: {
-						slidesToShow: 2,
-						slidesToScroll: 2
-					  }
-					},
-					{
-					  breakpoint: 480,
-					  settings: {
 						slidesToShow: 1,
 						slidesToScroll: 1
 					  }
@@ -53,20 +46,16 @@
 				}
 
 				function sizeCarouselTitle() {
-					getMaxHeight('.slick-active .news-carousel-title');
+					getMaxHeight('.slick-slide .news-carousel-title');
 				}
 
 				$('.news-carousel').on('afterChange', function(slick, currentSlide){
-					// sizeCarouselTitle();
 				});
 				$('.news-carousel').on('beforeChange', function(slick, currentSlide){
-					sizeCarouselTitle();
 				});
 				$('.news-carousel').on('swipe', function(slick, direction){
-					// sizeCarouselTitle();
 				});
 				$('.news-carousel').on('reInit', function(slick){
-					// sizeCarouselTitle();
 				});
 		    });
 
