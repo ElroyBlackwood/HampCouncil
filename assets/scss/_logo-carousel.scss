@@ -1,0 +1,20 @@
+#logo-carousel {
+	margin: auto;
+	width: 55vw;
+	text-align: center;
+	h4 {
+		width: 80%;
+		margin: auto;
+	}
+	.logo-carousel {
+		.slide-content {
+			text-align: center;
+			.logo {
+				@include bg_img_contain();
+				width: 75%;
+				padding-top: 75%;
+				margin: auto;
+			}
+		}
+	}
+}

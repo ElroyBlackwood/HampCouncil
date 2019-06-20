@@ -7,57 +7,60 @@ function outputLogoCarousel() {
 
 		if( have_rows('logos') ): ?>
 
-		<script>
-		(function($) {
-		    $(function () {
-		        $('.logo-carousel').slick({
-				  infinite: false,
-				  speed: 300,
-				  slidesToShow: 4,
-				  slidesToScroll: 4,
-				  arrows: true,
-				  responsive: [
-					{
-					  breakpoint: 1200,
-					  settings: {
-						slidesToShow: 3,
-						slidesToScroll: 3,
-						infinite: true,
-						dots: true
-					  }
-					},
-					{
-					  breakpoint: 600,
-					  settings: {
-						slidesToShow: 1,
-						slidesToScroll: 1
-					  }
-					}
-				  ]
-				});
-		})( jQuery );
-		</script>
-		<div class="slick-wrapper">
+			<script>
+			(function($) {
+			    $(function () {
+			        $('.logo-carousel').slick({
+					  infinite: true,
+					  speed: 300,
+					  slidesToShow: 3,
+					  slidesToScroll: 3,
+					  arrows: true,
+					  responsive: [
+						{
+						  breakpoint: 1200,
+						  settings: {
+							slidesToShow: 2,
+							slidesToScroll: 2,
+							infinite: true,
+							dots: true
+						  }
+						},
+						{
+						  breakpoint: 600,
+						  settings: {
+							slidesToShow: 1,
+							slidesToScroll: 1
+						  }
+						}
+					  ]
+					});
+			    });
+			})( jQuery );
+			</script>
+		<div class="slick-wrapper container-width" id="logo-carousel">
+			<h4><strong>Some of the influential financial services businesses operating in Hampshire</strong></h4>
 			<div class="logo-carousel">
-				<h3><strong>Some of the influential financial services businesses operating in Hampshire</strong></h3>
-<?php 
-		    while ( have_rows('logos') ) : the_row();
+	<?php 
+			    while ( have_rows('logos') ) : the_row();
 
-		        $logo = get_sub_field('logo');
-		        $logo_txt = get_sub_field('logo_text');
-		        $logo_link = get_sub_field('logo_link');
-?>
-			<div class="slide-content">
-				<a href="<?php echo $logo_link; ?>">
-					<div class="logo" style="background-image: url(<?php echo $logo['url']; ?>);">
-					</div>
-					<h3><?php echo $logo_link; ?></h3>
-				</a>
-			</div>
-<?php 
+			        $logo = get_sub_field('logo');
+			        $logo_txt = get_sub_field('logo_text');
+			        $logo_link = get_sub_field('logo_link');
+	?>
+				<div class="slide-content">
+					<a href="<?php echo $logo_link; ?>">
+						<div class="logo" style="background-image: url(<?php echo $logo['url']; ?>);">
+						</div>
+						<h4><?php echo $logo_txt; ?></h4>
+					</a>
+				</div>
+	<?php 
 
-		    endwhile;
-
+		 	   endwhile; ?>
+		 	</div>
+		 </div>
+<?php
 		else :
 
 		endif;

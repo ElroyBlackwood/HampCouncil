@@ -21,27 +21,24 @@
 				padding-top: 100%;
 				margin: 0 0 3vh;
 				position: relative;
-				.colour-overlay{
-					position: absolute;
-					top: 0;
-					left: 0;
-					width: 0%;
-					height: 100%;
-					background-color: rgba(242, 102, 64, 0.9);
-					opacity: 0;
-					@include ease(all, 0.25s);
-				}
-			}
-			.slide-thumbnail:hover {
-				.colour-overlay {
-					opacity: 1;
-					width: 100%;
-				}
 			}
 		}
 		.read-more {
 			span {
 				color: #333;
+				@include ease(all,0.25s);
+			}
+		}
+		.read-more:hover {
+			span {
+			    color: #F26640;
+			}
+		}
+	}
+	.slide-content:hover {
+		.read-more {
+			span {
+			    color: #F26640;
 			}
 		}
 	}

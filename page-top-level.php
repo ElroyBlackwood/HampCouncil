@@ -13,6 +13,7 @@
 	echo $content;
 ?>
 </div>
+<?php outputLogoCarousel(); ?>
 <?php outputStories(); ?>
 
 <?php get_footer(); ?>

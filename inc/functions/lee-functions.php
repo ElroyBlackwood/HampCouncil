@@ -20,5 +20,5 @@ include_once('featured-properties.php');
 include_once('property-links.php');
 include_once('property.php');
 include_once('post-gallery.php');
-
+include_once('logo-carousel.php');
 ?>
