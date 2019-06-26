@@ -167,12 +167,15 @@ function outputPostFilter() {
 							<div class="wdg-container filtered square-posts dimmed" style="background-image: url(<?php echo esc_url($feat_img) ?>);">
 								<div class="color-overlay"></div>
 								<div class="wdg-overlay">
-									<h2><?php echo get_the_title(); ?></h2>
-									<p><?php echo $wdg_content; ?></p>
-									<div class="read-more">
-						    			<div class="blue-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/blue-arrow.png);"></div>
-						    			<span>Read More</span>
-						    		</div>
+				        			<div class="wdg-overlay-title">
+					        			<h2><?php echo get_the_title(); ?></h2>
+	    			        			<div class="read-more">
+	    				        			<div class="blue-arrow"></div>
+	    				        			<span><strong>Read More</strong></span>
+	    				        		</div>
+	    				        	</div>
+				        			<?php $excert = wp_trim_words(get_the_content(), 15) ?>
+				        			<p><?php echo $excert; ?></p>
 								</div>
 							</div>
 						</a>

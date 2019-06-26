@@ -55,6 +55,53 @@ h5 {
 	color: $orange;
 }
 
+@include respond-above(lg) {
+	h1, h2, h3, h4, h5, h6, p, a, li {
+		font-family: $maven_pro;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		line-height: 1.2;
+		font-weight: 450;
+	}
+
+	li {
+		font-size: 1vw;
+		line-height: 1.2;
+		color: #404D4D;
+	}
+
+	input {
+		font-size: 0.9vw;
+	}
+
+	p, a, label {
+		font-size: 0.9vw;
+		line-height: 1.2;
+		color: #404D4D;
+	}
+
+	h1 {
+		font-size: 2.5vw;
+	}
+
+	h2 {
+		font-size: 2vw;
+	}
+
+	h3 {
+		font-size: 1.5vw;
+	}
+
+	h4 {
+		font-size: 1vw;
+	}
+
+	h5 {
+		font-size: 0.9vw;
+	}
+}
+
 @include respond-below(xs) {
 	li {
 		font-size: 4vw;

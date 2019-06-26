@@ -2,7 +2,6 @@
 (function($) {
 	
 	// $ Works! You can test it with next line if you like
-	// console.log($);
 	// run all functions that happen on resize or load
 	$(document).ready(function() {
 
@@ -74,9 +73,7 @@
 
 	// square divs
 	function squareElement(elm) {
-		// console.log('square element ' + elm);
 		var width = $(elm).outerWidth();
-		// console.log(width);
 		$(elm).each(function() {
 			$(this).height(width);
 		});
@@ -93,6 +90,16 @@
 			if ($('.square-story').length) {
 				squareElement('.square-story');
 			}
+			if ($('.news-carousel .slide-thumbnail').length) {
+				// var width = $('.news-carousel .slide-thumbnail').width();
+				setTimeout(function(){
+					$('.news-carousel .slide-thumbnail').each(function() {
+						var width = $('.slide-content').width();
+						console.log("width = " + width);
+						$(this).height(width);
+					});
+				}, 100);
+			}
 		},100);
 	}
 // ==========================================
@@ -100,7 +107,6 @@
 // ==========================================
 	$(function() {
 	      $(document).on('mouseover','.wdg-container', function() {
-	      	// console.log("new function");
 	      	if ($(this).hasClass('hover-active')) {
 
 	      	} else {
@@ -108,7 +114,7 @@
 	      		var wdgContainer = $(this);
 	      		var hidden = wdgContainer.find('p');
 	      		var content_height = hidden.height();
-	      		var change = content_height / 2;
+	      		// var change = content_height / 2;
 
 	      		$(this).find('.color-overlay').animate({opacity: 0.6}, 250);
 	      		moveElmWdg(wdgContainer, content_height);
@@ -117,7 +123,6 @@
 	      
 	      });
 	      $(document).on('mouseleave','.wdg-container', function() {
-	      	// console.log("new functionout");
 	      	var wdgContainer = $(this);
 	      	var hidden = wdgContainer.find('p');
 	      	var content_height = hidden.height();
@@ -145,11 +150,20 @@
 	}
 
 	function moveElmWdg(elm, change) {
-		var heading_height = elm.find('h2').height();
-		var half = change / 2;
-		var three_quarters = (change / 1.5) + (heading_height / 2.5);
-		elm.find('h2').animate({top: "-" + three_quarters}, 250);
-		elm.find('.read-more').animate({top: half}, 250);
+		var hidden_top = elm.find('p').position().top;
+		var title_top = elm.find('h2').position().top;
+		var read_more_top = elm.find('.read-more').position().top;
+		var title_height = elm.find('h2').height();
+		var hidden_height = elm.find('p').height();
+
+		var title_change = hidden_top - title_top - title_height;
+		title_change = title_change - (hidden_height / 2.5);
+		var readmore_change = hidden_top - read_more_top + hidden_height;
+		readmore_change = readmore_change + (hidden_height / 2.5);
+		// console.log('readmore_change = ' + readmore_change);
+
+		elm.find('h2').animate({top: title_change}, 250);
+		elm.find('.read-more').animate({top: readmore_change}, 250);
 	}
 
 	function resetElmWdg(elm) {
@@ -172,7 +186,7 @@ $('.fitler_tag').click(function() {
 
 	$('.active').each(function() {
 		$(this).removeClass('active');
-		// console.log('removeClass');
+		
 	});
 	$(this).addClass('active');
 	
@@ -250,7 +264,6 @@ $('.hamburger-bg').on('touch click', function(e) {
 // ==========================================
 
 // $(document).ready(function() {
-// 	console.log("size titles");
 // 	sizeCarouselTitle();
 // });
 
@@ -317,7 +330,6 @@ function triggerSticky() {
 // ==========================================
 
 $(document).on('mouseenter', '.dropdown', function() {
-	// console.log('mouse enter');
 	if($('.active-dd').length) {
 		$('.active-dd').each(function() {
 			$(this).removeClass('active-dd');
@@ -383,7 +395,6 @@ var isOutOfViewport = function (elem) {
 
 $(document).on('mouseenter', '.dropdown', function() {
 	var elm = $(this).find('.active-dd');
-	// console.log(elm);
 	var isOut = isOutOfViewport(elm);
 	var outofVP = false;
 	if (isOut.top) {
@@ -431,7 +442,6 @@ $(document).on('touch click', '.scroll-dwn', function() {
 
 function scrollToAnchor(aid){
     var aTag = $(aid);
-    // console.log(aTag.offset());
     $('html, body').animate({scrollTop: aTag.offset().top}, 800);
 }
 // ==========================================
@@ -484,7 +494,6 @@ function alignNewsCurve() {
 }
 
 function alignBlueFooterCurve() {
-	console.log('blue menu');
 	var footerBlock = $('#footer_menus');
 	var blueCurve = footerBlock.find('.blue-curve');
 	var blueCurveHeight = blueCurve.outerHeight();
@@ -521,7 +530,6 @@ $(document).ready(function() {
 	var link;
 
 	navitem.click(function() {
-		console.log('clicked');
 		link = $(this).find('a').attr('href');
 		window.location.href = link;
 	});

@@ -74,6 +74,9 @@
 			@include bg_img_cover();
 			position: relative;
 			overflow: hidden;
+			@include flexbox();
+			justify-content: center;
+			align-items: center;
 			.color-overlay {
 				@include overlay_cover();
 				background-color: #F26640;
@@ -88,36 +91,42 @@
 				text-align: center;
 				z-index: 10;
 				pointer-events:none;
-				h2 {
-					// @include ease(all, 0.25s);
-					position: relative;
-					top: 0;
-					color: #fff;
+				height: 100%;
+				@include flexbox();
+				align-items: center;
+				justify-content: center;
+				.wdg-overlay-title {
+					width: 100%;
+					h2 {
+						// @include ease(all, 0.25s);
+						position: relative;
+						color: #fff;
+					}
+					.read-more {
+						@include flexbox();
+						align-items: center;
+						justify-content: center;
+						margin: 0 auto;
+						.blue-arrow {
+							@include bg_img_contain();
+							height: 1vw;
+							width: 2vw;
+						}
+						span {
+							// @include ease(all, 0.25s);
+							position: relative;
+							top: 0;
+							color: #fff;
+						}
+					}
 				}
 				p {
 					@include overlay_center();
 					color: #fff;
 					width: 100%;
 					opacity: 0;
-				}
-				.read-more {
-					@include flexbox();
-					align-items: center;
-					justify-content: center;
-					top: 0;
-					position: relative;
-					margin: auto;
-					.blue-arrow {
-						@include bg_img_contain();
-						height: 1vw;
-						width: 2vw;
-					}
-					span {
-						// @include ease(all, 0.25s);
-						position: relative;
-						top: 0;
-						color: #fff;
-					}
+					top: 55%;
+					width: 75%;
 				}
 			}
 		}

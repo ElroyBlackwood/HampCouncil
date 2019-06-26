@@ -4,6 +4,7 @@
 
 <?php get_header(); ?>
 
+<?php outputWidgetBlock(); ?>
 <?php
 $page_url = get_the_permalink(); 
 $page_url_split = explode("/", $page_url);

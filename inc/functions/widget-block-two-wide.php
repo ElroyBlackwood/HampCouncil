@@ -15,12 +15,14 @@ function outputWdgTwoWide() {
 	        	<div class="wdg-container square-sectors dimmed" style="background-image: url(<?php echo $feat_img['url']; ?>);">
 	        		<div class="color-overlay"></div>
 	        		<div class="wdg-overlay">
-	        			<h2><?php echo $title; ?></h2>
+	        			<div class="wdg-overlay-title">
+	        				<h2><?php echo $title; ?></h2>
+		        			<div class="read-more">
+			        			<div class="blue-arrow"></div>
+			        			<span><strong>Read More</strong></span>
+			        		</div>
+			        	</div>
 	        			<?php echo $wdg_content; ?>
-	        			<div class="read-more">
-		        			<div class="blue-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/blue-arrow.png);"></div>
-		        			<span><strong>Read More</strong></span>
-		        		</div>
 	        		</div>
 	        	</div>
 	        </a>

@@ -13,7 +13,7 @@
 		    <div class="orange-curve top-curve"></div>
 			<div class="flex-container overcontent">
 				<div class="container">
-					<h1>You may also be interested in</h1>
+					<h2>You may also be interested in</h2>
 				</div>
 				<div class="container-fluid container-width">
 					<?php outputNewsCarousel(); ?>

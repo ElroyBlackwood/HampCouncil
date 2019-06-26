@@ -19,7 +19,7 @@
                     <h2><?php echo $title; ?></h2>
                     <?php echo $wdg_content; ?>
                     <div class="read-more">
-                        <div class="blue-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/blue-arrow.png);"></div>
+                        <div class="blue-arrow"></div>
                         <span><strong>Read More</strong></span>
                     </div>
                 </div>

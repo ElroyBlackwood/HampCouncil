@@ -37,6 +37,7 @@
 	.agent-contact-header {
 		@include flexbox();
 		margin: 6vh 0 2vh;
+		align-items: center;
 		.icon {
 			background-size: contain;
 		    background-position: center;

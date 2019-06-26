@@ -13,7 +13,7 @@ function outputLocationMap() { ?>
 	</div>
 	<a href="https://goo.gl/maps/HNtZBtwERdj4Vkdp6" target="_blank">
 		<div class="read-more">
-			<div class="blue-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/blue-arrow.png);"></div>
+			<div class="blue-arrow"></div>
 			<span>Open this map in Google maps</span>
 		</div>
 	</a>

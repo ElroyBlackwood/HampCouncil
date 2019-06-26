@@ -1,5 +1,6 @@
 #story_wdg_wide {
 	.wdg-container {
+		overflow: hidden;
 	    .wdg-overlay {
 	    	pointer-events: none;
 	    	.read-more {

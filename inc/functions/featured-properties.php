@@ -10,7 +10,7 @@ function outputFeatProperties() {
 	if ( $the_query->have_posts() ) { ?>
 		<div class="container-fluid" id="featured-properties">
 			<div class="in-page-title orange-text">
-				<h1>Featured Properties</h1>
+				<h1>Featured</h1>
 			</div>
 	<?php
 		while ( $the_query->have_posts() ) {
@@ -21,13 +21,15 @@ function outputFeatProperties() {
 	        	<div class="wdg-container square-sectors dimmed" style="background-image: url(<?php echo $feat_img; ?>);">
 	        		<div class="color-overlay"></div>
 	        		<div class="wdg-overlay">
-	        			<h2><?php echo get_the_title(); ?></h2>
+	        			<div class="wdg-overlay-title">
+		        			<h2><?php echo get_the_title(); ?></h2>
+		        			<div class="read-more">
+			        			<div class="blue-arrow"></div>
+			        			<span><strong>Read More</strong></span>
+			        		</div>
+			        	</div>
 	        			<?php $excert = wp_trim_words(get_the_content(), 15) ?>
 	        			<p><?php echo $excert; ?></p>
-	        			<div class="read-more">
-		        			<div class="blue-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/blue-arrow.png);"></div>
-		        			<span><strong>Read More</strong></span>
-		        		</div>
 	        		</div>
 	        	</div>
 	        </a>

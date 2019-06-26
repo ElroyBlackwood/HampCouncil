@@ -17,6 +17,7 @@ a {
 
 a:hover {
 	text-decoration: none;
+	color: #F26640;
 }
 
 div:focus, p:focus, h1:focus, h2:focus, h3:focus, h4:focus, h5:focus, h6:focus, span:focus, a:focus {
@@ -84,7 +85,7 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 	position: relative;
 	width: fit-content;
 	.blue-arrow {
-		background-image: url('../images/blue-arrow.png');
+		background-image: url('../images/blue arrow.svg');
 		@include bg_img_contain();
 		height: 1vw;
 		width: 2vw;
@@ -95,6 +96,16 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 		top: 0;
 		color: #fff;
 	}
+}
+
+.read-more:hover {
+	span, a {
+		color: #F26640;
+	}
+}
+
+.wp-caption {
+	width: 100%;
 }
 
 .intro-padding {
@@ -415,6 +426,20 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 	position: relative;
 }
 
+div.wpcf7-validation-errors, div.wpcf7-acceptance-missing, div.wpcf7-mail-sent-ng, div.wpcf7-aborted {
+	margin: -4vh 0 5vh;
+	font-size: 1.2vw;
+	color: red;
+	border: none;
+}
+
+div.wpcf7-mail-sent-ok {
+	margin: -4vh 0 5vh;
+	font-size: 1.2vw;
+	color: #404D4D;
+	border: none;
+}
+
 @include respond-below(xs) {
 	.container-width {
 		width: 90vw;
@@ -446,8 +471,8 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 
 	.read-more {
 		.blue-arrow {
-			height: 4vw;
-		    width: 7vw;
+			height: 4vw !important;
+		    width: 7vw !important;
 		    margin: 0 2vw 0 0;
 		}
 		span {

@@ -59,7 +59,7 @@
 		if ( $the_query->have_posts() ) { ?>
 		<div class="container-fluid" id="our-stories">
 			<div class="in-page-title orange-text">
-				<h1><?php echo $tag_name; ?> Stories</h1>
+				<h2><?php echo $tag_name; ?> Stories</h2>
 			</div>
 			<div class="slick-wrapper">
 				<div class="stories-carousel container-width">
@@ -82,13 +82,16 @@
 				        	<div class="wdg-container square-story dimmed" style="background-image: url(<?php echo $feat_img; ?>);">
 				        		<div class="color-overlay"></div>
 				        		<div class="wdg-overlay">
-				        			<h2><?php echo get_the_title(); ?></h2>
+				        			<div class="wdg-overlay-title">
+					        			<h2><?php echo get_the_title(); ?></h2>
+	    			        			<div class="read-more">
+	    				        			<div class="blue-arrow"></div>
+	    				        			<span><strong>Read More</strong></span>
+	    				        		</div>
+	    				        	</div>
 				        			<?php $excert = wp_trim_words(get_the_content(), 15) ?>
 				        			<p><?php echo $excert; ?></p>
-				        			<div class="read-more">
-					        			<div class="blue-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/blue-arrow.png);"></div>
-					        			<span><strong>Read More</strong></span>
-					        		</div>
+				        			
 				        		</div>
 				        	</div>
 				        </a>

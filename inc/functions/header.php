@@ -93,7 +93,7 @@ function ouputFeatBanner() {
 							<p><?php echo $content; ?></p>
 							<a href="<?php the_permalink(); ?>">
 			        			<div class="read-more">
-				        			<div class="blue-arrow" style="background-image: url(<?php echo get_template_directory_uri(); ?>/assets/images/blue-arrow.png);"></div>
+				        			<div class="blue-arrow"></div>
 				        			<span>Read More</span>
 				        		</div>
 							</a>
