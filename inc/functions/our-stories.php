@@ -59,7 +59,7 @@
 		if ( $the_query->have_posts() ) { ?>
 		<div class="container-fluid" id="our-stories">
 			<div class="in-page-title orange-text">
-				<h2><?php echo $tag_name; ?> Stories</h2>
+				<h1><?php echo $tag_name; ?> Stories</h1>
 			</div>
 			<div class="slick-wrapper">
 				<div class="stories-carousel container-width">
