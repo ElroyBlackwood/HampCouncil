@@ -94,7 +94,7 @@
 				// var width = $('.news-carousel .slide-thumbnail').width();
 				setTimeout(function(){
 					$('.news-carousel .slide-thumbnail').each(function() {
-						var width = $('.slide-content').width();
+						var width = $('.news-carousel .slide-content').width();
 						console.log("width = " + width);
 						$(this).height(width);
 					});
@@ -581,4 +581,28 @@ $(document).ready(function() {
 // ==========================================
 	// post gallery end
 // ==========================================
+
+// ==========================================
+	// external link hack
+// ==========================================
+$('a').each(function() {
+	var currentLink = $(this);
+	var href = $(this).attr('href');
+	var url = window.location.origin;
+	console.log("href - " + href);
+	console.log("url - " + url);
+
+	if (href.length) {
+		if (href.indexOf(url) >= 0) {
+			
+		} else {
+			currentLink.attr('target', '_blank');
+		}
+	}
+});
+
+// ==========================================
+	// external link end
+// ==========================================
+
 })( jQuery );

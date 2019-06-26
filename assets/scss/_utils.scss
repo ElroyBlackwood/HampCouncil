@@ -427,10 +427,21 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 }
 
 div.wpcf7-validation-errors, div.wpcf7-acceptance-missing, div.wpcf7-mail-sent-ng, div.wpcf7-aborted {
-	margin: -4vh 0 5vh;
 	font-size: 1.2vw;
 	color: red;
 	border: none;
+	text-align: right;
+}
+
+span.wpcf7-not-valid-tip {
+	font-size: 1.2vw;
+	color: red;
+	border: none;
+	text-align: right;
+}
+
+div.wpcf7-validation-errors {
+	margin: -4vh 0 5vh;
 }
 
 div.wpcf7-mail-sent-ok {
@@ -438,6 +449,7 @@ div.wpcf7-mail-sent-ok {
 	font-size: 1.2vw;
 	color: #404D4D;
 	border: none;
+	text-align: right;
 }
 
 @include respond-below(xs) {

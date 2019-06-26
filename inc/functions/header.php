@@ -61,57 +61,151 @@ function ouputFeatBanner() {
 	$args = array(
 		'posts_per_page' => -1,
 		'category_name' => 'News',
+		'meta_key' => 'featured_post',
+		'meta_value' => 'yes',
+		'compare' => 'LIKE'
 	);
 	// echo "is single page = " . $is_single_page;
 	$the_query = new WP_Query( $args );
 
 	if ( $the_query->have_posts() ) { ?>
 	<div class="container-fluid <?php if($is_subpage == true){ echo "subpage"; } ?>" id="featpost">
+
 	<?php
+		$post_count = $the_query->found_posts;
+		$count_ban = 0;
+		$count_ind = 0;
+
+		//  query for inicators
+		$the_query_indicators = new WP_Query( $args );
+		if ( $the_query_indicators->have_posts() ) { 
+			if ($post_count > 1) { ?>
+				<div id="carouselHeader" class="carousel slide carousel-fade <?php if($is_subpage == true){ echo "subpage"; } ?>" data-ride="carousel" data-interval="4000">
+					<ol class="carousel-indicators">
+		<?php }
+			while ( $the_query_indicators->have_posts() ) {
+				$the_query_indicators->the_post();
+				if ($post_count > 1) { 
+			    	if ($count_ind == 0) { ?>
+			    		<li data-target="#carouselHeader" data-slide-to="<?php echo $count_ind; ?>" class="active"></li>
+			    	<?php 
+			    	} else { ?>
+			    		<li data-target="#carouselHeader" data-slide-to="<?php echo $count_ind; ?>"></li>
+					<?php
+			    	}
+		    		$count_ind++;		
+				}
+			}
+			wp_reset_postdata();
+		} else {
+			// no posts
+		}
+	?>
+				</ol>
+		<!-- End indicator query -->
+
+	<?php
+		if ($post_count > 1) { ?>
+		  	<div class="carousel-inner">
+	            <div class="orange-curve bottom-curve"></div>
+        <?php
+		}
+
 		while ( $the_query->have_posts() ) {
 			$the_query->the_post();
-			$isfeatured = get_field('featured_post');
-			if ($isfeatured) {
-				$feat_img = get_the_post_thumbnail_url(get_the_ID(), 'full');
-				$cats = get_categories();
-				$cat_name = "";
-				$content = wp_trim_words(get_the_content(), 25);
-				foreach ($cats as $cat) {
-					if($cat->name == "News") {
+			$feat_img = get_the_post_thumbnail_url(get_the_ID(), 'full');
+			$cats = get_categories();
+			$cat_name = "";
+			$content = wp_trim_words(get_the_content(), 25);
+			foreach ($cats as $cat) {
+				if($cat->name == "News") {
 
-					} else {
-						$cat_name = $cat->name . " news:";
-					}
+				} else {
+					$cat_name = $cat->name . " news:";
 				}
-				?>
-				<div class="static-banner-image dimmed" style="background-image: url(<?php echo $feat_img; ?>);">
-		            <div class="orange-curve bottom-curve"></div>
-					<div id="static-banner-overlay">
-						<div class="static_banner_overlay_content">
-							<h3><?php echo $cat_name; ?></h3>
-							<h2><strong><?php echo get_the_title(); ?></strong></h2>
-							<p><?php echo $content; ?></p>
-							<a href="<?php the_permalink(); ?>">
-			        			<div class="read-more">
-				        			<div class="blue-arrow"></div>
-				        			<span>Read More</span>
-				        		</div>
-							</a>
-			        	</div>
-					</div>
-				</div>
-				<div id="banner-anch"></div>
-				<?php
 			}
 			?>
 			<?php
-		}
+			if ($post_count < 1) {
+				echo "PLEASE ENABLE A FEATURED POST";
+			} elseif ($post_count == 1) { ?>
+					<div class="static-banner-image dimmed" style="background-image: url(<?php echo $feat_img; ?>);">
+			            <div class="orange-curve bottom-curve"></div>
+						<div id="static-banner-overlay">
+							<div class="static_banner_overlay_content">
+								<h3><?php echo $cat_name; ?></h3>
+								<h2><strong><?php echo get_the_title(); ?></strong></h2>
+								<p><?php echo $content; ?></p>
+								<a href="<?php the_permalink(); ?>">
+				        			<div class="read-more">
+					        			<div class="blue-arrow"></div>
+					        			<span>Read More</span>
+					        		</div>
+								</a>
+				        	</div>
+						</div>
+					</div>	
+			<?php
+			} elseif ($post_count > 1) { ?>
+			<?php
+						        
+			        if ($count_ban == 0) { ?>
+			        	<div class="carousel-item active dimmed" style="background-image: url(<?php echo $feat_img; ?>);">
+			        		<div class="slide-overlay">
+    							<h3><?php echo $cat_name; ?></h3>
+    							<h2><strong><?php echo get_the_title(); ?></strong></h2>
+    							<p><?php echo $content; ?></p>
+    							<a href="<?php the_permalink(); ?>">
+    			        			<div class="read-more">
+    				        			<div class="blue-arrow"></div>
+    				        			<span>Read More</span>
+    				        		</div>
+    							</a>
+			        		</div>
+			        	</div>
+			        <?php
+			        } else { ?>
+			        	<div class="carousel-item dimmed" style="background-image: url(<?php echo $feat_img; ?>);">
+			        		<div class="slide-overlay">
+    							<h3><?php echo $cat_name; ?></h3>
+    							<h2><strong><?php echo get_the_title(); ?></strong></h2>
+    							<p><?php echo $content; ?></p>
+    							<a href="<?php the_permalink(); ?>">
+    			        			<div class="read-more">
+    				        			<div class="blue-arrow"></div>
+    				        			<span>Read More</span>
+    				        		</div>
+    							</a>
+			        		</div>
+			        	</div>
+			        <?php
+			    	}
+
+					$count_ban++; ?>
+
+					<a class="carousel-control-prev" href="#carouselHeader" role="button" data-slide="prev">
+					    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					    <span class="sr-only">Previous</span>
+					  </a>
+					  <a class="carousel-control-next" href="#carouselHeader" role="button" data-slide="next">
+					    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+					    <span class="sr-only">Next</span>
+					  </a>
+					<div class="scroll-dwn"></div>
+				
+			<?php
+			}
+			?>
+		<?php
+	}
 	?>
+		</div>
 	</div>
+	<div id="banner-anch"></div>	
 	<?php
 		wp_reset_postdata();
 	} else {
-
+		echo "no posts";
 	}	
 }
 
