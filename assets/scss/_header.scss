@@ -219,7 +219,7 @@ header {
 			    color: #fff;
 			    width: 40%;
 			    h1 {
-			    	line-height: 1.2;
+			    	font-size: 4vw;
 			    }
 			    p {
 			    	color: #fff;
@@ -301,6 +301,7 @@ header {
 			    color: #fff;
 			    width: 40%;
 			    h1 {
+			    	font-size: 4vw;
 			    	line-height: 1.2;
 			    }
 			    p {
@@ -533,6 +534,7 @@ header {
 					transform: translate(-50%, -50%);
 					width: 80%;
 				    h1 {
+				    	font-size: 10vw;
 				    }
 				}
 				.scroll-dwn {
@@ -565,8 +567,8 @@ header {
 					width: 70%;
 				    h1 {
 				    	width: 90%;
-				    	line-height: 1.1;
 				    	margin: 0 auto 0 0;
+				    	font-size: 10vw;
 				    }
 				}
 			}
@@ -743,7 +745,7 @@ header {
 				#static-banner-overlay {
 					
 				    h1 {
-				    	
+				    	font-size: 4.8vw;
 				    }
 				}
 				.scroll-dwn {
@@ -768,8 +770,8 @@ header {
 					left: 35%;
 				    h1 {
 				    	width: 90%;
-				    	line-height: 1.1;
 				    	margin: 0 auto 0 0;
+				    	font-size: 4.8vw;
 				    }
 				}
 			}
@@ -838,6 +840,199 @@ header {
 			.header-nav {
 				width: 80vw;
 			}
+		}
+	}
+}
+
+@include respond-above(lg) {
+	header {
+		
+		#header-menu {
+			
+			#top-bar {
+				#top-bar-menu {
+					#menu-top-bar {
+						li {
+							
+						}
+						li.tb-contact {
+							
+							a {
+								
+							}
+						}
+						li.tb-contact:hover {
+							
+							a {
+								
+							}
+						}
+						li.tb-news {
+							
+						}
+						li.tb-news:hover {
+							
+							a {
+							}
+						}
+					}
+				}
+				#ajax-search {
+					
+					#ajaxsearchlite1 {
+						
+						.probox {
+							
+							.promagnifier {
+								
+							}
+							.proinput {
+								
+								form {
+									
+									input {
+										
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+			.header-nav {
+				display: none;
+				#logo_lnk {
+					
+					.logo {
+						
+					}
+				}
+				.header-nav-menu {
+				
+					li {
+						
+						a {
+
+						}
+					}
+					.dropdown {
+						
+						.dropdown-toggle::after {
+							
+						}
+						.dropdown-menu {
+							
+							li {
+								
+								a {
+									
+								}
+							}
+						}
+					}
+					.dropdown:hover {
+						.dropdown-menu {
+						
+						}
+					}
+				}
+			}
+			li {
+				
+				a {
+					
+				}
+			}
+			li.active {
+				
+			}
+			li:hover {
+				
+				a {
+					
+				}
+			}
+			li.active:hover {
+				
+			}
+		}
+		#banner {
+			
+			#static-banner-image {
+				
+				#static-banner-overlay {
+					
+				    h1 {
+				    }
+				}
+				.scroll-dwn {
+				
+				}
+			}
+			#carouselHeader{
+				.carousel-indicators {
+					
+					li {
+					
+					}
+					li.active {
+						
+					}
+				}
+			}
+			.carousel-item {
+				
+				.slide-overlay {
+					
+				    h1 {
+				    	
+				    }
+				}
+			}
+		}
+		.letterbox#banner {
+			#featpost {
+				.static-banner-image {
+					#static-banner-overlay {
+						
+					}
+				}
+			}
+		}
+		.letterbox#banner:after {
+		}
+		#banner {
+			#featpost {
+				
+				.static-banner-image {
+					
+					#static-banner-overlay {
+						
+						.static_banner_overlay_content {
+							h3 {
+
+							}
+							h2 {
+
+							}
+							p {
+
+							}
+							.read-more {
+								
+								.blue-arrow {
+								
+								}
+								span {
+								
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+		#banner:after {
 		}
 	}
 }
