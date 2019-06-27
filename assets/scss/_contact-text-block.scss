@@ -62,11 +62,12 @@
 	#contact-details-text-block, .agent-contact-details {
 
 		.icon-text {
-
+			margin: 0;
 		}
 		.icon-text#email_address {
 			.icon {
-				
+				height: 6vh;
+			    width: 8vw;
 				margin: 0 2vw 0 0;
 			}
 			a {
@@ -75,8 +76,9 @@
 		}
 		.icon-text#phone_number {
 			.icon {
-				
-				margin: 0 1vw 0 0;
+				height: 6vh;
+			    width: 8vw;
+				margin: 0 2vw 0 0;
 			}
 			a {
 
@@ -106,8 +108,52 @@
 }
 
 @include respond-between(xs, sm) {
+	#contact-details-text-block, .agent-contact-details {
+		
+		.icon-text {
+			margin: 0 0 0vh;
+		}
+		.icon-text#email_address {
+			.icon {
+				
+			}
+			a {
+
+			}
+		}
+		.icon-text#phone_number {
+			.icon {
+				
+			}
+			a {
+
+			}
+		}
+	}
+
+	.agent-contact {
+		.agent-contact-header {
+			
+			.icon {
+				height: 5vh;
+			    width: 3vw;
+			    margin: 0 1vw 0 0;
+			}
+			h3 {
+				
+			}
+		}
+		.agent-contact-details {
+			p {
+				margin: 0 0 2vh;
+			}
+		}
+	}
+
+
 	#contact-details-text-block {
 		.icon-text {
+
 		}
 		.icon-text#email_address {
 			.icon {

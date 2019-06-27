@@ -548,8 +548,8 @@ div.wpcf7-mail-sent-ok {
 
 	.read-more {
 		.blue-arrow {
-			height: 2vw;
-		    width: 2vw;
+			height: 2vw !important;
+		    width: 2vw !important;
 		    margin: 0 1vw 0 0;
 		}
 		span {
@@ -594,6 +594,22 @@ div.wpcf7-mail-sent-ok {
 	.white-curve {
 	    padding-top: 1.5vw;
 		
+	}
+
+	.social-links {
+		
+		a {
+			
+			i {
+				font-size: 2vw;
+				
+			}
+		}
+		a:hover {
+			i {
+				
+			}
+		}
 	}
 }
 

@@ -156,10 +156,10 @@
 		var title_height = elm.find('h2').height();
 		var hidden_height = elm.find('p').height();
 
-		var title_change = hidden_top - title_top - title_height;
-		title_change = title_change - (hidden_height / 2.5);
-		var readmore_change = hidden_top - read_more_top + hidden_height;
-		readmore_change = readmore_change + (hidden_height / 2.5);
+		var title_change = hidden_top - title_top - title_height - 10;
+		// title_change = title_change - (hidden_height / 2.5);
+		var readmore_change = hidden_top - read_more_top + hidden_height + 10;
+		// readmore_change = readmore_change + (hidden_height / 2.5);
 		// console.log('readmore_change = ' + readmore_change);
 
 		elm.find('h2').animate({top: title_change}, 250);
@@ -587,15 +587,16 @@ $(document).ready(function() {
 // ==========================================
 $('a').each(function() {
 	var currentLink = $(this);
-	var href = $(this).attr('href');
+	var href = currentLink.attr('href');
 	var url = window.location.origin;
 	console.log("href - " + href);
 	console.log("url - " + url);
 
-	if (href.length) {
+	if (href.length > 1) {
 		if (href.indexOf(url) >= 0) {
-			
+			console.log('internal liunk');
 		} else {
+			console.log('external liunk');
 			currentLink.attr('target', '_blank');
 		}
 	}

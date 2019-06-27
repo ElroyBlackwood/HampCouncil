@@ -19,3 +19,22 @@
 		}
 	}
 }
+
+
+@include respond-below(xs) {
+	#logo-carousel {
+		width: 75vw;
+		margin: 6vh auto 8vh;
+		h4 {
+		
+		}
+		.logo-carousel {
+			.slide-content {
+				
+				.logo {
+					
+				}
+			}
+		}
+	}
+}

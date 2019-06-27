@@ -142,3 +142,57 @@
 		}
 	}
 }
+
+@include respond-between(xs, sm) {
+	#our-stories {
+		
+		.stories-carousel {
+			width: 80vw;
+			.slide-content {
+				a {
+					
+					.wdg-container {
+						
+						.color-overlay {
+							
+						}
+						.wdg-overlay {
+							width: 90%;
+							.wdg-overlay-title {
+								
+								h2 {
+									
+								}
+								.read-more {
+									
+									.blue-arrow {
+										
+									}
+									span {
+										
+									}
+								}
+							}
+							
+							p {
+								
+							}
+						}
+					}
+					.wdg-container:hover {
+						
+						.wdg-overlay {
+							h2 {
+								
+							}
+							p {
+							}
+							a {
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

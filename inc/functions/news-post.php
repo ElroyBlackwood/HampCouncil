@@ -33,7 +33,7 @@
 					if ($static_or_gallery == 'no') { ?>
 				<?php } else {
 					ouputPostGallery();
-				}s
+				}
 				?>
 				<div id="article-text">
 					<?php the_content(); ?>
