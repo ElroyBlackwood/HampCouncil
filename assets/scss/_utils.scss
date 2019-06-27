@@ -611,6 +611,22 @@ div.wpcf7-mail-sent-ok {
 			}
 		}
 	}
+
+	div.wpcf7-validation-errors, div.wpcf7-acceptance-missing, div.wpcf7-mail-sent-ng, div.wpcf7-aborted {
+		font-size: 2vw;
+		
+	}
+
+	span.wpcf7-not-valid-tip {
+		font-size: 2vw;
+	}
+
+	div.wpcf7-validation-errors {
+	}
+
+	div.wpcf7-mail-sent-ok {
+		font-size: 3vw;
+	}
 }
 
 @include respond-below(xs) {
@@ -684,6 +700,22 @@ div.wpcf7-mail-sent-ok {
 		width: 8vw !important;
 		height: 8vw !important;
 	}
+
+	div.wpcf7-validation-errors, div.wpcf7-acceptance-missing, div.wpcf7-mail-sent-ng, div.wpcf7-aborted {
+		font-size: 4vw;
+		
+	}
+
+	span.wpcf7-not-valid-tip {
+		font-size: 4vw;
+	}
+
+	div.wpcf7-validation-errors {
+	}
+
+	div.wpcf7-mail-sent-ok {
+		font-size: 6vw;
+	}
 }
 
 @include respond-between(sm, md) {
@@ -694,3 +726,4 @@ div.wpcf7-mail-sent-ok {
 		width: 70vw;
 	}
 }
+

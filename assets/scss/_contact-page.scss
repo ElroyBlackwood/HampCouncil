@@ -89,3 +89,35 @@
 		}
 	}
 }
+
+@include respond-between(xs, sm){
+	#contact_top_content {
+	}
+
+	#contact_info {
+		width: 85vw;
+		#contact-details {
+			
+		}
+		#contact-form {
+			.wpcf7-acceptance {
+				span {
+					label {
+					}
+				}
+				span.wpcf7-list-item:before {
+				}
+				input {
+				}
+			}
+			.container {
+				.checkmark {
+					
+				}
+			}
+			input[type="submit"] {
+			
+			}
+		}
+	}
+}
