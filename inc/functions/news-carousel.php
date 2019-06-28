@@ -33,22 +33,6 @@
 				  ]
 				});
 
-				function getMaxHeight(sel) {
-					var maxHeight = 0;
-					$(sel).each(function(){
-					   if ($(this).height() > maxHeight) { 
-						   maxHeight = $(this).height(); 
-					   }
-					});
-					$(sel).each(function() {
-						$(this).height(maxHeight);
-					});
-				}
-
-				function sizeCarouselTitle() {
-					getMaxHeight('.slick-slide .news-carousel-title');
-				}
-
 				$('.news-carousel').on('afterChange', function(slick, currentSlide){
 				});
 				$('.news-carousel').on('beforeChange', function(slick, currentSlide){
@@ -57,6 +41,52 @@
 				});
 				$('.news-carousel').on('reInit', function(slick){
 				});
+		    });
+
+		    function sizeCarouselTitle() {
+		    	console.log("resizxe");
+		    	getMaxHeight('.news-carousel-title');
+		    }
+
+		    function getMaxHeight(sel) {
+		    	var maxHeight = 0;
+		    	$(sel).each(function(){
+		    	   if ($(this).find('h3').outerHeight() > maxHeight) { 
+		    		   maxHeight = $(this).find('h3').outerHeight(); 
+		    	   }
+		    	});
+		    	$(sel).each(function() {
+		    		$(this).height(maxHeight);
+		    	});
+		    }
+
+		    $(document).ready(function() {
+		        function checkWidth() {
+		            var windowsize = $(window).width();
+		            if (windowsize > 255 && windowsize < 601) {
+		            	sizeCarouselTitle();
+		            } else if (windowsize > 600 && windowsize < 1201) {
+		            	sizeCarouselTitle();
+		            } else if (windowsize > 1200 && windowsize < 1601) {
+		            	sizeCarouselTitle();
+		            } else if (windowsize > 1600 && windowsize < 1921) {	
+		            	sizeCarouselTitle();
+		            } else if (windowsize > 1920) {
+		            	sizeCarouselTitle();
+		            }
+		        }
+		        
+		        // Execute on load
+		        checkWidth();
+		        
+		        // Bind event listener
+		        $(window).resize(checkWidth);
+		        
+		    
+		    function refreshNews() {
+		    	$('.news-carousel').slick('setPosition');
+		    }
+
 		    });
 
 		})( jQuery );
@@ -94,7 +124,9 @@
 					 ?>
 					<div class="slide-content">
 						<a href="<?php if($is_external == true){ echo $external_link; } else { the_permalink(); } ?>" <?php if($is_external == true){ echo "target='_blank'"; } ?> >
-							 <h3 class="news-carousel-title"><?php the_title(); ?></h3>
+							<div  class="news-carousel-title">
+							 <h3><?php the_title(); ?></h3>
+							</div>
 							<?php if ( has_post_thumbnail() ) : ?>
 							<?php $thumburl = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
 							<div class="slide-thumbnail" style="background-image: url(<?php echo $thumburl; ?>);">

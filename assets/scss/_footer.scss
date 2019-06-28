@@ -11,10 +11,12 @@
 	}
 	.slide-content {
 		a {
-			h3 {
+			.news-carousel-title{
 				margin: 0 0 4vh;
 				@include flexbox();
 				align-items: flex-end;
+				h3 {
+				}
 			}
 			.slide-thumbnail {
 				@include bg_img_cover();
@@ -178,8 +180,10 @@
 		.slide-content {
 			padding: 0;
 			a {
-				h3 {
-					
+				.news-carousel-title{
+					h3 {
+						
+					}
 				}
 				.slide-thumbnail {
 					

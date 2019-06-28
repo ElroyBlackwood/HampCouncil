@@ -114,14 +114,14 @@ function ouputFeatBanner() {
 		while ( $the_query->have_posts() ) {
 			$the_query->the_post();
 			$feat_img = get_the_post_thumbnail_url(get_the_ID(), 'full');
-			$cats = get_categories();
-			$cat_name = "";
+			$tags = get_the_tags();
+			$tag_name = "";
 			$content = wp_trim_words(get_the_content(), 25);
-			foreach ($cats as $cat) {
-				if($cat->name == "News") {
+			foreach ($tags as $tag) {
+				if($tag->name == "News") {
 
 				} else {
-					$cat_name = $cat->name . " news:";
+					$tag_name = $tag->name . " news:";
 				}
 			}
 			?>
@@ -133,13 +133,13 @@ function ouputFeatBanner() {
 			            <div class="orange-curve bottom-curve"></div>
 						<div id="static-banner-overlay">
 							<div class="static_banner_overlay_content">
-								<h3><?php echo $cat_name; ?></h3>
+								<h3><?php echo $tag_name; ?></h3>
 								<h2><strong><?php echo get_the_title(); ?></strong></h2>
 								<p><?php echo $content; ?></p>
 								<a href="<?php the_permalink(); ?>">
 				        			<div class="read-more">
 					        			<div class="blue-arrow"></div>
-					        			<span>Read More</span>
+					        			<span><strong>Read More</strong></span>
 					        		</div>
 								</a>
 				        	</div>
@@ -152,13 +152,13 @@ function ouputFeatBanner() {
 			        if ($count_ban == 0) { ?>
 			        	<div class="carousel-item active dimmed" style="background-image: url(<?php echo $feat_img; ?>);">
 			        		<div class="slide-overlay">
-    							<h3><?php echo $cat_name; ?></h3>
+    							<h3><?php echo $tag_name; ?></h3>
     							<h2><strong><?php echo get_the_title(); ?></strong></h2>
     							<p><?php echo $content; ?></p>
     							<a href="<?php the_permalink(); ?>">
     			        			<div class="read-more">
     				        			<div class="blue-arrow"></div>
-    				        			<span>Read More</span>
+    				        			<span><strong>Read More</strong></span>
     				        		</div>
     							</a>
 			        		</div>
@@ -167,7 +167,7 @@ function ouputFeatBanner() {
 			        } else { ?>
 			        	<div class="carousel-item dimmed" style="background-image: url(<?php echo $feat_img; ?>);">
 			        		<div class="slide-overlay">
-    							<h3><?php echo $cat_name; ?></h3>
+    							<h3><?php echo $tag_name; ?></h3>
     							<h2><strong><?php echo get_the_title(); ?></strong></h2>
     							<p><?php echo $content; ?></p>
     							<a href="<?php the_permalink(); ?>">

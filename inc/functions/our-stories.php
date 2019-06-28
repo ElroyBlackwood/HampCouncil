@@ -37,12 +37,19 @@
 		<?php
 		$tags = get_the_tags(get_the_ID());
 		$tag_name = "";
+		$is_empty = false;
 		if (!empty($tags)) {
-			$tag_id = $tags[0]->term_id;
-			$tag_name = $tags[0]->name;
-			
-			// echo "tag id = " . $tag_id;
-			// var_dump($tags);
+			foreach ($tags as $tag) {
+				$tag_id = $tag->term_id;
+				$is_empty = checkIfEmpty($tag_id);
+				
+				if ($is_empty == true) {
+
+				} else {
+					$tag_name = $tag->name;
+				}
+			}
+
 			$args = array(
 				'posts_per_page' => -1,
 				'tag_id' => $tag_id,
@@ -105,5 +112,23 @@
 			</div>
 		</div>
 <?php
+	}
+
+	function checkIfEmpty($tag_id){
+		
+		$args = array(
+			'posts_per_page' => -1,
+			'tag_id' => $tag_id,
+		);
+
+		$the_query = new WP_Query( $args );
+
+		$post_count = $the_query->found_posts;
+
+		if($post_count > 0) {
+			return true;
+		} else {
+			return false;
+		}
 	}
 ?>
