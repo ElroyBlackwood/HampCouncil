@@ -10,7 +10,7 @@
 			if (in_array("News", $list_of_cats)) {
 				
 				ouputNewsArticle();
-			} elseif (in_array('Property', $list_of_cats)) {
+			} elseif (in_array('Featured - Property', $list_of_cats)) {
 				
 				ouputProperty();
 			}
