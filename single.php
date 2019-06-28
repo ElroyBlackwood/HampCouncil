@@ -5,12 +5,12 @@
 			$cats = get_the_category();
 			$list_of_cats = array();
 			foreach ($cats as $cat) {
-				array_push($list_of_cats, $cat->name);
+				array_push($list_of_cats, $cat->term_id);
 			}
-			if (in_array("News", $list_of_cats)) {
+			if (in_array("4", $list_of_cats)) {
 				
 				ouputNewsArticle();
-			} elseif (in_array('Featured - Property', $list_of_cats)) {
+			} elseif (in_array('42', $list_of_cats)) {
 				
 				ouputProperty();
 			}
