@@ -136,6 +136,7 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 		@include flexbox();
 		align-items: center;
 		i {
+			@include ease(all, 0.25s);
 			font-size: 1.5vw;
 			margin: 0 1.5vw;
 		}
@@ -241,7 +242,7 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 			position: relative;
 			@include flexbox();
 			align-items: center;
-			color: #122121;
+			color: #404D4D;
 			width: fit-content;
 		    font-weight: 500;
 		}
@@ -450,6 +451,12 @@ div.wpcf7-mail-sent-ok {
 	color: #404D4D;
 	border: none;
 	text-align: right;
+}
+
+// iframe proepert stuff
+.property-iframe {
+	width: 75vw;
+	margin: auto;
 }
 
 @include respond-below(xs) {

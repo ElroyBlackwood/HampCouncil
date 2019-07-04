@@ -9,7 +9,7 @@ function outputWidgetBlock() { ?>
 		$hex = get_field('image_overlay_colour');
 		$hex = "#" . $hex;
 		list($r, $g, $b) = sscanf($hex, "#%02x%02x%02x");
-		$rgb_col = "$r, $g, $b, 0.9";
+		$rgb_col = "$r, $g, $b, 1";
 		$bg_img = get_field('wdg_background_image');
 		$text_col = get_field('text_colour');
 		$text_col = "#" . $text_col;

@@ -173,7 +173,7 @@ function ouputFeatBanner() {
     							<a href="<?php the_permalink(); ?>">
     			        			<div class="read-more">
     				        			<div class="blue-arrow"></div>
-    				        			<span>Read More</span>
+    				        			<span><strong>Read More</strong></span>
     				        		</div>
     							</a>
 			        		</div>

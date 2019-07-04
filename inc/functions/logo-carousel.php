@@ -39,7 +39,7 @@ function outputLogoCarousel() {
 			})( jQuery );
 			</script>
 		<div class="slick-wrapper container-width" id="logo-carousel">
-			<h4><strong>Some of the influential financial services businesses operating in Hampshire</strong></h4>
+			<h4><strong><?php the_field('logo_carousel_title'); ?></strong></h4>
 			<div class="logo-carousel">
 	<?php 
 			    while ( have_rows('logos') ) : the_row();

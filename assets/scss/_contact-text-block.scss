@@ -58,6 +58,28 @@
 	}
 }
 
+.agents-block {
+	@include flexbox();
+	.agent-contact {
+		@include flexbox();
+		width: 50%;
+		align-items: center;
+		.agent-contact-info {
+			width: 50%;
+		}
+		.agent-contact-logo {
+			width: 50%;
+			.agent-logo{
+				@include bg_img_contain();
+				padding-top: 100%;
+				width: 50%;
+			    margin: 0 auto 0 15%;
+			}
+		}
+	}
+}
+
+
 @include respond-below(xs) {
 	#contact-details-text-block, .agent-contact-details {
 
@@ -102,6 +124,25 @@
 		}
 		.agent-contact-details {
 			p {
+			}
+		}
+	}
+
+	.agents-block {
+		flex-wrap: wrap;
+		.agent-contact {
+			width: 100%;
+			.agent-contact-info {
+				width: 60%;
+				.agent-contact-header {
+					margin: 0vh 0 1vh;
+				}
+			}
+			.agent-contact-logo {
+				width: 50%;
+				.agent-logo{	
+					width: 70%;
+				}
 			}
 		}
 	}
@@ -169,6 +210,22 @@
 			}
 			a {
 
+			}
+		}
+	}
+}
+
+@include respond_between(sm, md) {
+	.agents-block {
+		.agent-contact {
+			.agent-contact-info {
+				width: 70%;
+				.agent-contact-header {
+				}
+			}
+			.agent-contact-logo {
+				.agent-logo{	
+				}
 			}
 		}
 	}

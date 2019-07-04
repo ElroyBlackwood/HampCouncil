@@ -7,18 +7,37 @@
 					$feat_img = get_the_post_thumbnail_url(get_the_ID(), 'full');
 					$post_thumbnail_id = get_post_thumbnail_id();
 					$caption = wp_get_attachment_caption($post_thumbnail_id);
-					$agent_logo = get_field('agent_logo');
-					$agents_name = get_field('agents_name');
-					$agent_website = get_field('agent_website');
-					$agent_address = get_field('agent_address');
-					$agent_email = get_field('agent_email');
-					$agent_phone_number = get_field('agent_phone_number');
 					$static_or_gallery = get_field('do_you_want_a_static_image_or_gallery');
-
+					$display_contact_logos = get_field('display_contact_logos');
 				?>
 				<div id="article-header">
-					<div class="agent-logo" style="background-image: url(<?php echo $agent_logo['url']; ?>);">
-						
+					<div class="agent-logos<?php if($display_contact_logos == 'no') { echo ' no-logos'; } ?>">
+					<?php 
+							if( have_rows('contactagent') ):
+
+							 	// loop through the rows of data
+							    while ( have_rows('contactagent') ) : the_row();
+							    	$agent_logo = get_sub_field('agent_logo');
+							    	$agents_name = get_sub_field('agents_name');
+							    	$agent_website = get_sub_field('agent_website');
+							    	$agent_address = get_sub_field('agent_address');
+							    	$agent_email = get_sub_field('agent_email');
+							    	$agent_phone_number = get_sub_field('agent_phone_number');
+							        
+							        if($display_contact_logos == 'yes') {
+							    	?>
+							    		<div class="agent-logo" style="background-image: url(<?php echo $agent_logo['url']; ?>);">
+								    	</div>
+							    	<?php
+							    	}
+							    endwhile;
+
+							else :
+
+							    // no rows found
+
+							endif;
+					?>
 					</div>
 					<div class="agent-title">
 						<h3 class="orange-text"><?php echo $agents_name; ?></h3>
@@ -49,14 +68,14 @@
 								while ( have_rows('social_media', 'option') ) : the_row();
 									$socialchannel = get_sub_field('social_channel', 'option');
 									$socialurl = get_sub_field('social_url', 'option');
-
+									// echo "social chan - " . $socialchannel . "<br />";
 									if ($socialchannel == "r fa-envelope") { ?>
 										<a href="mailto:<?php echo $socialurl; ?>"><i class="fa<? echo $socialchannel; ?>" aria-hidden="true"></i></a>
-									<?php } else { ?>
-										<a href="<?php echo $socialurl; ?>"><i class="fa<? echo $socialchannel; ?>" aria-hidden="true"></i></a>
-									<?php } ?>
-
-									<?php
+								<?php } elseif ($socialchannel == 'b fa-twitter') { ?>
+										<a href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" target="_blank"><i class="fa<? echo $socialchannel; ?>" aria-hidden="true"></i></a>
+								<?php } elseif ($socialchannel == 'b fa-linkedin') { ?>
+										<a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>" target="_blank"><i class="fa<? echo $socialchannel; ?>" aria-hidden="true"></i></a>
+								<?php }
 								endwhile;
 							endif;
 						?>
@@ -82,22 +101,52 @@
 						</a>
 					</div>
 				</div>
-				<div class="agent-contact">
-					<div class="agent-contact-header">
-						<div class="icon" style="background-image: url(<?php echo get_bloginfo('url') . '/wp-content/uploads/2019/06/icon-256px-red-envelope.png'; ?>);"></div>
-						<h3>Contact Agent</h3>
-					</div>
-					<div class="agent-contact-details">
-						<?php echo $agent_address; ?>
-						<div class="icon-text" id="email_address">
-							<div class="icon"></div>
-							<a href="mailto:<?php echo $agent_email; ?>"><?php echo $agent_email; ?></a>
-						</div>
-						<div class="icon-text" id="phone_number">
-							<div class="icon"></div>
-							<a href="tel:<?php echo $agent_phone_number; ?>"><?php echo $agent_phone_number; ?></a>
-						</div>
-					</div>
+				<div class="agents-block">
+				<?php 
+				if( have_rows('contactagent') ):
+
+				 	// loop through the rows of data
+				    while ( have_rows('contactagent') ) : the_row();
+				    	$agent_logo = get_sub_field('agent_logo');
+				    	$agents_name = get_sub_field('agents_name');
+				    	$agent_website = get_sub_field('agent_website');
+				    	$agent_address = get_sub_field('agent_address');
+				    	$agent_email = get_sub_field('agent_email');
+				    	$agent_phone_number = get_sub_field('agent_phone_number');
+				        
+				    	?>
+				    	<div class="agent-contact">
+				    		<div class="agent-contact-info">
+					    		<div class="agent-contact-header">
+					    			<div class="icon" style="background-image: url(<?php echo get_bloginfo('url') . '/wp-content/uploads/2019/06/icon-256px-red-envelope.png'; ?>);"></div>
+					    			<h3>Contact Agent</h3>
+					    		</div>
+					    		<div class="agent-contact-details">
+					    			<?php echo $agent_address; ?>
+					    			<div class="icon-text" id="email_address">
+					    				<div class="icon"></div>
+					    				<a href="mailto:<?php echo $agent_email; ?>"><?php echo $agent_email; ?></a>
+					    			</div>
+					    			<div class="icon-text" id="phone_number">
+					    				<div class="icon"></div>
+					    				<a href="tel:<?php echo $agent_phone_number; ?>"><?php echo $agent_phone_number; ?></a>
+					    			</div>
+					    		</div>
+					    	</div>
+					    	<div class="agent-contact-logo">
+					    		<div class="agent-logo" style="background-image: url(<?php echo $agent_logo['url']; ?>);">
+					    		</div>
+					    	</div>
+				    	</div>
+				    	<?php
+				    endwhile;
+
+				else :
+
+				    // no rows found
+
+				endif;
+					?>
 				</div>
 			</div>
 		</div>

@@ -2,6 +2,10 @@
 
 $maven_pro : 'Maven Pro';
 
+body {
+	color: #404D4D;
+}
+
 h1, h2, h3, h4, h5, h6, p, a, li {
 	font-family: $maven_pro;
 }

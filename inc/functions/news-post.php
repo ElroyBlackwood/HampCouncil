@@ -62,14 +62,14 @@
 								while ( have_rows('social_media', 'option') ) : the_row();
 									$socialchannel = get_sub_field('social_channel', 'option');
 									$socialurl = get_sub_field('social_url', 'option');
-
+									// echo "social chan - " . $socialchannel . "<br />";
 									if ($socialchannel == "r fa-envelope") { ?>
 										<a href="mailto:<?php echo $socialurl; ?>"><i class="fa<? echo $socialchannel; ?>" aria-hidden="true"></i></a>
-									<?php } else { ?>
-										<a href="<?php echo $socialurl; ?>"><i class="fa<? echo $socialchannel; ?>" aria-hidden="true"></i></a>
-									<?php } ?>
-
-									<?php
+								<?php } elseif ($socialchannel == 'b fa-twitter') { ?>
+										<a href="https://twitter.com/intent/tweet?url=<?php the_permalink(); ?>&text=<?php the_title(); ?>" target="_blank"><i class="fa<? echo $socialchannel; ?>" aria-hidden="true"></i></a>
+								<?php } elseif ($socialchannel == 'b fa-linkedin') { ?>
+										<a href="https://www.linkedin.com/shareArticle?mini=true&url=<?php the_permalink(); ?>&title=<?php the_title(); ?>" target="_blank"><i class="fa<? echo $socialchannel; ?>" aria-hidden="true"></i></a>
+								<?php }
 								endwhile;
 							endif;
 						?>

@@ -13,6 +13,19 @@
 	echo $content;
 ?>
 </div>
+
+<?php 
+$page_id = get_the_ID();
+
+if ($page_id == '1075' || $page_id == '1080') {
+	?>
+	<div class="property-iframe">
+		<?php outputIframe(); ?>
+	</div>
+	<?php
+}
+?>
+
 <?php outputLogoCarousel(); ?>
 <?php outputStories(); ?>
 

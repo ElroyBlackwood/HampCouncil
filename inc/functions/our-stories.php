@@ -42,11 +42,12 @@
 			foreach ($tags as $tag) {
 				$tag_id = $tag->term_id;
 				$is_empty = checkIfEmpty($tag_id);
-				
-				if ($is_empty == true) {
+				// echo "is empty - " . $is_empty;
+				if ($is_empty == 0) {
 
 				} else {
 					$tag_name = $tag->name;
+					// echo "tag_name - " . $tag_name;
 				}
 			}
 
@@ -126,9 +127,9 @@
 		$post_count = $the_query->found_posts;
 
 		if($post_count > 0) {
-			return true;
+			return 1;
 		} else {
-			return false;
+			return 0;
 		}
 	}
 ?>

@@ -21,6 +21,9 @@
 			}
 		}
 		.header-nav-menu {
+			ul.nav {
+				flex-wrap: nowrap;
+			}
 			.dropdown {
 				.dropdown-menu {
 					top: calc(100% + 1vh);

@@ -5,6 +5,8 @@
 	// run all functions that happen on resize or load
 	$(document).ready(function() {
 
+		var resizeTimer;
+
 	    function checkWidth() {
 	        var windowsize = $(window).width();
 	        if (windowsize > 255 && windowsize < 601) {
@@ -43,8 +45,12 @@
 	    shiftNavhack();
 	    triggerSticky();
 	    // Bind event listener
-	    $(window).resize(checkWidth);
-	    
+	    $(window).on("resize", function(e){
+	    	clearTimeout(resizeTimer);
+	    	resizeTimer = setTimeout(function(){
+	    		checkWidth();
+	    	}, 250); 
+	    });	    
 	});
 
 	// max width helper
@@ -293,9 +299,7 @@ function shiftNavhack() {
 $(document).scroll(function() {
 	var windowsize = $(window).width();
 	if (windowsize > 255 && windowsize < 601) {
-		
 	} else if (windowsize > 600 && windowsize < 1201) {
-		
 	} else if (windowsize > 1200 && windowsize < 1601) {
 		triggerSticky();
 	} else if (windowsize > 1600 && windowsize < 1921) {
