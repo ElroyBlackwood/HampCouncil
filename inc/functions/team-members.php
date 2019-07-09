@@ -18,7 +18,7 @@ function outputTeamMembers() {
 		       ?>
 		       <div class="team-member">
 		       		<div class="team-member-img-container">
-			       		<div class="team-member-img dimmed" style="background-image: url(<?php echo $profile_picture['url']; ?>);">
+			       		<div class="team-member-img" style="background-image: url(<?php echo $profile_picture['url']; ?>);">
 						</div>
 					</div>
 		       		<div class="team-member-content">

@@ -17,7 +17,7 @@
 <?php 
 $page_id = get_the_ID();
 
-if ($page_id == '1075' || $page_id == '1080') {
+if ($page_id == '999999999999') {
 	?>
 	<div class="property-iframe">
 		<?php outputIframe(); ?>

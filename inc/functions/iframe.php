@@ -1,8 +1,8 @@
 <?php 
 
 function outputIframe() { ?>
-	<script type="text/javascript" src="wp-content/plugins/advanced-iframe/js/ai.js"></script>
-	<script type="text/javascript" src="wp-content/plugins/advanced-iframe/js/ai_external.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/plugins/advanced-iframe/js/ai.js"></script>
+	<script type="text/javascript" src="<?php bloginfo('url'); ?>/wp-content/plugins/advanced-iframe/js/ai_external.js"></script>
 	<script type="text/javascript">
 	                
 		var ai_iframe_width_advanced_iframe = 0;
