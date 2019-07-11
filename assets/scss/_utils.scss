@@ -261,6 +261,7 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 	a{
 		color: #002EB5;
 		font-weight: 500;
+		font-size: inherit;
 	}
 	a:hover {
 		color: #F26640;
@@ -733,4 +734,3 @@ div.wpcf7-mail-sent-ok {
 		width: 70vw;
 	}
 }
-
