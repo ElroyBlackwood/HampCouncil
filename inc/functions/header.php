@@ -42,18 +42,24 @@ function outputHeader() { ?>
 	<?php 
 		$is_single_page = is_single();
 	?>
+	<?php
+	if ($is_single_page == 1) {
+		# code...
+	} else { ?>
 	<div class="container-fluid <?php if($is_single_page == 1){ ?>letterbox<?php }else{} ?>" id="banner">
-		<?php $banner_slider = get_field('static_banner_of_slider'); ?>
-		<?php if ($banner_slider == "banner") { ?>
-			<?php outputSingleBanner(); ?>
-		<?php } elseif ($banner_slider == "featpost") { ?>
-			<?php ouputFeatBanner(); ?>
-		<?php } elseif ($banner_slider == "slider") { ?>
-			<?php ouputSlider(); ?>
-		<?php } else {
-			
-		}
-		?>
+			<?php $banner_slider = get_field('static_banner_of_slider'); ?>
+			<?php if ($banner_slider == "banner") { ?>
+				<?php outputSingleBanner(); ?>
+			<?php } elseif ($banner_slider == "featpost") { ?>
+				<?php ouputFeatBanner(); ?>
+			<?php } elseif ($banner_slider == "slider") { ?>
+				<?php ouputSlider(); ?>
+			<?php } else {
+				
+			}
+	}
+	?>
+	
 </header>
 <?php }
 
