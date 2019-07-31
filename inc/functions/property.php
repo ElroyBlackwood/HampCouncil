@@ -31,14 +31,12 @@
 							    	$agent_phone_number = get_sub_field('agent_phone_number');
 							    	
 							    	if ($count < 1) {
-			    				        if($do_you_want_the_logo_to_appear_in_the_title == "yes") {
-			    		        	        if($display_contact_logos == 'yes') {
-			    		        	    	?>
+			    				        if($do_you_want_the_logo_to_appear_in_the_title == "yes") { ?>
+			    		        	        
 			    		        	    		<div class="agent-logo" style="background-image: url(<?php echo $agent_logo['url']; ?>);">
 			    		        		    	</div>
-			    		        	    	<?php
-			    		        	    	}
-			    				        } else {
+			    		        	    	
+		    				       <?php } else {
 			    				        	
 			    				        } 
 			    				        ?>
