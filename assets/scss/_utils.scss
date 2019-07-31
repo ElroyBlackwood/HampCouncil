@@ -43,7 +43,6 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 		@include bg_img_contain();
 		padding: 4vw;
 	    transform: rotateY(0deg);
-	    width: auto;
 	}	
 }
 
@@ -723,6 +722,10 @@ div.wpcf7-mail-sent-ok {
 
 	div.wpcf7-mail-sent-ok {
 		font-size: 4vw;
+	}
+
+	#swipebox-close {
+		left: 0 !important;
 	}
 }
 

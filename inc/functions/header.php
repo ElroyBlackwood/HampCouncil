@@ -48,9 +48,11 @@ function outputHeader() { ?>
 			<?php outputSingleBanner(); ?>
 		<?php } elseif ($banner_slider == "featpost") { ?>
 			<?php ouputFeatBanner(); ?>
-		<?php } else { ?>
+		<?php } elseif ($banner_slider == "slider") { ?>
 			<?php ouputSlider(); ?>
-		<?php }
+		<?php } else {
+			
+		}
 		?>
 </header>
 <?php }

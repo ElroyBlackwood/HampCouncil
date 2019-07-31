@@ -82,7 +82,9 @@
 				endif;
 			?>
 			</div>
-			<img id="hamp-cc-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/HCC-logo.png" width="190px" height="52px" />
+			<a href="https://www.hants.gov.uk/" target="_blank">
+				<img id="hamp-cc-logo" src="<?php echo get_template_directory_uri(); ?>/assets/images/HCC-logo.png" width="190px" height="52px" />
+			</a>
 		</div>
 	</div>
 <!--- FOOT SECTION 03 - SOCIAL END -->

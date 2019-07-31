@@ -2,7 +2,7 @@
 	.main-image-gallery {
 		.slide {
 			.slide-img {
-				@include bg_img_cover();
+				@include bg_img_contain();
 				padding-top: 50%;
 			}
 			.slide-img:hover {

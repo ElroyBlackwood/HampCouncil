@@ -14,36 +14,42 @@
 	        	alignHeaderCurve();
 	        	alignNewsCurve();
 	        	alignBlueFooterCurve();
+	        	alignHeaderCurveNewsSingle();
 
 	        } else if (windowsize > 600 && windowsize < 1201) {
 	        	initSquare();
 	        	alignHeaderCurve();
 	        	alignNewsCurve();
 	        	alignBlueFooterCurve();
+	        	alignHeaderCurveNewsSingle();
 
 	        } else if (windowsize > 1200 && windowsize < 1601) {
 	        	initSquare();
 	        	alignHeaderCurve();
 	        	alignNewsCurve();
 	        	alignBlueFooterCurve();
+	        	alignHeaderCurveNewsSingle();
 
 	        } else if (windowsize > 1600 && windowsize < 1921) {
 	        	initSquare();
 	        	alignHeaderCurve();
 	        	alignNewsCurve();
 	        	alignBlueFooterCurve();
+	        	alignHeaderCurveNewsSingle();
 
 	        } else if (windowsize > 1920) {
 	        	initSquare();
 	        	alignHeaderCurve();
 	        	alignNewsCurve();
 	        	alignBlueFooterCurve();
+	        	alignHeaderCurveNewsSingle();
 	        }
 	    }
 	    // Execute on load
 	    checkWidth();
 	    shiftNavhack();
 	    triggerSticky();
+	    alignHeaderCurve();
 	    // Bind event listener
 	    $(window).on("resize", function(e){
 	    	clearTimeout(resizeTimer);
@@ -476,6 +482,17 @@ $('#checkmark-checkboxG4').click(function() {
 function alignHeaderCurve() {
 	var banner = $('#banner');
 	var banner_height = banner.height();
+	console.log(banner.height());
+	var orange_curve = banner.find('.orange-curve');
+	var orange_curve_height = orange_curve.outerHeight();
+	var top = banner_height - orange_curve_height + 2;
+	orange_curve.css('top', top);
+}
+
+function alignHeaderCurveNewsSingle() {
+	var banner = $('.news-header #banner');
+	var banner_height = banner.height();
+	console.log(banner.height());
 	var orange_curve = banner.find('.orange-curve');
 	var orange_curve_height = orange_curve.outerHeight();
 	var top = banner_height - orange_curve_height + 2;
