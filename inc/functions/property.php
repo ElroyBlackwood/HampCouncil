@@ -13,10 +13,13 @@
 				<div id="article-header">
 					<?php
 							$do_you_want_the_logo_to_appear_in_the_title = get_field('do_you_want_the_logo_to_appear_in_the_title');
+							?>
+							<div class="agent-logos<?php if($display_contact_logos == 'no') { echo ' no-logos'; } ?>">
+							<?php
 							if( have_rows('contactagent') ):
 								$count = 0;
 								?>
-								<div class="agent-logos<?php if($display_contact_logos == 'no') { echo ' no-logos'; } ?>">
+								
 								<?php
 							 	// loop through the rows of data
 							    while ( have_rows('contactagent') ) : the_row();
@@ -47,12 +50,14 @@
 							else :
 
 							    // no rows found
-
+								?>
+							
+							<?php
 							endif;
 					?>
 						</div>
 						<div class="agent-title">
-							<h3 class="orange-text"><?php echo $agents_name; ?></h3>
+							<h3 class="orange-text"><?php if (!empty($agents_name)) { echo $agents_name; } ?></h3>
 							<h1><?php echo get_the_title(); ?></h1>
 						</div>
 					</div>
