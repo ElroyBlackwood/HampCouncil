@@ -91,15 +91,16 @@
 	#article-content {
 		#article-header {
 			@include flexbox();
-			justify-content: space-between;
+			justify-content: flex-start;
 			.agent-logos {
-				width: 30%;
+				width: auto;
 			    display: flex;
 			    justify-content: space-between;
 				.agent-logo {
 					@include bg_img_contain;
-					padding-top: 4vh;
-					width: 46%;
+					padding-top: 40%;
+				    width: 30%;
+				    margin: 0 auto 4vh 0;
 				}
 			}
 			.no-logos {
@@ -108,6 +109,10 @@
 			.agent-title{
 				width: 68%;
 			}
+		}
+		#article-bottom-bar {
+			justify-content: space-between;
+		    flex-direction: row-reverse;
 		}
 	}
 }
@@ -193,6 +198,12 @@
 				}
 				.agent-title{
 					width: 100%;
+				}
+			}
+			#article-bottom-bar {
+				flex-wrap: nowrap;
+				.article-bottom-bar-center {
+					order: 1;
 				}
 			}
 		}

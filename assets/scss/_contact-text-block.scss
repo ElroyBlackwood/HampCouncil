@@ -31,6 +31,19 @@
 
 		}
 	}
+	.icon-text#website {
+		.icon {
+			@include bg_img_contain();
+			background-image: url('../images/icon-computer.png');
+			height: 5vh;
+			width: 3vw;
+			margin: 0 1vw 0 0;
+			background-position: left;
+		}
+		a {
+
+		}
+	}
 }
 
 .agent-contact {
@@ -38,6 +51,7 @@
 		@include flexbox();
 		margin: 6vh 0 2vh;
 		align-items: center;
+		width: 100%;
 		.icon {
 			background-size: contain;
 		    background-position: center;
@@ -60,20 +74,23 @@
 
 .agents-block {
 	@include flexbox();
+	margin: 4vh 0 0 0;
 	.agent-contact {
 		@include flexbox();
 		width: 50%;
 		align-items: center;
+		margin: 0 0 2vh;
 		.agent-contact-info {
-			width: 50%;
+			width: 90%;
 		}
 		.agent-contact-logo {
-			width: 50%;
+			width: 100%;
 			.agent-logo{
 				@include bg_img_contain();
-				padding-top: 100%;
-				width: 50%;
-			    margin: 0 auto 0 15%;
+				padding-top: 30%;
+			    width: 30%;
+			    margin: 0;
+			    background-position: bottom;
 			}
 		}
 	}
@@ -97,6 +114,16 @@
 			}
 		}
 		.icon-text#phone_number {
+			.icon {
+				height: 6vh;
+			    width: 8vw;
+				margin: 0 2vw 0 0;
+			}
+			a {
+
+			}
+		}
+		.icon-text#website {
 			.icon {
 				height: 6vh;
 			    width: 8vw;
@@ -141,7 +168,9 @@
 			.agent-contact-logo {
 				width: 50%;
 				.agent-logo{	
-					width: 70%;
+					width: auto;
+				    padding-top: 80%;
+				    margin: 0 0 3vh;
 				}
 			}
 		}

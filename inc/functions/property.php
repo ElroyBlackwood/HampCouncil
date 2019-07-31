@@ -11,10 +11,13 @@
 					$display_contact_logos = get_field('display_contact_logos');
 				?>
 				<div id="article-header">
-					<div class="agent-logos<?php if($display_contact_logos == 'no') { echo ' no-logos'; } ?>">
-					<?php 
+					<?php
+							$do_you_want_the_logo_to_appear_in_the_title = get_field('do_you_want_the_logo_to_appear_in_the_title');
 							if( have_rows('contactagent') ):
-
+								$count = 0;
+								?>
+								<div class="agent-logos<?php if($display_contact_logos == 'no') { echo ' no-logos'; } ?>">
+								<?php
 							 	// loop through the rows of data
 							    while ( have_rows('contactagent') ) : the_row();
 							    	$agent_logo = get_sub_field('agent_logo');
@@ -23,13 +26,22 @@
 							    	$agent_address = get_sub_field('agent_address');
 							    	$agent_email = get_sub_field('agent_email');
 							    	$agent_phone_number = get_sub_field('agent_phone_number');
-							        
-							        if($display_contact_logos == 'yes') {
-							    	?>
-							    		<div class="agent-logo" style="background-image: url(<?php echo $agent_logo['url']; ?>);">
-								    	</div>
-							    	<?php
-							    	}
+							    	
+							    	if ($count < 1) {
+			    				        if($do_you_want_the_logo_to_appear_in_the_title == "yes") {
+			    		        	        if($display_contact_logos == 'yes') {
+			    		        	    	?>
+			    		        	    		<div class="agent-logo" style="background-image: url(<?php echo $agent_logo['url']; ?>);">
+			    		        		    	</div>
+			    		        	    	<?php
+			    		        	    	}
+			    				        } else {
+			    				        	
+			    				        } 
+			    				        ?>
+							    			
+						    	<?php }
+							     	$count++;
 							    endwhile;
 
 							else :
@@ -38,12 +50,12 @@
 
 							endif;
 					?>
+						</div>
+						<div class="agent-title">
+							<h3 class="orange-text"><?php echo $agents_name; ?></h3>
+							<h1><?php echo get_the_title(); ?></h1>
+						</div>
 					</div>
-					<div class="agent-title">
-						<h3 class="orange-text"><?php echo $agents_name; ?></h3>
-						<h1><?php echo get_the_title(); ?></h1>
-					</div>
-				</div>
 				<?php
 					if ($static_or_gallery == 'no') { ?>
 				<?php } else {
@@ -54,13 +66,13 @@
 					<?php the_content(); ?>
 				</div>
 				<div id="article-bottom-bar">
-					<div class="article-bottom-bar-left">
+					<!-- <div class="article-bottom-bar-left">
 						<a href="<?php echo $agent_website; ?>" target="_blank">
 							<div class="read-more">
 								<div class="blue-arrow"></div><span><strong>Go to agent's website</strong></span>
 							</div>
 						</a>
-					</div>
+					</div> -->
 					<div class="article-bottom-bar-center">
 						<div class="social-links">
 						<?php
@@ -113,13 +125,16 @@
 				    	$agent_address = get_sub_field('agent_address');
 				    	$agent_email = get_sub_field('agent_email');
 				    	$agent_phone_number = get_sub_field('agent_phone_number');
-				        
+				        $contactagent_type = get_sub_field('contactagent_type');
 				    	?>
 				    	<div class="agent-contact">
 				    		<div class="agent-contact-info">
+				    			<div class="agent-contact-logo">
+				    				<div class="agent-logo" style="background-image: url(<?php echo $agent_logo['url']; ?>);">
+				    				</div>
+				    			</div>
 					    		<div class="agent-contact-header">
-					    			<div class="icon" style="background-image: url(<?php echo get_bloginfo('url') . '/wp-content/uploads/2019/06/icon-256px-red-envelope.png'; ?>);"></div>
-					    			<h3>Contact Agent</h3>
+					    			<h3>Contact <?php echo $contactagent_type; ?></h3>
 					    		</div>
 					    		<div class="agent-contact-details">
 					    			<?php echo $agent_address; ?>
@@ -131,10 +146,10 @@
 					    				<div class="icon"></div>
 					    				<a href="tel:<?php echo $agent_phone_number; ?>"><?php echo $agent_phone_number; ?></a>
 					    			</div>
-					    		</div>
-					    	</div>
-					    	<div class="agent-contact-logo">
-					    		<div class="agent-logo" style="background-image: url(<?php echo $agent_logo['url']; ?>);">
+					    			<div class="icon-text" id="website">
+					    				<div class="icon"></div>
+					    				<a href="<?php echo $agent_website; ?>" target="_blank">Visit Website</a>
+					    			</div>
 					    		</div>
 					    	</div>
 				    	</div>
