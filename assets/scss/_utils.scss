@@ -53,8 +53,8 @@ div:active, p:active, h1:active, h2:active, h3:active, h4:active, h5:active, h6:
 }
 
 @-webkit-keyframes spin {
-  from { transform: rotateY(0deg); }
-  to { transform: rotateY(360deg); }
+  from { -webkit-transform: rotateY(0deg); }
+  to { -webkit-transform: rotateY(360deg); }
 }
 
 @keyframes spin {
