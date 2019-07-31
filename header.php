@@ -41,7 +41,7 @@
 	</head>
 
 	<div id="preLoader" class="preLoader">
-		<div class="logo spin"></div>
+		<div class="logo"></div>
 	</div>
 
 	<div id="top-anch"></div>
