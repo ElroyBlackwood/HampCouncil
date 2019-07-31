@@ -251,11 +251,11 @@ function ouputSlider() {
 			        $banner_img = get_sub_field('banner_image');
 			        $banner_overlay = get_sub_field('banner_overlay');
 			        $do_you_want_a_banner_link = get_sub_field('do_you_want_a_banner_link');
-			        
+			        $image_alignment_slider = get_sub_field('image_alignment_slider');
 			        if ($count_ban == 0) { 
 			        	
 			        	?>
-			        	<div class="carousel-item active dimmed" style="background-image: url(<?php echo $banner_img['url']; ?>);">
+			        	<div class="carousel-item active dimmed" style="background-image: url(<?php echo $banner_img['url']; ?>); background-position: <?php echo $image_alignment_slider; ?>">
 			        		<?php
 			        			if ($do_you_want_a_banner_link == 'yes') { 
 			        				$banner_link = get_sub_field('banner_link');
@@ -329,8 +329,9 @@ function outputSingleBanner() {
 		$is_subpage = is_subpage();
 		$static_banner_image = get_field('static_banner_image');
 		$static_banner_overlay = get_field('static_banner_overlay');
+		$banner_image_alignment = get_field('banner_image_alignment');
 	?>
-	<div id="static-banner-image" class="dimmed <?php if($is_subpage == true){ echo "subpage"; } ?>" style="background-image: url(<?php echo $static_banner_image['url']; ?>);">
+	<div id="static-banner-image" class="dimmed <?php if($is_subpage == true){ echo "subpage"; } ?>" style="background-image: url(<?php echo $static_banner_image['url']; ?>); background-position: <?php echo $banner_image_alignment; ?> ">
         <div class="orange-curve bottom-curve"></div>
 		<div id="static-banner-overlay">
 			<?php echo $static_banner_overlay; ?>
