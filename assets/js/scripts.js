@@ -609,6 +609,11 @@ $('a').each(function() {
 		
 	} else {
 		if (href.indexOf(url) >= 0) {
+			
+		} else if (href.indexOf('mailto') >= 0) { 
+
+		} else if (href.indexOf('tel') >= 0) {
+
 		} else {
 			currentLink.attr('target', '_blank');
 		}

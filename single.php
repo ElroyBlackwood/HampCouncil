@@ -4,6 +4,8 @@
 		<?php
 			$cats = get_the_category();
 			$list_of_cats = array();
+			$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID), 'full' );
+
 			foreach ($cats as $cat) {
 				array_push($list_of_cats, $cat->term_id);
 			}
@@ -13,7 +15,7 @@
 					?>
 					<div class="news-header">
 						<div class="container-fluid <?php if($is_single_page == 1){ ?>letterbox<?php }else{} ?>" id="banner">
-							<div id="static-banner-image" class="dimmed <?php if($is_subpage == true){ echo "subpage"; } ?>" style="background-image: url(https://businesshampshire.co.uk/wp-content/uploads/2019/07/Fawley-Waterside-Site-Aerial-1920x1080.jpg);">
+							<div id="static-banner-image" class="dimmed <?php if($is_subpage == true){ echo "subpage"; } ?>" style="background-image: url(<?php echo $url; ?>);">
 						        <div class="orange-curve bottom-curve"></div>
 								<div id="static-banner-overlay">
 									

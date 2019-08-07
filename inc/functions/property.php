@@ -109,7 +109,7 @@
 
 							}
 						?>
-						<a href="<?php echo $back_to_link; ?>">
+						<a href="<?php echo bloginfo('url'); ?>/land-property/">
 							<div class="read-more">
 								<div class="blue-arrow"></div><span><strong>Back to Properties</strong></span>
 							</div>
@@ -137,7 +137,7 @@
 				    				</div>
 				    			</div>
 					    		<div class="agent-contact-header">
-					    			<h3>Contact <?php echo $contactagent_type; ?></h3>
+					    			<h3><?php echo $contactagent_type; ?></h3>
 					    		</div>
 					    		<div class="agent-contact-details">
 					    			<?php echo $agent_address; ?>
@@ -151,7 +151,7 @@
 					    			</div>
 					    			<div class="icon-text" id="website">
 					    				<div class="icon"></div>
-					    				<a href="<?php echo $agent_website; ?>" target="_blank">Visit Website</a>
+					    				<a href="<?php echo $agent_website; ?>">Visit Website</a>
 					    			</div>
 					    		</div>
 					    	</div>
