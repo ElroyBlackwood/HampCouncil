@@ -22,4 +22,5 @@ include_once('property.php');
 include_once('post-gallery.php');
 include_once('logo-carousel.php');
 include_once('iframe.php');
+include_once('gallery-shortcode.php');
 ?>

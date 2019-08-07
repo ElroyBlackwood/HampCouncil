@@ -10,11 +10,11 @@
 	        'redirect'      => false
 	    ));
 
-	    // acf_add_options_sub_page(array(
-	    //     'page_title'    => 'Theme Footer Settings',
-	    //     'menu_title'    => 'Footer',
-	    //     'parent_slug'   => $parent['menu_slug'],
-	    // ));
+	    acf_add_options_sub_page(array(
+	        'page_title'    => 'Galleries',
+	        'menu_title'    => 'Galleries',
+	        'parent_slug'   => $parent['menu_slug'],
+	    ));
 	    
 	}
 
