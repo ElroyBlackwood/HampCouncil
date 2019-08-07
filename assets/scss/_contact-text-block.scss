@@ -49,7 +49,7 @@
 .agent-contact {
 	.agent-contact-header {
 		@include flexbox();
-		margin: 6vh 0 2vh;
+		margin: 4vh 0 2vh;
 		align-items: center;
 		width: 100%;
 		.icon {
@@ -67,7 +67,7 @@
 	}
 	.agent-contact-details {
 		p {
-			margin: 0 0 4vh;
+			margin: 0 0 2vh;
 		}
 	}
 }
@@ -255,6 +255,11 @@
 				.agent-logo{	
 				}
 			}
+		}
+	}
+	.agent-contact-details {
+		.icon-text {
+			margin: 0 0 0vh;
 		}
 	}
 }

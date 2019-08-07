@@ -34,7 +34,7 @@
 	        		$output .= '</div>';
 	        		}
 		        } else {
-		        	$output = "Cant find gallery, either you have not put the correct title in the shortcode or you havent created the gallery.";
+		        	// $output = "Cant find gallery, either you have not put the correct title in the shortcode or you havent created the gallery.";
 		        }
 		    endwhile;
 		endif;

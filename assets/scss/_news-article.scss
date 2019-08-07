@@ -57,6 +57,9 @@
 				height: auto;
 				max-width: 100%;
 			}
+			#post-gallery {
+				margin: 2vh auto;
+			}
 		}
 		#article-bottom-bar {
 			@include flexbox();
