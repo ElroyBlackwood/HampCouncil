@@ -1,4 +1,4 @@
-<?php 
+<?php
 	function ouputPostGallery() {
 		$gallery_images = get_field('gallery');
 
@@ -33,7 +33,6 @@
 	<?php
 		}
 	?>
-
 	<?php
 	}
 ?>
