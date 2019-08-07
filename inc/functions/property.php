@@ -14,7 +14,7 @@
 					<?php
 							$do_you_want_the_logo_to_appear_in_the_title = get_field('do_you_want_the_logo_to_appear_in_the_title');
 							?>
-							<div class="agent-logos<?php if($display_contact_logos == 'no') { echo ' no-logos'; } ?>">
+							<div class="agent-logos<?php if($do_you_want_the_logo_to_appear_in_the_title == 'no') { echo ' no-logos'; } ?>">
 							<?php
 							if( have_rows('contactagent') ):
 								$count = 0;
