@@ -6,9 +6,8 @@
 		), $params));
 		$shorcode_title = $params['title'];
 		$output = "";
-		if( have_rows('galleries', 'option') ): ?>
-		    <?php while( have_rows('galleries', 'option') ): the_row(); ?>
-		    <?php
+		if( have_rows('galleries', 'option') ):
+		    while( have_rows('galleries', 'option') ): the_row();
 		        $gallery_images = get_sub_field('images');
 		        $gallery_title = get_sub_field('gallery_title');
 		        if ($shorcode_title == $gallery_title) {
@@ -37,9 +36,8 @@
 		        } else {
 		        	$output = "Cant find gallery, either you have not put the correct title in the shortcode or you havent created the gallery.";
 		        }
-		    ?>
-		    <?php endwhile; ?>
-		<?php endif;
+		    endwhile;
+		endif;
 
 		return $output;
 	}
