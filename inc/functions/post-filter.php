@@ -150,7 +150,11 @@ function outputPostFilter() {
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
 			        $feat_img = get_the_post_thumbnail_url(get_the_ID(),'full');
-			        $wdg_content = wp_trim_words(get_the_content(), 25); 
+			        $content = get_the_content();
+			        $content = strip_shortcodes($content);
+			        // echo "$content = " . $content; 
+			        $wdg_content = wp_trim_words($content, 25);
+			        // echo $wdg_content; 
 					?>
 					<?php 
 						$external_post = get_field('external_blog_link');
@@ -175,7 +179,7 @@ function outputPostFilter() {
 	    				        		</div>
 	    				        	</div>
 				        			<?php $excert = wp_trim_words(get_the_content(), 15) ?>
-				        			<p><?php echo $excert; ?></p>
+				        			<p><?php echo $wdg_content; ?></p>
 								</div>
 							</div>
 						</a>

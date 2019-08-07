@@ -31,7 +31,9 @@ function filter_function(){
 		$post_count = $query->post_count;
 		while( $query->have_posts() ): $query->the_post();
 			$feat_img = get_the_post_thumbnail_url(get_the_ID(),'full');
-			$wdg_content = wp_trim_words(get_the_content(), 25);
+			$content = get_the_content();
+			$content = strip_shortcodes($content);
+			$wdg_content = wp_trim_words($content, 25);
 			?>
 			<?php 
 				$external_post = get_field('external_blog_link');
@@ -56,7 +58,7 @@ function filter_function(){
 				        		</div>
 				        	</div>
 		        			<?php $excert = wp_trim_words(get_the_content(), 15) ?>
-		        			<p><?php echo $excert; ?></p>
+		        			<p><?php echo $wdg_content; ?></p>
 						</div>
 					</div>
 				</a>

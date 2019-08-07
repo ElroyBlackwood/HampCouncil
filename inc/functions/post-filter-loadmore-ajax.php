@@ -27,7 +27,9 @@
 	        <?php while ( $my_posts->have_posts() ) : 
 	        		$my_posts->the_post();
 			        $feat_img = get_the_post_thumbnail_url(get_the_ID(),'full');
-			        $wdg_content = wp_trim_words(get_the_content(), 25);
+			        $content = get_the_content();
+			        $content = strip_shortcodes($content);
+			        $wdg_content = wp_trim_words($content, 25);
 					?>
 						<a href="<?php the_permalink(); ?>">
 							<div class="wdg-container square-posts dimmed loadedmore" style="background-image: url(<?php echo esc_url($feat_img) ?>);">
@@ -41,7 +43,7 @@
 	    				        		</div>
 	    				        	</div>
 				        			<?php $excert = wp_trim_words(get_the_content(), 15) ?>
-				        			<p><?php echo $excert; ?></p>
+				        			<p><?php echo $wdg_content; ?></p>
 								</div>
 							</div>
 						</a>	        	
