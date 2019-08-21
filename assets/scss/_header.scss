@@ -246,6 +246,13 @@ header, .news-header {
 				opacity: 1;
 				cursor: pointer;
 			}
+			.caption {
+				position: absolute;
+				top: 85%;
+				left: 0;
+				padding: 1vh 1vw;
+				background: rgba(255,255,255,0.9);
+			}
 		}
 		#carouselHeader{
 			.carousel-indicators {
@@ -313,6 +320,13 @@ header, .news-header {
 			    h2, h3, h4, h5, h6 {
 			    	font-weight: 400 !important;
 			    }
+			}
+			.caption {
+				position: absolute;
+				top: 85%;
+				left: 0;
+				padding: 1vh 1vw;
+				background: rgba(255,255,255,0.9);
 			}
 		}
 	}
@@ -551,10 +565,18 @@ header, .news-header {
 					height: 12vw;
 				    width: 6vw;
 				}
+				.caption {
+					width: 100%;
+					text-align: center;
+					padding: 1vh 2vw;
+				}
 			}
 			#carouselHeader{
 				.carousel-indicators {
-					
+					justify-content: center;
+					width: 100%;
+					bottom: 3.5%;
+					margin: 0;
 					li {
 					
 					}
@@ -580,6 +602,11 @@ header, .news-header {
 				    	margin: 0 auto 0 0;
 				    	font-size: 10vw;
 				    }
+				}
+				.caption {
+					width: 100%;
+					text-align: center;
+					padding: 1vh 2vw;
 				}
 			}
 		}

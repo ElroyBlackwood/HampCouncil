@@ -9,8 +9,12 @@ function outputLocationMap() { ?>
 	}
 </script>
 <div class="container-fluid" id="google-maps">
-	<div id="gmap">
-	</div>
+	<!-- <div id="gmap">
+	</div> -->
+	<a href="https://goo.gl/maps/HNtZBtwERdj4Vkdp6" target="_blank">
+		<div class="static-map" style="background-image: url(<?php echo bloginfo('url'); ?>/wp-content/uploads/2019/08/HAM-static-map-1209x1080.png);">
+		</div>
+	</a>
 	<a href="https://goo.gl/maps/HNtZBtwERdj4Vkdp6" target="_blank">
 		<div class="read-more">
 			<div class="blue-arrow"></div>

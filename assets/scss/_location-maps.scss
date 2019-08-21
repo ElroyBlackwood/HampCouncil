@@ -11,6 +11,10 @@
 		#gmap {
 			height: 90vh;
 		}
+		.static-map {
+			@include bg_img_contain();
+			padding-top: 66%;
+		}
 		.read-more {
 			margin: 1vh 0;
 		    justify-content: flex-end; 

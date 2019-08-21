@@ -279,6 +279,16 @@ function ouputSlider() {
 						        <?php
 						        }
 						        ?>
+						        <?php if ((get_sub_field('caption'))) {
+						        ?>
+						        <div class="caption">
+						        	<?php echo get_sub_field('caption'); ?>
+						        </div>
+						        <?php	
+						        } else {
+
+						        }
+						        ?>
 			        	</div>
 			        	<?php
 			        	
@@ -298,6 +308,16 @@ function ouputSlider() {
 			        	<div class="slide-overlay">
 			        		<?php echo $banner_overlay; ?>
 			        	</div>
+			        	<?php if (get_sub_field('caption')) {
+			        	?>
+			        	<div class="caption">
+				        	<?php echo get_sub_field('caption'); ?>
+			        	</div>
+			        	<?php	
+			        	} else {
+
+			        	}
+			        	?>
 			        </div>
 			        <?php
 				        if ($do_you_want_a_banner_link == 'yes') { ?>
@@ -343,6 +363,16 @@ function outputSingleBanner() {
 			<?php echo $static_banner_overlay; ?>
 		</div>
 		<div class="scroll-dwn"></div>
+		<?php if (get_field('banner_caption')) {
+		?>
+		<div class="caption">
+			<?php the_field('banner_caption'); ?>
+		</div>
+		<?php	
+		} else {
+
+		}
+		?>
 	</div>
 	<div id="banner-anch"></div>
 	<?php
