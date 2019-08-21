@@ -201,27 +201,27 @@
 			}
 		}
 	}
-
-	.agent-contact {
-		width: 100%;
-		.agent-contact-header {
-			
-			.icon {
-				height: 5vh;
-			    width: 3vw;
-			    margin: 0 1vw 0 0;
-			}
-			h3 {
+	.agents-block {
+		.agent-contact {
+			width: 100%;
+			.agent-contact-header {
 				
+				.icon {
+					height: 5vh;
+				    width: 3vw;
+				    margin: 0 1vw 0 0;
+				}
+				h3 {
+					
+				}
 			}
-		}
-		.agent-contact-details {
-			p {
-				margin: 0 0 2vh;
+			.agent-contact-details {
+				p {
+					margin: 0 0 2vh;
+				}
 			}
 		}
 	}
-
 
 	#contact-details-text-block {
 		.icon-text {
