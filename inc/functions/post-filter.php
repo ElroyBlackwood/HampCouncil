@@ -109,30 +109,7 @@ function outputPostFilter() {
 					jQuery(this).height(jQuery(this).width());
 				});
 			}
-        	var ajaxurl = "<?php echo admin_url( 'admin-ajax.php' ); ?>";
-			var page = 2;
-			console.log("page nmum - " + page);
-			jQuery(function($) {
-				$('body').on('click', '.loadmore', function() {
-					var filter_tag_id = jQuery('#fitler_tag_id').attr('value');
-					// console.log("filter tag id = " + filter_tag_id);
-					console.log("page nmum - " + page);
-				    var data = {
-				        'action': 'load_posts_by_ajax',
-				        'fitler_tag_id': filter_tag_id,
-				        'page': page,
-				        'security': '<?php echo wp_create_nonce("load_more_posts"); ?>'
-				    };
-
-				    $.post(ajaxurl, data, function(response) {
-				        $('#response').append(response);
-				        $('.filtered').ready(squarePosts());
-				        animateFilterBlockLoadMore();
-				        page++;
-				    });
-				    
-				});
-			});
+        	
 		</script>
 
 		<?php 
@@ -210,9 +187,36 @@ function outputPostFilter() {
 			}
 		?>
 		</div>
+		<script type="text/javascript">
+        	var ajaxurl = "<?php echo admin_url( 'admin-ajax.php' ); ?>";
+			var page = 2;
+			console.log("page nmum - " + page);
+			jQuery(function($) {
+				$('body').on('click', '.loadmore', function() {
+					var filter_tag_id = jQuery('#fitler_tag_id').attr('value');
+					// console.log("filter tag id = " + filter_tag_id);
+					console.log("page nmum - " + page);
+				    var data = {
+				        'action': 'load_posts_by_ajax',
+				        'fitler_tag_id': filter_tag_id,
+				        'page': page,
+				        'security': '<?php echo wp_create_nonce("load_more_posts"); ?>',
+				        'ids': <?php echo json_encode($ids); ?>
+				    };
+
+				    $.post(ajaxurl, data, function(response) {
+				        $('#response').append(response);
+				        $('.filtered').ready(squarePosts());
+				        animateFilterBlockLoadMore();
+				        page++;
+				    });
+				    
+				});
+			});
+		</script>
 		<div class="loadmore"><div class="down-arrow"></div>See more news articles</div>
 	</div>
-	    
+	
 	<?php
-	var_dump($ids);
+	// var_dump($ids);
 }

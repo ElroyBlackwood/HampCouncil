@@ -5,9 +5,12 @@
 	    ?>
 	    <?php
 	    $paged = $_POST['page'];
+		$ids = $_POST['ids'];
+
 	    $filter_tag_id = $_POST['fitler_tag_id'];
 	    $args = array(
 	        'posts_per_page' => 8,
+	        'post__not_in' => $ids,
 	        'category_name'=> 'News',
 	        'paged' => $paged,
 	    );
@@ -23,7 +26,7 @@
 	    if ( $my_posts->have_posts() ) : ?>
 	    <?php
 			$post_count = $my_posts->post_count;
-			$ids = array();
+			// var_dump($ids);
 		?>
 	        <?php while ( $my_posts->have_posts() ) : 
 	        		$my_posts->the_post();
@@ -81,7 +84,6 @@
 	        <?php else: ?>
 
 	        <?php endif;
-	 	var_dump($ids);
 	    wp_die();
 	}
 
