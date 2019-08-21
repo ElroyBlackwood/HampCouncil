@@ -5,7 +5,7 @@ function outputPropertyLinks() {
 		?>
 		<div class="container-fluid" id="property-search-links">
 			<div class="in-page-title orange-text">
-				<h1>Property and site searches</h1>
+				<h1><?php the_field('title'); ?></h1>
 			</div>
 		<?php
 	    while ( have_rows('squares') ) : the_row();

@@ -11,7 +11,7 @@ function outputFeatProperties() {
 	if ( $the_query->have_posts() ) { ?>
 		<div class="container-fluid" id="featured-properties">
 			<div class="in-page-title orange-text">
-				<h1>Featured</h1>
+				<h1><?php the_field('title_feat_prop'); ?></h1>
 			</div>
 	<?php
 		while ( $the_query->have_posts() ) {
