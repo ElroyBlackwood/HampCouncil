@@ -46,27 +46,25 @@ function outputHeader() { ?>
 	<?php
 	if (strpos($page_template, "page-third-level-property") !== false) {
 		# code...
-	} else { ?>
-	<div class="container-fluid <?php if($is_single_page == 1){ ?>letterbox<?php }else{} ?>" id="banner">
-			<?php $banner_slider = get_field('static_banner_of_slider'); ?>
-			<?php if ($banner_slider == "banner") { ?>
-				<?php outputSingleBanner(); ?>
-			<?php } elseif ($banner_slider == "featpost") { ?>
-				<?php ouputFeatBanner(); ?>
-			<?php } elseif ($banner_slider == "slider") { ?>
-				<?php ouputSlider(); ?>
-			<?php } else {
-				
-			}
-	?>
-	</div>
-	<?php
-	}
-	if ($is_single_page == 1) {
-		# code...
-	} else { ?>
-
-	<?php
+	} else {
+		if ($is_single_page == 1) {
+			# code...
+		} else { ?>
+		<div class="container-fluid <?php if($is_single_page == 1){ ?>letterbox<?php }else{} ?>" id="banner">
+				<?php $banner_slider = get_field('static_banner_of_slider'); ?>
+				<?php if ($banner_slider == "banner") { ?>
+					<?php outputSingleBanner(); ?>
+				<?php } elseif ($banner_slider == "featpost") { ?>
+					<?php ouputFeatBanner(); ?>
+				<?php } elseif ($banner_slider == "slider") { ?>
+					<?php ouputSlider(); ?>
+				<?php } else {
+					
+				}
+		?>
+		</div>
+		<?php
+		}
 	}
 	?>
 	
