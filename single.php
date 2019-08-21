@@ -13,7 +13,7 @@
 						$is_subpage = is_subpage();
 						$is_single_page = is_single();
 					?>
-					<div class="news-header">
+					<!-- <div class="news-header">
 						<div class="container-fluid <?php if($is_single_page == 1){ ?>letterbox<?php }else{} ?>" id="banner">
 							<div id="static-banner-image" class="dimmed <?php if($is_subpage == true){ echo "subpage"; } ?>" style="background-image: url(<?php echo $url; ?>);">
 						        <div class="orange-curve bottom-curve"></div>
@@ -24,7 +24,7 @@
 							</div>
 						</div>
 						<div id="banner-anch"></div>
-					</div>
+					</div> -->
 					<?php
 				ouputNewsArticle();
 			} elseif (in_array('42', $list_of_cats)) {
