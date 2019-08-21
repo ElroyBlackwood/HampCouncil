@@ -3,7 +3,7 @@
 ?>
 
 <?php get_header(); ?>
-	
+<?php outputWidgetBlock(); ?>	
 <div class="container-fluid" id="single-property">
 	<div id="article-content">
 		<?php

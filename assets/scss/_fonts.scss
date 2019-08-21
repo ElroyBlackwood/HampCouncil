@@ -108,7 +108,7 @@ h5 {
 
 @include respond-below(xs) {
 	li {
-		font-size: 4vw;
+		font-size: 4.5vw;
 		line-height: 1.2;
 		color: #404D4D;
 	}
@@ -146,7 +146,7 @@ h5 {
 
 @include respond-between(xs, sm) {
 	li {
-		font-size: 1.8vw;
+		font-size: 2vw;
 		line-height: 1.2;
 		color: #404D4D;
 	}
@@ -184,7 +184,7 @@ h5 {
 
 @include respond-between(sm, md) {
 	li {
-		font-size: 1.3vw;
+		font-size: 1.5vw;
 		line-height: 1.2;
 		color: #404D4D;
 	}

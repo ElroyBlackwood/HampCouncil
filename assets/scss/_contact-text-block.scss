@@ -75,6 +75,7 @@
 .agents-block {
 	@include flexbox();
 	margin: 4vh 0 0 0;
+	flex-wrap: wrap;
 	.agent-contact {
 		@include flexbox();
 		width: 50%;
