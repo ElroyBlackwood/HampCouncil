@@ -23,6 +23,7 @@
 	    if ( $my_posts->have_posts() ) : ?>
 	    <?php
 			$post_count = $my_posts->post_count;
+			$ids = array();
 		?>
 	        <?php while ( $my_posts->have_posts() ) : 
 	        		$my_posts->the_post();
@@ -30,6 +31,7 @@
 			        $content = get_the_content();
 			        $content = strip_shortcodes($content);
 			        $wdg_content = wp_trim_words($content, 25);
+			        $ids[] = get_the_ID();
 					?>
 					<?php 
 						$external_post = get_field('external_blog_link');
@@ -79,7 +81,7 @@
 	        <?php else: ?>
 
 	        <?php endif;
-	 
+	 	var_dump($ids);
 	    wp_die();
 	}
 

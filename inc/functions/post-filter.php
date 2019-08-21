@@ -147,6 +147,7 @@ function outputPostFilter() {
 
 			if ( $the_query->have_posts() ) {
 				$post_count = $the_query->post_count;
+				$ids = array();
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
 			        $feat_img = get_the_post_thumbnail_url(get_the_ID(),'full');
@@ -155,6 +156,7 @@ function outputPostFilter() {
 			        // echo "$content = " . $content; 
 			        $wdg_content = wp_trim_words($content, 25);
 			        // echo $wdg_content; 
+			        $ids[] = get_the_ID();
 					?>
 					<?php 
 						$external_post = get_field('external_blog_link');
@@ -212,4 +214,5 @@ function outputPostFilter() {
 	</div>
 	    
 	<?php
+	var_dump($ids);
 }
