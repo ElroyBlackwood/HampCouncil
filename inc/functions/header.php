@@ -39,11 +39,12 @@ function outputHeader() { ?>
 			</div>
 		</div>
 	</div>
+	<?php $page_template = get_page_template(); ?>
 	<?php 
 		$is_single_page = is_single();
 	?>
 	<?php
-	if ($is_single_page == 1) {
+	if (strpos($page_template, "page-third-level-property") !== false) {
 		# code...
 	} else { ?>
 	<div class="container-fluid <?php if($is_single_page == 1){ ?>letterbox<?php }else{} ?>" id="banner">
@@ -57,6 +58,15 @@ function outputHeader() { ?>
 			<?php } else {
 				
 			}
+	?>
+	</div>
+	<?php
+	}
+	if ($is_single_page == 1) {
+		# code...
+	} else { ?>
+
+	<?php
 	}
 	?>
 	
