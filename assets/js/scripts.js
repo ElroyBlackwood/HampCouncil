@@ -624,4 +624,17 @@ $('a').each(function() {
 	// external link end
 // ==========================================
 
+
+// ==========================================
+	// back to top
+// ==========================================
+$(document).ready(function(){
+    $( ".backtotop" ).click(function( event ) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: $('#backtotop').offset().top }, 500);
+    });
+});
+// ==========================================
+	// back to top end
+// ==========================================
 })( jQuery );

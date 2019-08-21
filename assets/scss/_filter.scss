@@ -60,11 +60,10 @@
 			}
 		}
 	}
-	.loadmore {
+	.loadmore, .backtotop {
 		@include flexbox();
 		align-items: center;
 		position: relative;
-		width: 75vw;
 		.down-arrow {
 			background-image: url('../images/blue-arrow-down.png');
 			@include bg_img_contain;
@@ -76,7 +75,19 @@
 	.loadmore:hover {
 		cursor: pointer;
 	}
-	
+	.backtotop {
+		.down-arrow {
+			@include rotate(180);
+		}
+	}
+	.backtotop:hover {
+		cursor: pointer;
+	}
+	.bottom-news {
+		@include flexbox();
+		justify-content: space-between;
+		width: 75vw;
+	}
 }
 
 @include respond-below(xs) {

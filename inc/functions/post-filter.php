@@ -2,6 +2,7 @@
 
 function outputPostFilter() {
 	?>
+	<div id="backtotop"></div>
 	<div class="hamburger-bg"></div>
 	<div id="news-filter">
 		<h1>News</h1>
@@ -214,7 +215,10 @@ function outputPostFilter() {
 				});
 			});
 		</script>
-		<div class="loadmore"><div class="down-arrow"></div>See more news articles</div>
+		<div class="bottom-news">
+			<div class="loadmore"><div class="down-arrow"></div>See more news articles</div>
+			<div class="backtotop"><div class="down-arrow"></div>Back to top</div>
+		</div>
 	</div>
 	
 	<?php
