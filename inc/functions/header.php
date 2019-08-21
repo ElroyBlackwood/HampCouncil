@@ -353,11 +353,16 @@ function ouputSlider() {
 
 function outputSingleBanner() {
 		$is_subpage = is_subpage();
-		$static_banner_image = get_field('static_banner_image');
+		if (get_field('static_banner_image')) {
+			$static_banner_image = get_field('static_banner_image');
+			$static_banner_image = $static_banner_image['url'];
+		} else {
+			$static_banner_image = get_the_post_thumbnail_url(get_the_ID(), 'full');;
+		}
 		$static_banner_overlay = get_field('static_banner_overlay');
 		$banner_image_alignment = get_field('banner_image_alignment');
 	?>
-	<div id="static-banner-image" class="dimmed <?php if($is_subpage == true){ echo "subpage"; } ?>" style="background-image: url(<?php echo $static_banner_image['url']; ?>); background-position: <?php echo $banner_image_alignment; ?> ">
+	<div id="static-banner-image" class="dimmed <?php if($is_subpage == true){ echo "subpage"; } ?>" style="background-image: url(<?php echo $static_banner_image; ?>); background-position: <?php echo $banner_image_alignment; ?> ">
         <div class="orange-curve bottom-curve"></div>
 		<div id="static-banner-overlay">
 			<?php echo $static_banner_overlay; ?>

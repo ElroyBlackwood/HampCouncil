@@ -2,7 +2,8 @@
 function outputFeatProperties() {
 	$args = array(
 		'posts_per_page' => -1,
-		'category_name' => 'Property',
+		'tag' => 'featured-property',
+		'post_type' => 'page',
 	);
 
 	$the_query = new WP_Query( $args );
