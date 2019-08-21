@@ -31,7 +31,18 @@
 			        $content = strip_shortcodes($content);
 			        $wdg_content = wp_trim_words($content, 25);
 					?>
-						<a href="<?php the_permalink(); ?>">
+					<?php 
+						$external_post = get_field('external_blog_link');
+						$is_external = false;
+						$external_link = "";
+
+						if ($external_post == 'yes') {
+							$is_external = true;
+							$external_link = get_field('link_to_story');
+							$external_link = strip_tags($external_link);
+						}
+					 ?>
+						<a href="<?php if($is_external == true){ echo $external_link; } else { the_permalink(); } ?>" <?php if($is_external == true){ echo "target='_blank'"; } ?> >
 							<div class="wdg-container square-posts dimmed loadedmore" style="background-image: url(<?php echo esc_url($feat_img) ?>);">
 								<div class="color-overlay"></div>
 								<div class="wdg-overlay">
