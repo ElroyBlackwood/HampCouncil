@@ -13,6 +13,7 @@
 	        'post__not_in' => $ids,
 	        'category_name'=> 'News',
 	        'paged' => $paged,
+	        'post_status' => 'publish',
 	    );
 
 	    if ($filter_tag_id == '10') {

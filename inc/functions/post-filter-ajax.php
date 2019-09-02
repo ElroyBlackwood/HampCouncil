@@ -7,6 +7,7 @@ function filter_function(){
 	$args = array(
 		'orderby' => 'date', // we will sort posts by date
 		'posts_per_page' => 8,
+		'post_status' => 'publish',
 	);
 	
 	if ( !empty($_POST) ) {
