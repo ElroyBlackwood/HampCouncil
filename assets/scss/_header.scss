@@ -220,12 +220,15 @@ header, .news-header {
 			    width: 40%;
 			    h1 {
 			    	font-size: 4vw;
+			    	text-shadow: 0px 7px 5px #3e3e3c;
 			    }
 			    p {
+			    	text-shadow: 0px 7px 5px #3e3e3c;
 			    	color: #fff;
 			    }
 			    h2, h3, h4, h5, h6 {
 			    	font-weight: 400 !important;
+			    	text-shadow: 0px 7px 5px #3e3e3c;
 			    }
 			}
 			.scroll-dwn {
@@ -313,12 +316,15 @@ header, .news-header {
 			    h1 {
 			    	font-size: 4vw;
 			    	line-height: 1.2;
+			    	text-shadow: 0px 7px 5px #3e3e3c;
 			    }
 			    p {
 			    	color: #fff;
+			    	text-shadow: 0px 7px 5px #3e3e3c;
 			    }
 			    h2, h3, h4, h5, h6 {
 			    	font-weight: 400 !important;
+			    	text-shadow: 0px 7px 5px #3e3e3c;
 			    }
 			}
 			.caption {
@@ -373,9 +379,11 @@ header, .news-header {
 						}
 						p {
 							color: #fff;
+							text-shadow: 0px 7px 5px #3e3e3c;
 						}
-						h2, h3, h4, h5, h6 {
+						h1, h2, h3, h4, h5, h6 {
 							font-weight: 400 !important;
+							text-shadow: 0px 7px 5px #3e3e3c;
 						}
 						.read-more {
 							@include flexbox();
