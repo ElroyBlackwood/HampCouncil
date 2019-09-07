@@ -1,0 +1,4 @@
+[01-Sep-2019 09:49:46 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home/businesshamp/public_html/wp-content/themes/HampCouncil/index.php:1
+Stack trace:
+#0 {main}
+  thrown in /home/businesshamp/public_html/wp-content/themes/HampCouncil/index.php on line 1

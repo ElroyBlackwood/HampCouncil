@@ -117,7 +117,7 @@ function outputPostFilter() {
 			$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 
 			$args = array(
-				'posts_per_page' => 8,
+				'posts_per_page' => 10,
 				'category_name'=> 'News',
 				'paged' => $paged,
 			);
@@ -126,6 +126,7 @@ function outputPostFilter() {
 			if ( $the_query->have_posts() ) {
 				$post_count = $the_query->post_count;
 				$ids = array();
+				// echo "Post count - " . $post_count;
 				while ( $the_query->have_posts() ) {
 					$the_query->the_post();
 			        $feat_img = get_the_post_thumbnail_url(get_the_ID(),'full');

@@ -9,7 +9,7 @@
 
 	    $filter_tag_id = $_POST['fitler_tag_id'];
 	    $args = array(
-	        'posts_per_page' => 8,
+	        'posts_per_page' => 10,
 	        'post__not_in' => $ids,
 	        'category_name'=> 'News',
 	        'paged' => $paged,

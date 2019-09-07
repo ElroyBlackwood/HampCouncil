@@ -6,7 +6,7 @@ add_action('wp_ajax_nopriv_myfilter', 'filter_function');
 function filter_function(){
 	$args = array(
 		'orderby' => 'date', // we will sort posts by date
-		'posts_per_page' => 8,
+		'posts_per_page' => 10,
 		'post_status' => 'publish',
 	);
 	
