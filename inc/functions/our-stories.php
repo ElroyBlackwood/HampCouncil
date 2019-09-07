@@ -87,7 +87,7 @@
 					<?php $feat_img = get_the_post_thumbnail_url(get_the_ID(), 'full'); ?>
 					<div class="slide-content">
 				        <a href="<?php if($is_external == true){ echo $external_link; } else { the_permalink(); } ?>" <?php if($is_external == true){ echo "target='_blank'"; } ?> >
-				        	<div class="wdg-container square-story dimmed" style="background-image: url(<?php echo $feat_img; ?>);">
+				        	<div class="wdg-container square-story dimmed faded" style="background-image: url(<?php echo $feat_img; ?>);">
 				        		<div class="color-overlay"></div>
 				        		<div class="wdg-overlay">
 				        			<div class="wdg-overlay-title">

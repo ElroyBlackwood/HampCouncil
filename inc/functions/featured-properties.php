@@ -19,7 +19,7 @@ function outputFeatProperties() {
 		    $feat_img = get_the_post_thumbnail_url(get_the_ID(), 'full');
 	    ?>
 	        <a href="<?php the_permalink(); ?>">
-	        	<div class="wdg-container square-sectors dimmed" style="background-image: url(<?php echo $feat_img; ?>);">
+	        	<div class="wdg-container square-sectors dimmed faded" style="background-image: url(<?php echo $feat_img; ?>);">
 	        		<div class="color-overlay"></div>
 	        		<div class="wdg-overlay">
 	        			<div class="wdg-overlay-title">

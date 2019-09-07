@@ -642,7 +642,7 @@ $(document).ready(function(){
 	// coursel 
 // ==========================================
 
-$('#carouselHeader').carousel( {interval: 7000} );
+$('#carouselHeader').carousel( {interval: 6000} );
 
 // ==========================================
 	// carousel end

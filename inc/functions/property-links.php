@@ -15,7 +15,7 @@ function outputPropertyLinks() {
 	        $title = get_sub_field('sq_title');
 	        ?>
 	        <a href="<?php echo $link['url']; ?>">
-	        	<div class="wdg-container square-sectors dimmed" style="background-image: url(<?php echo $feat_img['url']; ?>);">
+	        	<div class="wdg-container square-sectors dimmed faded" style="background-image: url(<?php echo $feat_img['url']; ?>);">
 	        		<div class="color-overlay"></div>
 	        		<div class="wdg-overlay">
 	        			<div class="wdg-overlay-title">
