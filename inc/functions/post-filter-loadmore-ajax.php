@@ -10,10 +10,11 @@
 	    $filter_tag_id = $_POST['fitler_tag_id'];
 	    $args = array(
 	        'posts_per_page' => 10,
-	        'post__not_in' => $ids,
+	        // 'post__not_in' => $ids,
 	        'category_name'=> 'News',
 	        'paged' => $paged,
 	        'post_status' => 'publish',
+	        'orderby' => 'date',
 	    );
 
 	    if ($filter_tag_id == '10') {
@@ -23,10 +24,23 @@
 	    }
 	    
 
+
 	    $my_posts = new WP_Query( $args );
 	    if ( $my_posts->have_posts() ) : ?>
 	    <?php
+	    // print_r( "max posts " . $my_posts->max_num_pages);
+	    // print_r("paged = " . $paged);
+	    if ($paged == $my_posts->max_num_pages) {
+	    	?>
+				<script type="text/javascript">
+					jQuery('.loadmore').html('<div class="down-arrow"></div>No more news articles');
+	        	</script>
+	    	<?php
+	    }
+	    ?>
+	    <?php
 			$post_count = $my_posts->post_count;
+			// echo "post count = " . $post_count;
 			// var_dump($ids);
 		?>
 	        <?php while ( $my_posts->have_posts() ) : 
@@ -65,21 +79,6 @@
 							</div>
 						</a>	        	
 	        <?php endwhile;
-
-    			if ($post_count < 8) {
-    				?>
-    				<script type="text/javascript">
-    	        		jQuery('.loadmore').html('<div class="down-arrow"></div>No more news articles');
-    	        	</script>
-    				<?php
-    			} else {
-    				?>
-    				<script type="text/javascript">
-    	        		jQuery('.loadmore').html('<div class="down-arrow"></div>See more news articles');
-    	        	</script>
-    				<?php
-    			}
-
 	        	wp_reset_postdata();
 	        ?>
 	        <?php else: ?>

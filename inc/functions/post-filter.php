@@ -117,6 +117,7 @@ function outputPostFilter() {
 			$paged = get_query_var( 'paged' ) ? get_query_var( 'paged' ) : 1;
 
 			$args = array(
+				'orderby' => 'date',
 				'posts_per_page' => 10,
 				'category_name'=> 'News',
 				'paged' => $paged,
@@ -166,7 +167,7 @@ function outputPostFilter() {
 						</a>
 					<?php
 				}
-				if ($post_count < 8) {
+				if ($post_count < 10) {
 					?>
 					<script type="text/javascript">
 		        		jQuery('.loadmore').html('<div class="down-arrow"></div>No more news articles');
