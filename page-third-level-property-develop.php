@@ -119,7 +119,7 @@
 				?>
 				<a href="<?php echo bloginfo('url'); ?>/land-property/">
 					<div class="read-more">
-						<div class="blue-arrow"></div><span><strong>Back to Development Properties</strong></span>
+						<div class="blue-arrow"></div><span><strong>Back to Properties</strong></span>
 					</div>
 				</a>
 			</div>
