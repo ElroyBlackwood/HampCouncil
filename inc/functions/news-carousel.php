@@ -135,6 +135,11 @@
 							</div>
 							<?php endif; ?>
 							<?php $excert = wp_trim_words(get_the_content(), 15) ?>
+							<?php 
+								$excert = str_replace("&nbsp;", "", $excert);
+								$excert = strip_shortcodes($excert);
+							?>
+							<?php $excert = ltrim($excert); ?>
 							<p><?php echo $excert; ?></p>
 							<div class="read-more">
 								<div class="blue-arrow"></div><span><strong>Read More</strong></span>

@@ -7,9 +7,11 @@ function outputWdgTwoWide() {
 		<?php
 	    while ( have_rows('squares', 'option') ) : the_row();
 	    	$wdg_content = get_sub_field('sq_text_content');
+	        $wdg_content = strip_shortcodes($wdg_content);
 	        $feat_img = get_sub_field('sq_background_image');
 	        $link = get_sub_field('square_link');
 	        $title = get_sub_field('sq_title');
+
 	        ?>
 	        <a href="<?php echo $link['url']; ?>">
 	        	<div class="wdg-container square-sectors dimmed faded" style="background-image: url(<?php echo $feat_img['url']; ?>);">

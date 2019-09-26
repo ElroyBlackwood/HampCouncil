@@ -117,9 +117,9 @@
 
 					}
 				?>
-				<a href="<?php echo bloginfo('url'); ?>/land-property/">
+				<a href="<?php echo bloginfo('url'); ?>/land-property/development/">
 					<div class="read-more">
-						<div class="blue-arrow"></div><span><strong>Back to Properties</strong></span>
+						<div class="blue-arrow"></div><span><strong>Back to Developments</strong></span>
 					</div>
 				</a>
 			</div>
@@ -157,10 +157,16 @@
 			    				<div class="icon"></div>
 			    				<a href="tel:<?php echo $agent_phone_number; ?>"><?php echo $agent_phone_number; ?></a>
 			    			</div>
-			    			<div class="icon-text" id="website">
-			    				<div class="icon"></div>
-			    				<a href="<?php echo $agent_website; ?>">Visit Website</a>
-			    			</div>
+			    			<?php
+			    				if (!empty($agent_website)) {
+			    				?>
+			    				<div class="icon-text" id="website">
+			    					<div class="icon"></div>
+			    					<a href="<?php echo $agent_website; ?>">Visit Website</a>
+			    				</div>
+			    				<?php		
+			    				}
+			    			?>
 			    		</div>
 			    	</div>
 		    	</div>

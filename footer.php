@@ -34,7 +34,7 @@
 		<h2><?php the_field('sitemap_title', 'option'); ?></h2>
 	</div>
 	<div class="container-width" id="top-footer">
-		<div class="flex-container sitemap">
+		<div class="flex-container sitemap h-xs">
  			<?php if(is_active_sidebar('footer-smp-1')):
 			dynamic_sidebar('footer-smp-1');
 			endif; ?>
@@ -54,8 +54,17 @@
 			dynamic_sidebar('footer-smp-6');
 			endif; ?>
 		  </div>
+	  		<div class="flex-container sitemap h-sm h-md h-lg h-xlg">
+	   			<?php if(is_active_sidebar('footer-mb-1')):
+	  			dynamic_sidebar('footer-mb-1');
+	  			endif; ?>
+	   			<?php if(is_active_sidebar('footer-mb-2')):
+	  			dynamic_sidebar('footer-mb-2');
+	  			endif; ?>
+	  		</div>
 		</div>
 	</div>
+</div>
 <!--- FOOT SECTION 02 - SITEMAP END -->
 
 <!--- FOOT SECTION 03 - SOCIAL START -->

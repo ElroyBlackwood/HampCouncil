@@ -32,7 +32,13 @@ function outputWidgetBlock() { ?>
 		</style>
 		<div class="container-fluid" id="wdgt_block_outer">
 			<div class="colour-overlay" style="background: linear-gradient( rgba(<?php echo $rgb_col; ?>), rgba(<?php echo $rgb_col; ?>) ); color: <?php echo $text_col; ?>">
-			<h1><?php echo $block_title; ?></h1>
+			<?php
+			if (!empty($block_title)) {
+				?>
+				<h1><?php echo $block_title; ?></h1>
+				<?php
+			}
+			?>
 				<div class="widget-container container-width">
 		<?php
 				if( have_rows('widgets') ):
@@ -56,7 +62,13 @@ function outputWidgetBlock() { ?>
 				        		<div class="widget-icon" style="background-image: url(<?php echo $wdg_icon['url']; ?>);">
 				        		</div>
 				        		<div class="widget-text">
-				        			<h3 style="color: <?php echo $text_col; ?>"><?php echo $wdg_title; ?></h3>
+				        			<?php 
+				        			if (!empty($wdg_title)) {
+				        				?>
+					        			<h3 style="color: <?php echo $text_col; ?>"><?php echo $wdg_title; ?></h3>
+				        				<?php
+				        			}
+				        			?>
 				        			<p  style="color: <?php echo $text_col; ?>"><?php echo $wdg_txt; ?></p>
 				        		</div>
 				        	</div>

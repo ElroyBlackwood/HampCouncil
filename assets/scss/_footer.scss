@@ -20,7 +20,7 @@
 			}
 			.slide-thumbnail {
 				@include bg_img_cover();
-				margin: 0 0 3vh;
+				margin: 0 0 4vh;
 				position: relative;
 			}
 		}
@@ -65,9 +65,12 @@
 }
 
 #top-footer {
-	li:hover {
-		a {
-			color: #F26640;
+	ul {
+		list-style-type: none;
+		li:hover {
+			a {
+				color: #F26640;
+			}
 		}
 	}
 }

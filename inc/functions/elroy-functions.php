@@ -71,5 +71,27 @@
 			'before_title'  => '<h3 class="widget-title">',
 			'after_title'   => '</h3>',
 		) );
+
+	        // mobile footer
+		register_sidebar( array(
+				'name'          => __( 'Footer Mobile 1' ),
+				'id'            => 'footer-mb-1',
+				'description'   => __( 'Add widgets here to appear in your Footer Mobile Nav.' ),
+				'before_widget' => '<div id="%1$s" class="col-6">',
+				'after_widget'  => '</div>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
+			) );
+
+		        
+			register_sidebar( array(
+					'name'          => __( 'Footer Mobile 2' ),
+					'id'            => 'footer-mb-2',
+					'description'   => __( 'Add widgets here to appear in your Footer Mobile Nav.' ),
+					'before_widget' => '<div id="%1$s" class="col-6">',
+					'after_widget'  => '</div>',
+					'before_title'  => '<h3 class="widget-title">',
+					'after_title'   => '</h3>',
+				) );
     // Widgets END
 ?>
